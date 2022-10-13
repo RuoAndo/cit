@@ -1,10 +1,11 @@
 # テストデータ(JSON, CSV)の生成
-
+<pre>
 dummyjson sample-json.hbs > test_data.json
 dummyjson sample-csv.hbs > test_data.csv
+</pre>
 
 # CSVファイルの取り込み
-
+<pre>
 Use ".open FILENAME" to reopen on a persistent database.
 sqlite> .mode csv
 
@@ -16,3 +17,4 @@ test_data
 
 sqlite> select * from test_data where id=48;
 48,"Francis Winter",Xenosys,1989,"65 Elton Way",Medford,false,
+</pre>
