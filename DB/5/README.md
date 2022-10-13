@@ -4,7 +4,7 @@ dummyjson sample-json.hbs > test_data.json
 dummyjson sample-csv.hbs > test_data.csv
 </pre>
 
-# CSVファイルの取り込み
+# CSVファイルのsqliteへの取り込み
 <pre>
 Use ".open FILENAME" to reopen on a persistent database.
 sqlite> .mode csv
