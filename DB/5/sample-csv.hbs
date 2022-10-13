@@ -1,0 +1,4 @@
+id,name,work,email,dob,address,city,optedin
+{{#repeat 50 comma=false}}
+{{@index}},{{firstName}} {{lastName}},{{company}},{{date '1900' '2000' 'YYYY'}},{{int 1 100}} {{street}},{{city}},{{boolean}}
+{{/repeat}}

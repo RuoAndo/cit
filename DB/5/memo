@@ -1,0 +1,2 @@
+ 2059  dummyjson sample-json.hbs > test_data.json
+ 2062  dummyjson sample-csv.hbs > test_data.csv

@@ -1,0 +1,14 @@
+[
+    {{#repeat 50}}
+    {
+      "id": {{@index}},
+      "name": "{{firstName}} {{lastName}}",
+      "work": "{{company}}",
+      "email": "{{email}}",
+      "dob": "{{date '1900' '2000' 'YYYY'}}",
+      "address": "{{int 1 100}} {{street}}",
+      "city": "{{city}}",
+      "optedin": {{boolean}}
+    }
+    {{/repeat}}
+]
