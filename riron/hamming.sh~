@@ -1,0 +1,7 @@
+#!/bin/sh
+# t@Cð1s¸ÂÇÝñÅ\¦
+
+TESTFILE=./hoge.txt
+while read line; do
+    echo $line
+done < $TESTFILE

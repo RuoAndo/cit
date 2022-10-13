@@ -1,0 +1,23 @@
+import random
+import matplotlib.pyplot as plt
+
+a = [random.gauss(75, 3) for _ in range(100)]
+b = [random.gauss(85, 3) for _ in range(100)]
+
+strl = []
+
+for i in a:
+    strl.append(i)
+
+for i in b:
+    strl.append(i)
+
+random.shuffle(strl)
+
+strl2 = '' 
+for i in strl:
+    strl2 = strl2 + chr(int(i))
+
+print(strl2)
+       
+        

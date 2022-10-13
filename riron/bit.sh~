@@ -1,0 +1,7 @@
+#!/bin/sh
+
+for i in `seq 0 16`
+do
+    echo "obase=2;ibase=10;$i" | bc | xargs printf %08d
+    echo ""
+done

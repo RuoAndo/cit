@@ -1,0 +1,7 @@
+#!/bin/sh
+
+for i in `seq 0 15`
+do
+    result=`echo "obase=2;ibase=10;$i" | bc | xargs printf %04d`
+    ./hamming2 $result
+done

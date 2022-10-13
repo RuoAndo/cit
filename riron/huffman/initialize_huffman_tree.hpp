@@ -1,0 +1,16 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <map>
+#include <algorithm>
+#include <queue>
+
+void initialize_huffman_tree(map<char, int> &dist, vector<tuple<int, vector<int>, string> > &T){
+    int i = 0;
+    vector<int> temp = {};
+    for (auto itr : dist){
+        T[i] = make_tuple(dist[itr.first], temp, "");
+        i++;
+    }
+}
+
