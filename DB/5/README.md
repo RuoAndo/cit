@@ -18,3 +18,5 @@ test_data
 sqlite> select * from test_data where id=48;
 48,"Francis Winter",Xenosys,1989,"65 Elton Way",Medford,false,
 </pre>
+
+<img src="import-csv.png">
