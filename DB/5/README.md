@@ -65,3 +65,8 @@ sqlite> select eyeColor, COUNT(eyeColor) from person group by eyeColor;
 sqlite> SELECT SUM(age) FROM person;
 26067
 </pre>
+
+# 8. 年齢の総和を求める (JSON/Python)
+
+(base) PS C:\Users\flare\cit\DB\5> python sum.py person.json
+26067
