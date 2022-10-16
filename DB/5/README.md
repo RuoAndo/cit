@@ -1,4 +1,4 @@
-# テストデータ(JSON, CSV)の生成
+# テストデータ(JSON, CSV)の生成1
 <pre>
 dummyjson sample-json.hbs > test_data.json
 dummyjson sample-csv.hbs > test_data.csv
@@ -19,4 +19,7 @@ sqlite> select * from test_data where id=48;
 48,"Francis Winter",Xenosys,1989,"65 Elton Way",Medford,false,
 </pre>
 
-<img src="import-csv.png">
+# テストデータ(JSON, CSV)の生成2
+<pre>
+https://json-generator.com/
+</pre>
