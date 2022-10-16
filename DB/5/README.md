@@ -33,6 +33,7 @@ https://json-generator.com/
 </pre>
 
 # 5. 下記のコマンドを実行
+<pre>
 (base) PS C:\Users\flare\cit\DB\5> .\sqlite3.exe
 SQLite version 3.39.3 2022-09-05 11:02:23
 Enter ".help" for usage hints.
@@ -46,14 +47,16 @@ blue
 blue
 green
 brown
+</pre>
 
 # 6. 下記のコマンドを実行
 
+<pre>
 sqlite> select eyeColor from person group by eyeColor;
 blue
 brown
 green
 sqlite> select eyeColor, COUNT(eyeColor) from person group by eyeColor;
-
+</pre>
 
 
