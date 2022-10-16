@@ -59,19 +59,19 @@ green
 sqlite> select eyeColor, COUNT(eyeColor) from person group by eyeColor;
 </pre>
 
-# 7. 年齢の総和を求める (SQL sum)
+# 7. 年齢の総和を求める1 (SQL sum)
 
 <pre>
 sqlite> SELECT SUM(age) FROM person;
 26067
 </pre>
 
-# 8. 年齢の総和を求める (JSON/Python)
+# 8. 年齢の総和を求める2 (JSON/Python)
 
 (base) PS C:\Users\flare\cit\DB\5> python sum.py person.json
 26067
 
-# 9. 瞳の色ごとの人数を求める (SQL COUNT, GROUP BY)
+# 9. 瞳の色ごとの人数を求める1 (SQL COUNT, GROUP BY)
 
 <pre>
 (base) PS C:\Users\flare\cit\DB\5> .\sqlite3.exe                                                                       
@@ -87,7 +87,7 @@ brown,281
 green,294
 </pre>
 
-# 10. 瞳の色ごとの人数を求める (JSON/python)
+# 10. 瞳の色ごとの人数を求める2 (JSON/python)
 <pre>
 (base) PS C:\Users\flare\cit\DB\5> python .\count_group_by.py .\person.json
 Counter({"['blue']": 301, "['green']": 294, "['brown']": 281})
