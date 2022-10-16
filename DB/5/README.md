@@ -87,3 +87,10 @@ brown,281
 green,294
 </pre>
 
+# 10. 瞳の色ごとの人数を求める (JSON/python)
+<pre>
+(base) PS C:\Users\flare\cit\DB\5> python .\count_group_by.py .\person.json
+Counter({"['blue']": 301, "['green']": 294, "['brown']": 281})
+</pre>
+
+
