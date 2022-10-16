@@ -26,13 +26,13 @@ https://json-generator.com/
 
 <img src="json-generator.png">
 
-# 4. 保存したJSONファイルをCSVに変換(Linux)
+# 4. 保存したテストデータ2のJSONファイル(person.json)をCSVに変換(Linux)
 <pre>
 # in2csv person.json  > person.csv
 /usr/lib/python3.6/importlib/_bootstrap.py:219: ImportWarning: can't resolve package from __spec__ or __package__, falling back on __name__ and __path__
 </pre>
 
-# 5. 下記のコマンドを実行
+# 5. 下記のコマンドを実行 (SQL)
 <pre>
 (base) PS C:\Users\flare\cit\DB\5> .\sqlite3.exe
 SQLite version 3.39.3 2022-09-05 11:02:23
@@ -49,7 +49,7 @@ green
 brown
 </pre>
 
-# 6. 下記のコマンドを実行
+# 6. 下記のコマンドを実行 (SQL)
 
 <pre>
 sqlite> select eyeColor from person group by eyeColor;
