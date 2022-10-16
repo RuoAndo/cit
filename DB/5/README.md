@@ -32,7 +32,7 @@ https://json-generator.com/
 /usr/lib/python3.6/importlib/_bootstrap.py:219: ImportWarning: can't resolve package from __spec__ or __package__, falling back on __name__ and __path__
 </pre>
 
-# 5. 下記のコマンドを実行 (SQL)
+# 5. 下記のコマンドを実行 (SQL .import)
 <pre>
 (base) PS C:\Users\flare\cit\DB\5> .\sqlite3.exe
 SQLite version 3.39.3 2022-09-05 11:02:23
@@ -49,7 +49,7 @@ green
 brown
 </pre>
 
-# 6. 下記のコマンドを実行 (SQL)
+# 6. 下記のコマンドを実行 (SQL group by)
 
 <pre>
 sqlite> select eyeColor from person group by eyeColor;
@@ -59,7 +59,7 @@ green
 sqlite> select eyeColor, COUNT(eyeColor) from person group by eyeColor;
 </pre>
 
-# 7. 年齢の総和を求める (SQL)
+# 7. 年齢の総和を求める (SQL sum)
 
 <pre>
 sqlite> SELECT SUM(age) FROM person;
