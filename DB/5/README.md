@@ -1,10 +1,10 @@
-# 1. テストデータ(JSON, CSV)の生成1
+# 1. テストデータ1(JSON, CSV)の生成
 <pre>
 dummyjson sample-json.hbs > test_data.json
 dummyjson sample-csv.hbs > test_data.csv
 </pre>
 
-# 2. CSVファイルのsqliteへの取り込み
+# 2. テストデータ1のCSVファイルのsqliteへの取り込み
 <pre>
 Use ".open FILENAME" to reopen on a persistent database.
 sqlite> .mode csv
@@ -19,15 +19,15 @@ sqlite> select * from test_data where id=48;
 48,"Francis Winter",Xenosys,1989,"65 Elton Way",Medford,false,
 </pre>
 
-# 3. テストデータ(JSON, CSV)の生成2
+# 3. テストデータ2(JSON)の生成
 <pre>
 https://json-generator.com/
 </pre>
 
 <img src="json-generator.png">
 
-<pre>
 # 4. 保存したJSONファイルをCSVに変換(Linux)
+<pre>
 # in2csv person.json  > person.csv
 /usr/lib/python3.6/importlib/_bootstrap.py:219: ImportWarning: can't resolve package from __spec__ or __package__, falling back on __name__ and __path__
 </pre>
@@ -70,3 +70,4 @@ sqlite> SELECT SUM(age) FROM person;
 
 (base) PS C:\Users\flare\cit\DB\5> python sum.py person.json
 26067
+
