@@ -1,0 +1,33 @@
+#include <rapidjson/document.h>
+#include <string>
+#include <sstream>
+#include <fstream>
+#include <iostream>
+#include <time.h>
+
+int
+main(int argc, char* argv[]) {
+  clock_t t;
+  t = clock();
+  for (int n = 0; n < 1000; n++) {
+    std::stringstream ss;
+    std::ifstream f;
+    f.open("person.json", std::ios::binary);
+    ss << f.rdbuf();
+    f.close();
+
+    rapidjson::Document doc;  
+    if (doc.Parse<0>(ss.str().c_str()).HasParseError()) {
+      std::cerr << "parse error" << std::endl;
+      return 1;
+    }
+
+    rapidjson::Value& entries = doc["entries"];
+    int i, l = entries.Size();
+    for (i = 0; i < l; i++) {
+      std::cerr << entries[rapidjson::SizeType(i)]["title"].GetString() << std::endl;
+    }
+  }
+  std::cout << "score: " << clock() - t << std::endl;
+  return 0;
+}
