@@ -23,3 +23,9 @@ sqlite> select * from test_data where id=48;
 <pre>
 https://json-generator.com/
 </pre>
+
+<pre>
+保存したJSONファイルをCSVに変換(Linux)
+# in2csv person.json  > person.csv
+/usr/lib/python3.6/importlib/_bootstrap.py:219: ImportWarning: can't resolve package from __spec__ or __package__, falling back on __name__ and __path__
+</pre>
