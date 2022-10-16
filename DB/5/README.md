@@ -71,3 +71,19 @@ sqlite> SELECT SUM(age) FROM person;
 (base) PS C:\Users\flare\cit\DB\5> python sum.py person.json
 26067
 
+# 9. 瞳の色ごとの人数を求める (SQL COUNT, GROUP BY)
+
+<pre>
+(base) PS C:\Users\flare\cit\DB\5> .\sqlite3.exe                                                                       
+SQLite version 3.39.3 2022-09-05 11:02:23
+Enter ".help" for usage hints.
+Connected to a transient in-memory database.
+Use ".open FILENAME" to reopen on a persistent database.
+sqlite> .import person.csv person
+
+sqlite> select eyeColor, count(*) from person group by eyeColor;
+blue,301
+brown,281
+green,294
+</pre>
+
