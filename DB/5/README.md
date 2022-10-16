@@ -59,4 +59,9 @@ green
 sqlite> select eyeColor, COUNT(eyeColor) from person group by eyeColor;
 </pre>
 
+# 7. 年齢の総和を求める (SQL)
 
+<pre>
+sqlite> SELECT SUM(age) FROM person;
+26067
+</pre>
