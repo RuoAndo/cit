@@ -1,0 +1,228 @@
+[
+  {
+    "_id": "634b62607df62d00fd340ba8",
+    "index": 0,
+    "guid": "d74fb385-435e-4e60-9c9e-642c68c2def7",
+    "isActive": true,
+    "balance": "$2,336.05",
+    "picture": "http://placehold.it/32x32",
+    "age": 37,
+    "eyeColor": "blue",
+    "name": "Juanita Lane",
+    "gender": "female",
+    "company": "KNEEDLES",
+    "email": "juanitalane@kneedles.com",
+    "phone": "+1 (830) 580-2978",
+    "address": "165 Seba Avenue, Rose, Indiana, 5071",
+    "about": "Irure in ea deserunt officia eiusmod elit in magna id ut irure commodo in. Ut eiusmod cupidatat consectetur sunt eu. Tempor veniam velit incididunt non exercitation laboris irure. In non nisi sit tempor.\r\n",
+    "registered": "2019-05-25T03:00:57 -09:00",
+    "latitude": 17.252481,
+    "longitude": -63.285056,
+    "tags": [
+      "nisi",
+      "incididunt",
+      "non",
+      "ipsum",
+      "esse",
+      "quis",
+      "nostrud"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Nelson Frederick"
+      },
+      {
+        "id": 1,
+        "name": "Mueller Conley"
+      },
+      {
+        "id": 2,
+        "name": "Henson Glass"
+      }
+    ],
+    "greeting": "Hello, Juanita Lane! You have 9 unread messages.",
+    "favoriteFruit": "strawberry"
+  },
+  {
+    "_id": "634b626014ad2e7db3a6a54b",
+    "index": 1,
+    "guid": "dbafc684-246e-4f3f-b6e8-205f8974dbcb",
+    "isActive": false,
+    "balance": "$3,022.06",
+    "picture": "http://placehold.it/32x32",
+    "age": 22,
+    "eyeColor": "blue",
+    "name": "Langley Gates",
+    "gender": "male",
+    "company": "ELEMANTRA",
+    "email": "langleygates@elemantra.com",
+    "phone": "+1 (965) 554-2726",
+    "address": "991 Vista Place, Ripley, Kentucky, 4433",
+    "about": "Aliquip culpa quis reprehenderit sunt consectetur laborum in exercitation tempor fugiat proident ad. Magna anim do cillum enim ullamco qui. Incididunt ullamco ad ut non incididunt quis. Aliqua dolor labore consequat in minim. Proident non pariatur dolor adipisicing. Qui enim aliquip officia deserunt do. Exercitation aute duis laborum nulla nulla.\r\n",
+    "registered": "2019-02-10T03:19:06 -09:00",
+    "latitude": -40.409552,
+    "longitude": 66.962292,
+    "tags": [
+      "deserunt",
+      "occaecat",
+      "ea",
+      "quis",
+      "fugiat",
+      "enim",
+      "nulla"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Joyner Benson"
+      },
+      {
+        "id": 1,
+        "name": "Kellie Mendez"
+      },
+      {
+        "id": 2,
+        "name": "Jacobson Hopkins"
+      }
+    ],
+    "greeting": "Hello, Langley Gates! You have 6 unread messages.",
+    "favoriteFruit": "strawberry"
+  },
+  {
+    "_id": "634b62602aff07df6de52a48",
+    "index": 2,
+    "guid": "7b9205de-070d-429f-acd1-e8e415ad3b40",
+    "isActive": false,
+    "balance": "$3,049.65",
+    "picture": "http://placehold.it/32x32",
+    "age": 23,
+    "eyeColor": "green",
+    "name": "Burgess Davenport",
+    "gender": "male",
+    "company": "XPLOR",
+    "email": "burgessdavenport@xplor.com",
+    "phone": "+1 (963) 412-3211",
+    "address": "726 Bedell Lane, Titanic, Nebraska, 5179",
+    "about": "Consectetur minim voluptate cupidatat mollit irure sit dolore ad officia. Magna dolor reprehenderit excepteur officia mollit culpa incididunt. Sit enim duis quis magna deserunt esse exercitation ut.\r\n",
+    "registered": "2020-02-19T10:10:11 -09:00",
+    "latitude": 86.685085,
+    "longitude": -179.668511,
+    "tags": [
+      "ea",
+      "ad",
+      "officia",
+      "pariatur",
+      "ad",
+      "consectetur",
+      "sunt"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Bianca Oneill"
+      },
+      {
+        "id": 1,
+        "name": "Keller Horne"
+      },
+      {
+        "id": 2,
+        "name": "Helga Guzman"
+      }
+    ],
+    "greeting": "Hello, Burgess Davenport! You have 2 unread messages.",
+    "favoriteFruit": "apple"
+  },
+  {
+    "_id": "634b6260d8dc0850f18ca414",
+    "index": 3,
+    "guid": "308fdc07-bee7-4a0e-a9b0-e1b7204585f5",
+    "isActive": true,
+    "balance": "$3,780.96",
+    "picture": "http://placehold.it/32x32",
+    "age": 35,
+    "eyeColor": "brown",
+    "name": "Woods Morris",
+    "gender": "male",
+    "company": "QUILK",
+    "email": "woodsmorris@quilk.com",
+    "phone": "+1 (893) 452-2893",
+    "address": "842 Ridge Court, Healy, South Dakota, 6541",
+    "about": "Fugiat occaecat fugiat quis nostrud et Lorem mollit eiusmod elit non ea dolor. In esse pariatur nulla quis magna minim incididunt Lorem labore. Fugiat cupidatat labore dolor magna minim pariatur ullamco nulla. Ea officia pariatur ullamco non officia amet commodo.\r\n",
+    "registered": "2022-03-08T03:46:45 -09:00",
+    "latitude": -19.830824,
+    "longitude": 22.961945,
+    "tags": [
+      "elit",
+      "duis",
+      "aliquip",
+      "proident",
+      "quis",
+      "fugiat",
+      "cupidatat"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Murphy Mccall"
+      },
+      {
+        "id": 1,
+        "name": "Horton Sellers"
+      },
+      {
+        "id": 2,
+        "name": "Janelle Hahn"
+      }
+    ],
+    "greeting": "Hello, Woods Morris! You have 3 unread messages.",
+    "favoriteFruit": "apple"
+  },
+  {
+    "_id": "634b6260dc977c6e35e64ae0",
+    "index": 4,
+    "guid": "99b57149-cda3-44a1-b572-29708f122188",
+    "isActive": false,
+    "balance": "$3,712.21",
+    "picture": "http://placehold.it/32x32",
+    "age": 36,
+    "eyeColor": "blue",
+    "name": "Gabriela Merritt",
+    "gender": "female",
+    "company": "AUSTECH",
+    "email": "gabrielamerritt@austech.com",
+    "phone": "+1 (978) 472-2991",
+    "address": "714 Dank Court, Tryon, Guam, 4493",
+    "about": "Velit consequat sit commodo id elit sint cillum. Exercitation sint non adipisicing non Lorem fugiat incididunt reprehenderit id. Cillum sunt ullamco id exercitation officia incididunt eiusmod ad et do irure. In anim occaecat deserunt voluptate incididunt officia nulla irure sint nisi dolor. Sint nisi ex culpa ullamco. Elit deserunt in nulla proident in sint proident officia aute labore reprehenderit cupidatat ut. Amet amet magna sit magna ipsum esse qui sunt consectetur mollit.\r\n",
+    "registered": "2022-08-08T04:29:15 -09:00",
+    "latitude": -42.593092,
+    "longitude": 144.096782,
+    "tags": [
+      "ullamco",
+      "esse",
+      "sint",
+      "quis",
+      "nisi",
+      "duis",
+      "est"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Naomi Richards"
+      },
+      {
+        "id": 1,
+        "name": "Pansy Robinson"
+      },
+      {
+        "id": 2,
+        "name": "Jewel Mcmahon"
+      }
+    ],
+    "greeting": "Hello, Gabriela Merritt! You have 6 unread messages.",
+    "favoriteFruit": "banana"
+  }
+]
+
