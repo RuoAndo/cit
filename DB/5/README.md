@@ -93,4 +93,25 @@ green,294
 Counter({"['blue']": 301, "['green']": 294, "['brown']": 281})
 </pre>
 
+#11. pythonからSQL文を発行
 
+sqlite.py
+<pre>
+import sqlite3
+
+dbname = 'sakila_master.db'
+conn = sqlite3.connect(dbname)
+cur = conn.cursor()
+
+cur.execute('SELECT * FROM film limit 2')
+
+print(cur.fetchall())
+
+cur.close()
+conn.close()
+</pre>
+
+<pre>
+(base) PS C:\Users\flare\cit\DB\5> python .\sqlite.py
+[(1, 'ACADEMY DINOSAUR', 'A Epic Drama of a Feminist And a Mad Scientist who must Battle a Teacher in The Canadian Rockies', '2006', 1, None, 6, 0.99, 86, 20.99, 'PG', 'Deleted Scenes,Behind the Scenes', '2020-12-23 07:12:31'), (2, 'ACE GOLDFINGER', 'A Astounding Epistle of a Database Administrator And a Explorer who must Find a Car in Ancient China', '2006', 1, None, 3, 4.99, 48, 12.99, 'G', 'Trailers,Deleted Scenes', '2020-12-23 07:12:31')]
+</pre>
