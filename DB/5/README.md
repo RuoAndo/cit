@@ -93,7 +93,7 @@ green,294
 Counter({"['blue']": 301, "['green']": 294, "['brown']": 281})
 </pre>
 
-#11. pythonからSQL文を発行
+# 11. pythonからSQL文を発行
 
 sqlite.py
 <pre>
