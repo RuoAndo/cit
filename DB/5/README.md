@@ -115,3 +115,17 @@ conn.close()
 (base) PS C:\Users\flare\cit\DB\5> python .\sqlite.py
 [(1, 'ACADEMY DINOSAUR', 'A Epic Drama of a Feminist And a Mad Scientist who must Battle a Teacher in The Canadian Rockies', '2006', 1, None, 6, 0.99, 86, 20.99, 'PG', 'Deleted Scenes,Behind the Scenes', '2020-12-23 07:12:31'), (2, 'ACE GOLDFINGER', 'A Astounding Epistle of a Database Administrator And a Explorer who must Find a Car in Ancient China', '2006', 1, None, 3, 4.99, 48, 12.99, 'G', 'Trailers,Deleted Scenes', '2020-12-23 07:12:31')]
 </pre>
+
+#12. JSONをSTL map (C++)に格納
+
+下記を実行
+
+<pre>
+(base) PS C:\Users\flare\cit\DB\5> cd .\nlohmann\
+(base) PS C:\Users\flare\cit\DB\5\nlohmann> g++ .\4.cpp -I./
+(base) PS C:\Users\flare\cit\DB\5\nlohmann> .\a.exe
+</pre>
+
+<img src="4.png">
+
+
