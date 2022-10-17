@@ -116,7 +116,10 @@ conn.close()
 [(1, 'ACADEMY DINOSAUR', 'A Epic Drama of a Feminist And a Mad Scientist who must Battle a Teacher in The Canadian Rockies', '2006', 1, None, 6, 0.99, 86, 20.99, 'PG', 'Deleted Scenes,Behind the Scenes', '2020-12-23 07:12:31'), (2, 'ACE GOLDFINGER', 'A Astounding Epistle of a Database Administrator And a Explorer who must Find a Car in Ancient China', '2006', 1, None, 3, 4.99, 48, 12.99, 'G', 'Trailers,Deleted Scenes', '2020-12-23 07:12:31')]
 </pre>
 
-#12. JSONをSTL map (C++)に格納
+# 12. JSONをSTL map (C++)に格納
+
+nlohmann/jsonを使う
+https://qiita.com/yohm/items/0f389ba5c5de4e2df9cf
 
 下記を実行
 
