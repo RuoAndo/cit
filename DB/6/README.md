@@ -66,3 +66,38 @@ SONIA|GREGORY|23:50:11
 CHARLES|KOWALSKI|23:54:34
 JEANETTE|GREENE|23:54:46
 </pre>
+
+<pre>
+sqlite> .schema customer
+CREATE TABLE customer (
+  customer_id INT NOT NULL,
+  store_id INT NOT NULL,
+  first_name VARCHAR(45) NOT NULL,
+  last_name VARCHAR(45) NOT NULL,
+  email VARCHAR(50) DEFAULT NULL,
+  address_id INT NOT NULL,
+  active CHAR(1) DEFAULT 'Y' NOT NULL,
+  create_date TIMESTAMP NOT NULL,
+  last_update TIMESTAMP NOT NULL,
+  PRIMARY KEY  (customer_id),
+  CONSTRAINT fk_customer_store FOREIGN KEY (store_id) REFERENCES store (store_id) ON DELETE NO ACTION ON UPDATE CASCADE,
+  CONSTRAINT fk_customer_address FOREIGN KEY (address_id) REFERENCES address (address_id) ON DELETE NO ACTION ON UPDATE CASCADE
+);
+</pre>
+
+<pre>
+sqlite> .schema rental
+CREATE TABLE rental (
+  rental_id INT NOT NULL,
+  rental_date TIMESTAMP NOT NULL,
+  inventory_id INT  NOT NULL,
+  customer_id INT  NOT NULL,
+  return_date TIMESTAMP DEFAULT NULL,
+  staff_id SMALLINT  NOT NULL,
+  last_update TIMESTAMP NOT NULL,
+  PRIMARY KEY (rental_id),
+  CONSTRAINT fk_rental_staff FOREIGN KEY (staff_id) REFERENCES staff (staff_id) ,
+  CONSTRAINT fk_rental_inventory FOREIGN KEY (inventory_id) REFERENCES inventory (inventory_id) ,
+  CONSTRAINT fk_rental_customer FOREIGN KEY (customer_id) REFERENCES customer (customer_id)
+);
+</pre>
