@@ -46,7 +46,9 @@ sqlite> select distinct actor_id from film_actor order by actor_id limit 5;
 # 2. テーブルのリンク
 
 <pre>
-sqlite> select c.first_name, c.last_name, time(rental.rental_date) rental_time from customer c inner join rental on c.customer_id = rental.customer_id where date(rental.rental_date) = '2005-06-14';
+sqlite> select c.first_name, c.last_name, time(rental.rental_date) rental_time from customer c 
+inner join rental on c.customer_id = rental.customer_id where date(rental.rental_date) = '2005-06-14';
+
 JEFFERY|PINSON|22:53:33
 ELMER|NOE|22:55:13
 MINNIE|ROMERO|23:00:34
