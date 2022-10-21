@@ -60,7 +60,8 @@ sqlite> select distinct actor_id from film_actor order by actor_id limit 5;
 
 # 3. テーブルのリンク (SQL JOIN)
 
-<pre> customerテーブル
+customerテーブル
+<pre> 
 sqlite> .schema customer
 CREATE TABLE customer (
   customer_id INT NOT NULL,
@@ -78,7 +79,8 @@ CREATE TABLE customer (
 );
 </pre>
 
-<pre> schemaテーブル
+schemaテーブル
+<pre> 
 sqlite> .schema rental
 CREATE TABLE rental (
   rental_id INT NOT NULL,
@@ -95,6 +97,7 @@ CREATE TABLE rental (
 );
 </pre>
 
+JOINコマンド
 <pre>
 sqlite> select c.first_name, c.last_name, time(rental.rental_date) rental_time from customer c 
 inner join rental on c.customer_id = rental.customer_id where date(rental.rental_date) = '2005-06-14';
