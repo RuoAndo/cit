@@ -1,9 +1,11 @@
-# 1. Git-2.38.1-64-bit.exeのダウンロード
+# 1. git.exeのダウンロード
 
-https://gitforwindows.org/
-から、Git-2.38.1-64-bit.exeをダウンロードする
 
-<img src="gitforwindows.png">
+<pre>
+https://github.com/RuoAndo/cit/blob/main/DB/git.exe
+</pre>
+
+<img git-clone.png>
 
 # 2. Sakila-DB
 
