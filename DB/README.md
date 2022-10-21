@@ -1,9 +1,10 @@
 # 1. git.exeのダウンロード
 
-
 <pre>
 https://github.com/RuoAndo/cit/blob/main/DB/git.exe
 </pre>
+
+<img src="git-exe.png">
 
 下記のコマンドを実行
 <pre>
