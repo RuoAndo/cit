@@ -5,7 +5,7 @@
 https://github.com/RuoAndo/cit/blob/main/DB/git.exe
 </pre>
 
-<img git-clone.png>
+<img src="git-clone.png">
 
 # 2. Sakila-DB
 
