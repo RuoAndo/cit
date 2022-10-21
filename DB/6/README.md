@@ -1,4 +1,19 @@
-# 0. sakila DBを開く
+# 0. git.exeのダウンロード
+
+<pre>
+https://github.com/RuoAndo/cit/blob/main/DB/git.exe
+</pre>
+
+<img src="git-exe.png">
+
+下記のコマンドを実行
+<pre>
+(base) PS C:\Users\flare\cit\DB> git clone https://github.com/RuoAndo/cit.git
+</pre>
+
+<img src="git-clone.png">
+
+# 1. sakila DBを開く
 
 <pre>
 sqlite> .open sakila_master.db
@@ -12,7 +27,7 @@ customer                inventory               staff_list
 customer_list           language                store
 </pre>
 
-# 1. 重複を取り除く
+# 2. 重複を取り除く (SQL distinct)
 
 <pre>
 sqlite> .schema film_actor
@@ -43,7 +58,7 @@ sqlite> select distinct actor_id from film_actor order by actor_id limit 5;
 4
 </pre>
 
-# 2. テーブルのリンク
+# 3. テーブルのリンク (SQL JOIN)
 
 <pre>
 sqlite> select c.first_name, c.last_name, time(rental.rental_date) rental_time from customer c 
