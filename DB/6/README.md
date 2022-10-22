@@ -120,4 +120,42 @@ CHARLES|KOWALSKI|23:54:34
 JEANETTE|GREENE|23:54:46
 </pre>
 
+# 4. Tableの作成
+
+<pre>
+sqlite> create table person
+   ...> (person_id SMALLINT UNSIGNED,
+   ...> fname VARCHAR(20),
+   ...> lname VARCHAR(20),
+   ...> eye_color CHAR(2),
+   ...> birth_date DATE,
+   ...> street VARCHAR(30),
+   ...> city VARCHAR(20),
+   ...> street VARCHAR(30),
+   ...> country VARCHAR(20),
+   ...> postal_code VARCHAR(20),
+   ...> CONSTRAINT pk_person PRIMARY KEY (person_id)
+   ...> );
+ </pre>
+
+<pre>
+create table person (person_id INTEGER PRIMARY KEY AUTOINCREMENT, fname VARCHAR(20), lname VARCHAR(20), eye_color CHAR(2), birth_date DATE, street VARCHAR(30), city VARCHAR(20), state VARCHAR(30), country VARCHAR(20), postal_code VARCHAR(20));
+</pre>
+
+# 5. データをINSERT（格納）する
+<pre>
+sqlite> insert into person (fname, lname, eye_color, birth_date)
+   ...> values('taro', 'yamada', 'BR', '1972-05-27');
+sqlite> select person_id, fname, lname, birth_date from person;
+1|taro|yamada|1972-05-27
+sqlite> insert into person (fname, lname, eye_color, birth_date)
+   ...> values('hanako', 'sato', 'BR', '1972-10-27');
+sqlite> select person_id, fname, lname, birth_date from person;
+1|taro|yamada|1972-05-27
+2|hanako|sato|1972-10-27
+</pre>
+
+<img src="insert.png">
+
+ 
 
