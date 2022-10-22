@@ -181,5 +181,25 @@ pizza
 soba
 </pre>
 
+# 7. 好物と誕生日を結合した表を作る (SQL:JOIN)
 
+<pre>
+sqlite> .schema person
+CREATE TABLE person (person_id INTEGER PRIMARY KEY AUTOINCREMENT, fname VARCHAR(20), lname VARCHAR(20), eye_color CHAR(2), birth_date DATE, street VARCHAR(30), city VARCHAR(20), state VARCHAR(30), country VARCHAR(20), postal_code VARCHAR(20));
+sqlite> .schema favarite_food
+CREATE TABLE favarite_food
+(person_id SMALLINT UNSINGED,
+food varchar(20),
+constraint pk_favorite_food primary key (person_id, food),
+constraint fk_fav_food_person_id foreign key (person_id)
+references person (person_id)
+);
+</pre>
+
+<pre>
+sqlite> select p.fname, p.lname, p.birth_date, favarite_food.food from person p inner join favarite_food on p.person_id = favarite_food.person_id;
+taro|yamada|1972-05-27|pizza
+hanako|sato|1972-10-27|curry
+taro|yamada|1972-05-27|soba
+</pre>
 
