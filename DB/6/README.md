@@ -157,5 +157,29 @@ sqlite> select person_id, fname, lname, birth_date from person;
 
 <img src="insert.png">
 
- 
+# 6. 好きな食べ物のテーブルを作成
+
+<pre>
+sqlite> create table favarite_food
+   ...> (person_id SMALLINT UNSINGED,
+   ...> food varchar(20),
+   ...> constraint pk_favorite_food primary key (person_id, food),
+   ...> constraint fk_fav_food_person_id foreign key (person_id)
+   ...> references person (person_id)
+   ...> );
+</pre>
+
+好物を格納
+<pre>
+sqlite> insert into favarite_food (person_id, food)
+   ...> values (1, 'pizza');
+sqlite> insert into favarite_food (person_id, food)
+   ...> values (1, 'soba');
+   
+sqlite> select food from favarite_food where person_id = 1 order by food;
+pizza
+soba
+</pre>
+
+
 
