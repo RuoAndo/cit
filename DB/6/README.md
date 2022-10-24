@@ -203,7 +203,7 @@ hanako|sato|1972-10-27|curry
 taro|yamada|1972-05-27|soba
 </pre>
 
-# 8. Sakila-DB: 38本以上レンタルした人の表を作る
+# 8. Sakila-DB: 38本以上レンタルした人の表を作る (SQL:JOIN)
 
 Group byを使う場合、whereの代わりにhavingを使う。
 
