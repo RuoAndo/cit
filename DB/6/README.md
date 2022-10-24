@@ -203,3 +203,16 @@ hanako|sato|1972-10-27|curry
 taro|yamada|1972-05-27|soba
 </pre>
 
+# 8. Sakila-DB: 38本以上レンタルした人の表を作る
+
+Group byを使う場合、whereの代わりにhavingを使う。
+
+<pre>
+sqlite> select c.first_name, c.last_name, count(*) from customer c inner join rental r on c.customer_id = r.customer_id group by c.first_name, c.last_name having count(*) >=38;
+</pre>
+
+<img src="rental.png">
+
+
+
+
