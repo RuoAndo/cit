@@ -58,7 +58,7 @@ sqlite> select distinct actor_id from film_actor order by actor_id limit 5;
 4
 </pre>
 
-# 3. テーブルのリンク (SQL JOIN)
+# 3. テーブルの結合 (SQL JOIN)
 
 customerテーブル
 <pre> 
