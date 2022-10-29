@@ -64,8 +64,19 @@ create table player (person_id INTEGER PRIMARY KEY AUTOINCREMENT, fname VARCHAR(
 create table character (person_id INTEGER, character_name VARCHAR(20), HP INTERGER, MP INTEGER, EXP INTEGER);
 </pre>
 
-<img src="character.png>
-          
+<img src="character.png">
+
+1.3 プレイヤー情報の登録
+
+<pre>
+insert into player (fname, lname, character, points, rank) values('taro', 'yamada', 'doraemon', '0', 'D');
+insert into player (fname, lname, character, points, rank) values('hanako', 'sato', 'akinator', '0', 'D');          
+</pre>
+
+<img src="insert-player.png">
+
+
+
 
 
 
