@@ -22,6 +22,6 @@ Taro Yamadaのデータを格納
 insert into person (fname, lname, eye_color, birth_date) values('taro', 'yamada', 'BR', '1972-05-27');
 </pre>
 
-
+<img src="insert.png">
 
 
