@@ -53,7 +53,7 @@ select p.fname, p.lname, p.birth_date, favarite_food.food from person p inner jo
 1.1 プレイヤーのテーブルを作成する
 
 <pre>
-create table player (person_id INTEGER PRIMARY KEY AUTOINCREMENT, fname VARCHAR(20), lname VARCHAR(20), character VARCHAR(20), points VARCHAR(20), rank VARCHAR(20));
+create table player (person_id INTEGER PRIMARY KEY AUTOINCREMENT, fname VARCHAR(20), lname VARCHAR(20), points INTEGER, rank VARCHAR(20));
 </pre>
 
 <img src="player.png">
@@ -61,21 +61,26 @@ create table player (person_id INTEGER PRIMARY KEY AUTOINCREMENT, fname VARCHAR(
 1.2 キャラクタのテーブルを作成する
 
 <pre>
-create table character (person_id INTEGER, character_name VARCHAR(20), HP INTERGER, MP INTEGER, EXP INTEGER);
+create table character (person_id INTEGER, character_id INTEGER, character_name VARCHAR(20), HP INTERGER, MP INTEGER, EXP INTEGER);
 </pre>
 
 <img src="character.png">
 
 1.3 プレイヤー情報の登録
-
 <pre>
-insert into player (fname, lname, character, points, rank) values('taro', 'yamada', 'doraemon', '0', 'D');
-insert into player (fname, lname, character, points, rank) values('hanako', 'sato', 'akinator', '0', 'D');          
+insert into player (fname, lname, points, rank) values('taro', 'yamada', '0', 'D');
+insert into player (fname, lname, points, rank) values('hanako', 'sato', '0', 'D');        
 </pre>
 
 <img src="insert-player.png">
 
+1.4 キャラクタ情報の登録
+<pre>
+insert into character (person_id, character_id, character_name, HP, MP, EXP) values(1, 1, 'doraemon', 10, 10, 0)
+insert into character (person_id, character_id, character_name, HP, MP, EXP) values(2, 2, 'akinator', 15, 5, 0);
+</pre>
 
+<img src="insert-character.png">
 
 
 
