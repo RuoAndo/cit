@@ -30,3 +30,14 @@ insert into person (fname, lname, eye_color, birth_date) values('taro', 'yamada'
 update person set street='minamisenju 17', city='arakawa-ku', state='tokyo', country='japan', postal_code = '1160003' where person_id = 1;
 </pre>
 
+0.6 TaroさんとHanakoさんの好物を追加
+
+<pre>
+insert into favarite_food (person_id, food) values (1, 'pizza');
+insert into favarite_food (person_id, food) values (1, 'soba');
+insert into favarite_food (person_id, food) values (2, 'ramen');
+</pre>
+
+<img src="food.png">
+
+
