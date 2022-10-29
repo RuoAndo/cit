@@ -47,3 +47,18 @@ select p.fname, p.lname, p.birth_date, favarite_food.food from person p inner jo
 </pre>
 
 <img src="join.png">
+
+# 1. ゲームのステータス画面のDB設計
+
+1.1 プレイヤーのテーブルを作成する
+
+<pre>
+create table player (person_id INTEGER PRIMARY KEY AUTOINCREMENT, fname VARCHAR(20), lname VARCHAR(20), character VARCHAR(20), points VARCHAR(20), rank VARCHAR(20));
+</pre>
+
+<img src="player.png">
+
+
+
+
+
