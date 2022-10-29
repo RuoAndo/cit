@@ -58,7 +58,14 @@ create table player (person_id INTEGER PRIMARY KEY AUTOINCREMENT, fname VARCHAR(
 
 <img src="player.png">
 
+1.2 キャラクタのテーブルを作成する
 
+<pre>
+create table character (person_id INTEGER, character_name VARCHAR(20), HP INTERGER, MP INTEGER, EXP INTEGER);
+</pre>
+
+<img src="character.png>
+          
 
 
 
