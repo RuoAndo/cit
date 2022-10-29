@@ -82,6 +82,18 @@ insert into character (person_id, character_id, character_name, HP, MP, EXP) val
 
 <img src="insert-character.png">
 
+1.5 キャラクタの値を更新
+<pre>
+update character set HP=5, MP=10, EXP=5 where character_id = 1;
+</pre>
+<img src="update.png">
+
+1.6 更新されたプレイヤーのステータス情報のテーブルを作る
+
+<pre>
+select p.fname, p.lname, points, rank, character.character_name, character.HP, character.MP, character.EXP from player p inner join character on p.person_id = character.person_id;
+</pre>
+
 
 
 
