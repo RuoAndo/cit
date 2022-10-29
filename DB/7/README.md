@@ -11,3 +11,17 @@ create table favarite_food (person_id SMALLINT UNSINGED, food varchar(20), const
 </pre>
 
 <img src="create-table.png">
+
+Sato Hanakoのデータを格納
+<pre>
+insert into person (fname, lname, eye_color, birth_date) values('hanako', 'sato', 'BR', '1972-10-27');
+</pre>
+
+Taro Yamadaのデータを格納
+<pre>
+insert into person (fname, lname, eye_color, birth_date) values('taro', 'yamada', 'BR', '1972-05-27');
+</pre>
+
+
+
+
