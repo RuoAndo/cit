@@ -42,5 +42,8 @@ insert into favarite_food (person_id, food) values (2, 'ramen');
 
 0.7 住所のテーブルと好物のテーブルをperson_idで結合する
 
+<pre>
 select p.fname, p.lname, p.birth_date, favarite_food.food from person p inner join favarite_food on p.person_id = favarite_food.person_id;
+</pre>
 
+<img src="join.png">
