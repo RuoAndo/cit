@@ -1,5 +1,7 @@
 # 0. 好きな食べ物のデータベースを作成
 
+<img src="eaters.png">
+
 0.1 人のテーブルを作成
 <pre>
 create table favarite_food (person_id SMALLINT UNSINGED, food varchar(20), constraint pk_favorite_food primary key (person_id, food), constraint fk_fav_food_person_id foreign key (person_id) references person (person_id));
