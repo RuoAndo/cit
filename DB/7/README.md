@@ -50,6 +50,8 @@ select p.fname, p.lname, p.birth_date, favarite_food.food from person p inner jo
 
 # 1. ゲームのステータス画面のDB設計
 
+<img src="characters.png">
+
 1.1 プレイヤーのテーブルを作成する
 
 <pre>
