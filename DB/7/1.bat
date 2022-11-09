@@ -1,4 +1,5 @@
 sqlite3 cit-7.db "drop table person;"
+sqlite3 cit-7.db "drop table favarite_food;"
 
 sqlite3 cit-7.db "create table person (person_id INTEGER PRIMARY KEY AUTOINCREMENT, fname VARCHAR(20), lname VARCHAR(20), eye_color CHAR(2), birth_date DATE, street VARCHAR(30), city VARCHAR(20), state VARCHAR(30), country VARCHAR(20), postal_code VARCHAR(20));"
 
