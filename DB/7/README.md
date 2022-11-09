@@ -180,7 +180,7 @@ HP = random.randint(0, 20)
 MP = random.randint(0, 20)
 comstr = "update character set HP=" + str(HP) + ", MP=" + str(MP) + ", EXP=5 where character_id = 1;"
 
-# 3.テーブルに人名データを登録する
+# 3.
 cur.execute(comstr)
 
 HP = random.randint(0, 20)
@@ -211,7 +211,7 @@ conn = sqlite3.connect(dbname)
 # 2.sqliteを操作するカーソルオブジェクトを作成
 cur = conn.cursor()
 
-# 3.テーブルに人名データを登録する
+# 3.
 cur.execute('select * from character;')
 for row in cur:
     print(row)
