@@ -159,9 +159,13 @@ sqlite3 cit-7.db "select p.fname, p.lname, points, rank, character.character_nam
 <hr>
 1.8 pythonからSQL実行
 
-ランダムにHPとMPを変化させる
+1.8.1 playerのテーブルを作成
 
-1.8.1 update.py
+<img src="create_players_table.png">
+
+
+
+1.8.3 ランダムにHPとMPを変化させる - update.py
 
 ```python
 #!/usr/bin/env python
@@ -228,7 +232,6 @@ conn.close()
 
 1.8.3 pythonだけで動作確認
 
-<img src="create_players_table.png">
 
 1.9 ER図を書いてまとめる
 
