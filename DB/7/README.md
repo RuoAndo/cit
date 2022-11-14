@@ -211,10 +211,6 @@ conn = sqlite3.connect(dbname)
 # 2.sqliteを操作するカーソルオブジェクトを作成zuwo
 cur = conn.cursor()
 
-1.8.3 pythonだけで動作確認
-
-
-
 # 3.
 cur.execute('select * from character;')
 for row in cur:
@@ -228,7 +224,9 @@ cur.close()
 conn.close()
 </pre>
 
-<img src="python.png">
+1.8.3 pythonだけで動作確認
+
+<img src="create_players_table.png">
 
 1.9 ER図を書いてまとめる
 
