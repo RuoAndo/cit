@@ -130,7 +130,7 @@ select p.fname, p.lname, points, rank, character.character_name, character.HP, c
 </pre>
 
 <hr>
-バッチで一括実行
+1.7 バッチで一括実行
 
 2.bat
 <pre>
@@ -157,11 +157,11 @@ sqlite3 cit-7.db "select p.fname, p.lname, points, rank, character.character_nam
 <img src="2bat.png">
 
 <hr>
-pythonからSQL実行
+1.8 pythonからSQL実行
 
 ランダムにHPとMPを変化させる
 
-update.py
+1.8.1 update.py
 <pre>
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
@@ -197,7 +197,7 @@ cur.close()
 conn.close()
 </pre>
 
-show.py
+1.8.2 show.py
 <pre>
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
