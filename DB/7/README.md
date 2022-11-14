@@ -162,7 +162,8 @@ sqlite3 cit-7.db "select p.fname, p.lname, points, rank, character.character_nam
 ランダムにHPとMPを変化させる
 
 1.8.1 update.py
-```
+
+```python
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
