@@ -163,7 +163,9 @@ sqlite3 cit-7.db "select p.fname, p.lname, points, rank, character.character_nam
 
 <img src="create_players_table.png">
 
+1.8.2 characterのテーブルを作成
 
+<img src="create_characters_table.png">
 
 1.8.3 ランダムにHPとMPを変化させる - update.py
 
