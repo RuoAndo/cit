@@ -230,4 +230,4 @@ conn.close()
 
 1.9 ER図を書いてまとめる
 
-<img src="7-ER.jpg">
+<img src="7-ER.jpg" width=70%>
