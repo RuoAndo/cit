@@ -208,8 +208,10 @@ dbname = 'cit-7.db'
 # 1.データベースに接続
 conn = sqlite3.connect(dbname)
 
-# 2.sqliteを操作するカーソルオブジェクトを作成
+# 2.sqliteを操作するカーソルオブジェクトを作成zuwo
 cur = conn.cursor()
+
+
 
 # 3.
 cur.execute('select * from character;')
@@ -225,3 +227,7 @@ conn.close()
 </pre>
 
 <img src="python.png">
+
+1.9 ER図を書いてまとめる
+
+<img src="7-ER.jpg">
