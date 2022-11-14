@@ -211,6 +211,8 @@ conn = sqlite3.connect(dbname)
 # 2.sqliteを操作するカーソルオブジェクトを作成zuwo
 cur = conn.cursor()
 
+1.8.3 pythonだけで動作確認
+
 
 
 # 3.
