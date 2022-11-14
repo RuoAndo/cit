@@ -199,7 +199,8 @@ conn.close()
 ```
 
 1.8.2 show.py
-<pre>
+
+```python
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
@@ -223,7 +224,7 @@ conn.commit()
 # 5.データベースの接続を切断
 cur.close()
 conn.close()
-</pre>
+```
 
 1.8.3 pythonだけで動作確認
 
