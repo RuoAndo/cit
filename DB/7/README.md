@@ -130,7 +130,7 @@ select p.fname, p.lname, points, rank, character.character_name, character.HP, c
 </pre>
 
 <hr>
-バッチで一括実行
+1.7 バッチで一括実行
 
 2.bat
 <pre>
@@ -157,12 +157,17 @@ sqlite3 cit-7.db "select p.fname, p.lname, points, rank, character.character_nam
 <img src="2bat.png">
 
 <hr>
-pythonからSQL実行
+1.8 pythonからSQL実行
 
-ランダムにHPとMPを変化させる
+1.8.1 playerのテーブルを作成
 
-update.py
-<pre>
+<img src="create_players_table.png">
+
+
+
+1.8.3 ランダムにHPとMPを変化させる - update.py
+
+```python
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
@@ -195,10 +200,11 @@ conn.commit()
 # 5.データベースの接続を切断
 cur.close()
 conn.close()
-</pre>
+```
 
-show.py
-<pre>
+1.8.2 show.py
+
+```python
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
@@ -208,7 +214,7 @@ dbname = 'cit-7.db'
 # 1.データベースに接続
 conn = sqlite3.connect(dbname)
 
-# 2.sqliteを操作するカーソルオブジェクトを作成
+# 2.sqliteを操作するカーソルオブジェクトを作成zuwo
 cur = conn.cursor()
 
 # 3.
@@ -222,6 +228,11 @@ conn.commit()
 # 5.データベースの接続を切断
 cur.close()
 conn.close()
-</pre>
+```
 
-<img src="python.png">
+1.8.3 pythonだけで動作確認
+
+
+1.9 ER図を書いてまとめる
+
+<img src="7-ER.jpg" width=70%>
