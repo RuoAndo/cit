@@ -162,7 +162,7 @@ sqlite3 cit-7.db "select p.fname, p.lname, points, rank, character.character_nam
 ランダムにHPとMPを変化させる
 
 1.8.1 update.py
-<pre>
+```
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
@@ -195,7 +195,7 @@ conn.commit()
 # 5.データベースの接続を切断
 cur.close()
 conn.close()
-</pre>
+```
 
 1.8.2 show.py
 <pre>
