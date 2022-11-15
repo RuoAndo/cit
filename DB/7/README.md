@@ -232,7 +232,9 @@ cur.close()
 conn.close()
 ```
 
-1.8.3 pythonだけで動作確認
+1.8.3 通しで実行してみる
+
+<ing src="python-through.png">
 
 
 1.9 ER図を書いてまとめる
