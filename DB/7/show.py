@@ -11,7 +11,7 @@ conn = sqlite3.connect(dbname)
 cur = conn.cursor()
 
 # 3.playerテーブルを見る
-cur.execute('select * from character;')
+cur.execute('select * from player;')
 for row in cur:
     print(row)
     
