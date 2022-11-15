@@ -234,7 +234,28 @@ conn.close()
 
 1.8.3 通しで実行してみる
 
-<ing src="python-through.png">
+<pre>
+(base) C:\Users\flare\OneDrive\cit\DB\7>rm cit-7.db
+(base) C:\Users\flare\OneDrive\cit\DB\7>python create_players_table.py
+(base) C:\Users\flare\OneDrive\cit\DB\7>python create_characters_table.py
+(base) C:\Users\flare\OneDrive\cit\DB\7>python insert.py
+(base) C:\Users\flare\OneDrive\cit\DB\7>python show.py
+(1, 'taro', 'yamada', 0, 'D')
+(2, 'hanako', 'sato', 0, 'D')
+---
+(1, 1, 'doraemon', 10, 10, 0)
+(2, 2, 'akinator', 15, 5, 0)
+
+(base) C:\Users\flare\OneDrive\cit\DB\7>python update.py
+(base) C:\Users\flare\OneDrive\cit\DB\7>python show.py
+(1, 'taro', 'yamada', 0, 'D')
+(2, 'hanako', 'sato', 0, 'D')
+---
+(1, 1, 'doraemon', 1, 17, 5)
+(2, 2, 'akinator', 14, 13, 5)
+</pre>
+
+<img src="python-through-2.png">
 
 
 1.9 ER図を書いてまとめる
