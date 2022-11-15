@@ -4,21 +4,23 @@
 import sqlite3
 
 dbname = 'cit-7.db'
-# 1.ƒf[ƒ^ƒx[ƒX‚ÉÚ‘±
+# 1.ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã«æ¥ç¶š
 conn = sqlite3.connect(dbname)
 
-# 2.sqlite‚ğ‘€ì‚·‚éƒJ[ƒ\ƒ‹ƒIƒuƒWƒFƒNƒg‚ğì¬
+# 2.sqliteã‚’æ“ä½œã™ã‚‹ã‚«ãƒ¼ã‚½ãƒ«ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ä½œæˆ
 cur = conn.cursor()
 
-# 3.ƒe[ƒuƒ‹‚Él–¼ƒf[ƒ^‚ğ“o˜^‚·‚é
+# 3.playerãƒ†ãƒ¼ãƒ–ãƒ«ã‚’è¦‹ã‚‹
 cur.execute('select * from character;')
 for row in cur:
     print(row)
-
-# 4.ƒf[ƒ^ƒx[ƒX‚Éƒf[ƒ^‚ğƒRƒ~ƒbƒg
-conn.commit()
-
-# 5.ƒf[ƒ^ƒx[ƒX‚ÌÚ‘±‚ğØ’f
+    
+# 4.characterãƒ†ãƒ¼ãƒ–ãƒ«ã‚’è¦‹ã‚‹
+cur.execute('select * from character;')
+for row in cur:
+    print(row)
+    
+# 5.ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã®æ¥ç¶šã‚’åˆ‡æ–­
 cur.close()
 conn.close()
 
