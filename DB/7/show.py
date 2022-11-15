@@ -15,6 +15,8 @@ cur.execute('select * from player;')
 for row in cur:
     print(row)
     
+print("---")    
+    
 # 4.characterテーブルを見る
 cur.execute('select * from character;')
 for row in cur:
