@@ -20,3 +20,12 @@ for number in range(10):
 ```
 
 <img src="1.png">
+
+# 2. sakira_dbの時系列データを見てみる
+
+<pre>
+sqlite> .open sakila_master.db
+sqlite> .schema rental
+</pre>
+
+<img src="sakila_timestamp.png">
