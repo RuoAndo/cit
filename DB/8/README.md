@@ -39,6 +39,8 @@ sqlite> select * from rental limit 5;
 5|2005-05-24 23:05:21.000|2079|222|2005-06-02 04:33:21.000|1|2020-12-23 07:15:20
 </pre>
 
+2005年6月14日にレンタルした人を調べる
+
 <pre>
 sqlite> select customer.first_name, customer.last_name, time(rental.rental_date) rental_time from customer inner join rental on customer.customer_id = rental.customer_id where date(rental.rental_date) = '2005-06-14';
 </pre>
