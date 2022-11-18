@@ -38,3 +38,9 @@ sqlite> select * from rental limit 5;
 4|2005-05-24 23:04:41.000|2452|333|2005-06-03 01:43:41.000|2|2020-12-23 07:15:20
 5|2005-05-24 23:05:21.000|2079|222|2005-06-02 04:33:21.000|1|2020-12-23 07:15:20
 </pre>
+
+<pre>
+sqlite> select customer.first_name, customer.last_name, time(rental.rental_date) rental_time from customer inner join rental on customer.customer_id = rental.customer_id where date(rental.rental_date) = '2005-06-14';
+</pre>
+
+<img src="rental.png">
