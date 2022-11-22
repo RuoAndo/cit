@@ -44,8 +44,17 @@ sqlite> select customer.first_name, customer.last_name, time(rental.rental_date)
 <img src="rental.png">
 
 # 3. csvファイルを読み込む
+
+3.1 csvファイルwdataframeに格納
 <pre>
 (base) PS C:\Users\flare\OneDrive\cit\DB\8> python .\csv-dataframe.py .\imdb_top_1000.csv
 </pre>
 
 <img src="csv-dataframe.png">
+
+3.2 dataframeをsqliteに格納
+<pre>
+(base) PS C:\Users\flare\OneDrive\cit\DB\8> python .\csv-dataframe-3.py .\imdb_top_1000.csv
+</pre>
+
+<img src="csv-dataframe-3.png">
