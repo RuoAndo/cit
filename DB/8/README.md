@@ -8,13 +8,9 @@
 import time
 import random
 import datetime
-
-
 for number in range(10):
-
 	dt_now = datetime.datetime.now()
 	print(dt_now.strftime('%Y-%m-%d %H:%M:%S'))
-
 	waitsec=random.randint(1,5)
 	time.sleep(waitsec)
 ```
@@ -46,3 +42,10 @@ sqlite> select customer.first_name, customer.last_name, time(rental.rental_date)
 </pre>
 
 <img src="rental.png">
+
+# 3. csvファイルを読み込む
+<pre>
+(base) PS C:\Users\flare\OneDrive\cit\DB\8> python .\csv-dataframe.py .\imdb_top_1000.csv
+</pre>
+
+<img src="csv-dataframe.png">
