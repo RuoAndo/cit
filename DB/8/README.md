@@ -58,3 +58,9 @@ sqlite> select customer.first_name, customer.last_name, time(rental.rental_date)
 </pre>
 
 <img src="csv-dataframe-3.png">
+
+#.4
+
+<img src="players.png">
+<img src="characters.png">
+
