@@ -59,8 +59,16 @@ sqlite> select customer.first_name, customer.last_name, time(rental.rental_date)
 
 <img src="csv-dataframe-3.png">
 
-#.4
+# 4 
 
 <img src="players.png">
 <img src="characters.png">
+
+4.1 データベースを初期化
+<pre>
+(base) PS C:\Users\flare\OneDrive\cit\DB\8> .\init.bat
+</pre>
+
+<img src="init.png">
+
 
