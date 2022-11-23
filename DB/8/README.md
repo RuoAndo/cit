@@ -85,4 +85,6 @@ sqlite> select customer.first_name, customer.last_name, time(rental.rental_date)
 (base) PS C:\Users\flare\OneDrive\cit\DB\8> python .\create_events_table.py
 </pre>
 
+4.5 通しで実行
 
+<img src="8-through.png">
