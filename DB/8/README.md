@@ -75,7 +75,7 @@ sqlite> select customer.first_name, customer.last_name, time(rental.rental_date)
 
 4.3 ランダム（０～５）に各キャラクターのHPを減少させるプログラムを実行
 
-<img src="random-hp-decrease.png>
+<img src="random-hp-decrease.png">
 
 
 
