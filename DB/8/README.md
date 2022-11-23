@@ -61,7 +61,7 @@ sqlite> select customer.first_name, customer.last_name, time(rental.rental_date)
 
 # 4. イベントの実装
 
-<img src="IMG_1201.jpg" width=100>
+<img src="IMG_1201.jpg" width=500>
 
 <img src="players.png">
 <img src="characters.png">
