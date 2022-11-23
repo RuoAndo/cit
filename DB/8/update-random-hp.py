@@ -24,7 +24,7 @@ for row in cur:
 
 	print(row)
 	strhp = str(row[0]) + "," + str(row[1]) + "," + str(row[2]) + "," + str(row[3])
-	print(strhp)
+	#print(strhp)
 
 	charaID = row[1];
 	damage = random.randint(0, 5)	
