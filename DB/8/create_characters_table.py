@@ -5,20 +5,23 @@ import sqlite3
 import random
 
 dbname = 'cit-7.db'
-# 1.ƒf[ƒ^ƒx[ƒX‚ÉÚ‘±
+# 1.ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã«æ¥ç¶š
 conn = sqlite3.connect(dbname)
 
-# 2.sqlite‚ğ‘€ì‚·‚éƒJ[ƒ\ƒ‹ƒIƒuƒWƒFƒNƒg‚ğì¬
+# 2.sqliteã‚’æ“ä½œã™ã‚‹ã‚«ãƒ¼ã‚½ãƒ«ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ä½œæˆ
 cur = conn.cursor()
 
-comstr = "create table character (person_id INTEGER, character_id INTEGER, character_name VARCHAR(20), HP INTERGER, MP INTEGER, EXP INTEGER);"
+comstr1 = "drop table character;"
+cur.execute(comstr1)
 
-# 3.ƒe[ƒuƒ‹‚Él–¼ƒf[ƒ^‚ğ“o˜^‚·‚é
-cur.execute(comstr)
+comstr2 = "create table character (person_id INTEGER, character_id INTEGER, character_name VARCHAR(20), HP INTERGER, MP INTEGER, EXP INTEGER);"
 
-# 4.ƒf[ƒ^ƒx[ƒX‚Éƒf[ƒ^‚ğƒRƒ~ƒbƒg
+# 3.ãƒ†ãƒ¼ãƒ–ãƒ«ã«äººåãƒ‡ãƒ¼ã‚¿ã‚’ç™»éŒ²ã™ã‚‹
+cur.execute(comstr2)
+
+# 4.ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã«ãƒ‡ãƒ¼ã‚¿ã‚’ã‚³ãƒŸãƒƒãƒˆ
 conn.commit()
 
-# 5.ƒf[ƒ^ƒx[ƒX‚ÌÚ‘±‚ğØ’f
+# 5.ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã®æ¥ç¶šã‚’åˆ‡æ–­
 cur.close()
 conn.close()
