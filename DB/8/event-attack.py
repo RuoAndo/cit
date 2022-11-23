@@ -36,7 +36,7 @@ for row in cur:
 	print("---")
 
 	cur2 = conn.cursor()
-	eventstr = "insert into events (person_id, character_id, character_name, event_type, event_time) values(" + str(row[0]) + "," + str(row[1]) + ",'" +  str(row[2]) + "'," + "'attack'" + ",'" +  timestr + "');"
+	eventstr = "insert into events (person_id, character_id, character_name, event_type, event_time) values(" + str(row[0]) + "," + str(row[1]) + ",'" +  str(row[2]) + "'," + "'attacked'" + ",'" +  timestr + "');"
 	print(eventstr)
 	cur2.execute(eventstr)
 	cur2.close()
