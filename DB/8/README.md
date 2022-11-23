@@ -71,7 +71,11 @@ sqlite> select customer.first_name, customer.last_name, time(rental.rental_date)
 <img src="init.png">
 
 4.2 各プレイヤーのHPを表示
-
 <img src="hp.png">
+
+4.3 ランダム（０～５）に各キャラクターのHPを減少させるプログラムを実行
+
+<img src="random-hp-decrease.png>
+
 
 
