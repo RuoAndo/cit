@@ -87,4 +87,12 @@ sqlite> select customer.first_name, customer.last_name, time(rental.rental_date)
 
 4.5 通しで実行
 
+<pre>
+(base) PS C:\Users\flare\OneDrive\cit\DB\8> python .\create_players_table.py
+(base) PS C:\Users\flare\OneDrive\cit\DB\8> python .\create_characters_table.py
+(base) PS C:\Users\flare\OneDrive\cit\DB\8> python .\insert.py
+(base) PS C:\Users\flare\OneDrive\cit\DB\8> python .\create_events_table.py
+(base) PS C:\Users\flare\OneDrive\cit\DB\8> python .\show3.py
+</pre>
+
 <img src="8-through.png">
