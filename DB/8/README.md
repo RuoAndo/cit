@@ -68,7 +68,10 @@ sqlite> select customer.first_name, customer.last_name, time(rental.rental_date)
 <pre>
 (base) PS C:\Users\flare\OneDrive\cit\DB\8> .\init.bat
 </pre>
-
 <img src="init.png">
+
+4.2 各プレイヤーのHPを表示
+
+<img src="hp.png">
 
 
