@@ -39,6 +39,7 @@ for row in cur:
 	
 conn.commit()
 
+print("---")
 print("[after]")
 print("player ID, character ID, character_nane, HP")
 
