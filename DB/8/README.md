@@ -81,7 +81,8 @@ sqlite> select customer.first_name, customer.last_name, time(rental.rental_date)
 4.4 イベントを記録する
 
 イベントのテーブルを作成
+<pre>
 (base) PS C:\Users\flare\OneDrive\cit\DB\8> python .\create_events_table.py
-
+</pre>
 
 
