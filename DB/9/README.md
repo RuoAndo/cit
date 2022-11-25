@@ -1,4 +1,4 @@
-0. ƒe[ƒuƒ‹‚ðì¬‚·‚é
+0. ãƒ†ãƒ¼ãƒ–ãƒ«ã‚’ä½œæˆã™ã‚‹
 
 (base) PS C:\Users\flare\OneDrive\cit\DB\9> python .\create_players_table.py
 (base) PS C:\Users\flare\OneDrive\cit\DB\9> python .\create_characters_table.py
