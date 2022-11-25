@@ -7,4 +7,4 @@
 (base) PS C:\Users\flare\OneDrive\cit\DB\9> python .\show_tables.py
 </pre>
 
-
+<img src="show_tables.png">
