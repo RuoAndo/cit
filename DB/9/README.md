@@ -9,4 +9,4 @@
 
 <img src="show_tables.png">
 
-<img src=".png">
+<img src="nobita.png">
