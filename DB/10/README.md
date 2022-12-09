@@ -16,5 +16,11 @@ characters
 
 <img src="join-result.jpg">
 
+<pre>
+(base) C:\Users\flare\OneDrive\cit\DB\10>python join.py
+(1, 'taro', 'yamada', 0, 'D', 1, 1, 'doraemon', 10, 10, 0)
+(1, 'taro', 'yamada', 0, 'D', 1, 2, 'akinator', 15, 5, 0)
+(2, 'hanako', 'sato', 0, 'D', 2, 2, 'akinator', 15, 5, 0)
+</pre>
 
 ２．　ドラえもんをターゲットにして、３～５秒間に一度、ドラえもんのHPを８０％の確率で、半分にするキャラクター（ダークのび太）を作成
