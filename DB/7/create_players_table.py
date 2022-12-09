@@ -16,9 +16,6 @@ comstr = "create table player (person_id INTEGER PRIMARY KEY AUTOINCREMENT, fnam
 # 3.テーブルに人名データを登録する
 cur.execute(comstr)
 
-
-
-
 # 4.データベースにデータをコミット
 conn.commit()
 
