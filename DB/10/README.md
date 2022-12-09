@@ -1,6 +1,6 @@
 # 0. 2.batを実行する
 
-<img src="2bat.img">
+<img src="2bat.png">
 
 <pre>
 players
