@@ -1,14 +1,16 @@
-# 0.テーブルを作成する
+# 0. 2.batを実行する
+
+<img src="2bat.img">
 
 <pre>
-(base) PS C:\Users\flare\OneDrive\cit\DB\9> python .\create_players_table.py
-(base) PS C:\Users\flare\OneDrive\cit\DB\9> python .\create_characters_table.py
-(base) PS C:\Users\flare\OneDrive\cit\DB\9> python .\create_events_table.py
-(base) PS C:\Users\flare\OneDrive\cit\DB\9> python .\show_tables.py
+players
+(1, 'taro', 'yamada', 0, 'D')
+(2, 'hanako', 'sato', 0, 'D')
+characters
+(1, 1, 'doraemon', 10, 10, 0)
+(1, 2, 'akinator', 15, 5, 0)
+(2, 2, 'akinator', 15, 5, 0)
 </pre>
 
-<img src="show_tables.png">
-
-<img src="nobita.png">
 
 ２．　ドラえもんをターゲットにして、３～５秒間に一度、ドラえもんのHPを８０％の確率で、半分にするキャラクター（ダークのび太）を作成
