@@ -14,7 +14,7 @@ characters
 
 # 1 charaterとplayerをjoinする
 
-<img src="join-result.png">
+<img src="join-result.jpg">
 
 
 ２．　ドラえもんをターゲットにして、３～５秒間に一度、ドラえもんのHPを８０％の確率で、半分にするキャラクター（ダークのび太）を作成
