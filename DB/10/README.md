@@ -1,3 +1,7 @@
+<img src="transaction1.png">
+
+<img src="transaction2.png">
+
 # 0. 2.batを実行する
 
 <img src="2bat.png">
