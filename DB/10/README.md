@@ -1,6 +1,6 @@
-<img src="transaction1.png">
+<img src="transaction1.jpg">
 
-<img src="transaction2.png">
+<img src="transaction2.jpg">
 
 # 0. 2.batを実行する
 
