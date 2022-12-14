@@ -1,4 +1,4 @@
-<img src="transaction1.jpg">
+<img src="transaction1.jpg" width=80%>
 
 <img src="transaction2.jpg">
 
