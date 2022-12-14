@@ -20,7 +20,7 @@ characters
 
 # 1 charaterとplayerをjoinする
 
-<img src="join-result.jpg">
+<img src="join-result.jpg" width=80%>
 
 <pre>
 (base) C:\Users\flare\OneDrive\cit\DB\10>python join.py
