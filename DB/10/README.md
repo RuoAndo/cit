@@ -1,6 +1,6 @@
-<img src="transaction1.jpg" width=80%>
+<img src="transaction1.jpg" width=70%>
 
-<img src="transaction2.jpg">
+<img src="transaction2.jpg" width=70%>
 
 # 0. 2.batを実行する
 
