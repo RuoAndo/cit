@@ -148,6 +148,7 @@ while i < 500:
 		currentHP = row[3]
 		nextHP = currentHP + recover
 
+		# transaction recoverを設定
 		cur.execute('BEGIN IMMEDIATE TRANSACTION recover;')
 		cur.execute('select * from character;')
 
