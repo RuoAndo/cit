@@ -39,7 +39,7 @@ characters
 
 3.2 全キャラクターを対象に、5秒間に一度、HPを0～20の範囲で、回復させるキャラクターを作成
 
-<img src="bcm.jpg" width=80%>
+<img src="bcm.jpg" width=25%>
 
 
 
