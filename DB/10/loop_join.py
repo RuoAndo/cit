@@ -21,8 +21,8 @@ while i < 500:
 	#(1, 'taro', 'yamada', 0, 'D', 1, 2, 'akinator', -289, 5, 0)
 	#(2, 'hanako', 'sato', 0, 'D', 2, 2, 'akinator', -289, 5, 0)
 
-	#for row in cur:
-	
+	for row in cur:
+		print(row)	
 
 	time.sleep(5)
     
