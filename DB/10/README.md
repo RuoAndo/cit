@@ -35,6 +35,8 @@ characters
 
 入れ子のリストからHTML画面を生成
 
+<img src="loop_join.png">
+
 # 3. キャラクタを作成
 
 3.1 ドラえもんをターゲットにして、3～5秒間に一度、ドラえもんのHPを80％の確率で、半分にするキャラクターを作成
@@ -146,6 +148,7 @@ while i < 500:
 		currentHP = row[3]
 		nextHP = currentHP + recover
 
+		# transaction recoverを設定
 		cur.execute('BEGIN IMMEDIATE TRANSACTION recover;')
 		cur.execute('select * from character;')
 
