@@ -7,6 +7,7 @@
 
 # 2. CommitとRollbackの実行比較
 <pre>
+TRANSACTIONコマンド実行
 (base) C:\Users\flare\OneDrive\cit\DB\11\code_11>2.bat
 (base) C:\Users\flare\OneDrive\cit\DB\11\code_11>python transaction_test_commit.py
 </pre>
@@ -14,6 +15,7 @@
 <img src="committed.png" width=80%>
 
 <pre>
+ROLLBACKコマンド実行
 (base) C:\Users\flare\OneDrive\cit\DB\11\code_11>2.bat
 (base) C:\Users\flare\OneDrive\cit\DB\11\code_11>python transaction_test_rollback.py
 </pre>
