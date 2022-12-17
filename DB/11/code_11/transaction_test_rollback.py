@@ -14,6 +14,10 @@ print("player ID, character ID, character_nane, HP")
 
 cur.execute('select * from character;')
 
+print("")
+print("transaction start:")
+print("")
+
 for row in cur:
 	cur2 = conn.cursor()
 	print(row)
@@ -26,13 +30,19 @@ for row in cur:
 	cur2.execute('select * from character;')
 
 	comstr = "update character set HP=0" + " where character_id = " + str(charaID) + ";"
-	print(comstr)
+	print("- " + comstr)
 	cur2.execute(comstr)
 	cur2.execute('ROLLBACK;')
 
 	cur2.close()	
 	#conn.commit()		
-	print("transaction committed")
+	print("- transaction rollbacked")
+	print("")
+
+print("transaction end (with rollback):")
+
+print("")
+print("result:")
 
 cur.execute('select * from character;')
 for row in cur:
