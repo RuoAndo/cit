@@ -4,3 +4,6 @@
 
 # 1. Transaction 
 <img src="transaction_13.jpg" width=80%>
+
+# 2. CommitとRollbackを比較してみる
+
