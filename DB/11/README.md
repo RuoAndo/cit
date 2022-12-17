@@ -7,3 +7,8 @@
 
 # 2. CommitとRollbackの実行比較
 
+<img src="2bat.png" width=80%>
+
+<img src="committed.png" width=80%>
+
+
