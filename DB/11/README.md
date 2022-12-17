@@ -22,4 +22,6 @@ ROLLBACKコマンド実行
 <img src="2bat.png" width=80%>
 <img src="rollback.png" width=80%>
 
+# 3. Transaction 処理時間の計測
+
 
