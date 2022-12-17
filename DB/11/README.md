@@ -7,16 +7,17 @@
 
 # 2. CommitとRollbackの実行比較
 <pre>
-初期化
 (base) C:\Users\flare\OneDrive\cit\DB\11\code_11>2.bat
-(base) C:\Users\flare\OneDrive\cit\DB\11\code_11>git add transaction_test_commit.py
+(base) C:\Users\flare\OneDrive\cit\DB\11\code_11>python transaction_test_commit.py
 </pre>
-
 <img src="2bat.png" width=80%>
+<img src="committed.png" width=80%>
 
 <pre>
-Transactionコマンドの実行
+(base) C:\Users\flare\OneDrive\cit\DB\11\code_11>2.bat
+(base) C:\Users\flare\OneDrive\cit\DB\11\code_11>python transaction_test_rollback.py
 </pre>
-<img src="committed.png" width=80%>
+<img src="2bat.png" width=80%>
+<img src="rollback.png" width=80%>
 
 
