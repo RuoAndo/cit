@@ -24,4 +24,9 @@ ROLLBACKコマンド実行
 
 # 3. Transaction 処理時間の計測
 
+# 4. Joinの結果をJSONで出力
+<pre>
+(base) PS C:\Users\flare\OneDrive\cit\DB\11\code_11> python .\loop_join_json.py
+</pre>
 
+<img src="loop_join.png">
