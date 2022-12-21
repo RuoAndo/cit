@@ -21,6 +21,8 @@ while i < 500:
 	#cur.execute('.mode json')
 	cur.execute('select * from player inner join character on character.person_id = player.person_id;')
 
+	print("SQL: select * from player inner join character on character.person_id = player.person_id;")
+
 	#(1, 'taro', 'yamada', 0, 'D', 1, 1, 'doraemon', -267, 10, 0)
 	#(1, 'taro', 'yamada', 0, 'D', 1, 2, 'akinator', -289, 5, 0)
 	#(2, 'hanako', 'sato', 0, 'D', 2, 2, 'akinator', -289, 5, 0)
@@ -30,45 +32,65 @@ while i < 500:
 	for row in cur:
 		d = {}
 		list2 = []
+			
+		#print(row)
 		
-		constr = str(row[0]) + "," + str(row[1]) + "," + str(row[2])
-		#print(constr) 
-		
+		#print(str(row[0]))
+		d = {}
 		d["player_id"] = str(row[0])
 		list2.append(d)
+		
+		#print(str(row[0]))
+		d = {}
 		d["first_name"] = str(row[1])
 		list2.append(d)
+		
+		d = {}
 		d["last_name"] = str(row[2])
 		list2.append(d)
+		
+		d = {}
 		d["point"] = str(row[3])
 		list2.append(d)
+		
+		d = {}
 		d["rank"] = str(row[4])
 		list2.append(d)
 	
+		d = {}
 		d["character_id"] = str(row[5])
 		list2.append(d)
+		
+		d = {}
 		d["player_id"] = str(row[6])
 		list2.append(d)
+		
+		d = {}
 		d["character_name"] = str(row[7])
 		list2.append(d)
-		d["HP"] = str(row[7])
+		
+		d = {}
+		d["HP"] = str(row[8])
 		list2.append(d)
-		d["MP"] = str(row[8])
+		
+		d = {}
+		d["MP"] = str(row[9])
 		list2.append(d)
-		d["EXP"] = str(row[9])
+		
+		d = {}
+		d["EXP"] = str(row[10])
 		list2.append(d)
 	
+		#print(list2)
+		#list2.clear()
+	
+		#print("---")
 		list1.append(list2)
 	
-	print(list2)
+	print(list1)
 	
+	print("-----")
 	
-#		for j in row:		
-#			list.append(j)
-	
-	print(list)
-	#print(type(json.dumps(list)))
-
 	time.sleep(2)
     
 # 5.データベースの接続を切断
