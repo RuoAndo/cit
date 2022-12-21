@@ -23,6 +23,10 @@ ROLLBACKコマンド実行
 <img src="rollback.png" width=80%>
 
 # 3. Transaction 処理時間の計測
+<pre>
+(base) PS C:\Users\flare\OneDrive\cit\DB\11\code_11> python .\transaction_test_commit_procTime.py
+</pre>
+<img src="transaction.png">
 
 # 4. Joinの結果をJSONで出力
 <pre>
