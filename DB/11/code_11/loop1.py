@@ -37,7 +37,7 @@ while i < 500:
 		nextHP = currentHP - damage
 
 		comstr = "update character set HP=" + str(nextHP) + " where character_id = " + str(charaID) + ";"
-		#print(comstr)
+		print("SQL: " + comstr)
 		cur2.execute(comstr)
 
 		cur2.close()

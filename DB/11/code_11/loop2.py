@@ -29,7 +29,7 @@ while i < 500:
 
 		print(row)
 		strhp = str(row[0]) + "," + str(row[1]) + "," + str(row[2]) + "," + str(row[3])
-		#print(strhp)
+		#print("SQL: " + strhp)
 
 		charaID = row[1];
 		damage = random.randint(0, 5)	
@@ -37,7 +37,7 @@ while i < 500:
 		nextHP = currentHP - damage
 
 		comstr = "update character set HP=" + str(nextHP) + " where character_id = " + str(charaID) + ";"
-		#print(comstr)
+		print("SQL: " + comstr)
 		cur2.execute(comstr)
 
 		cur2.close()
