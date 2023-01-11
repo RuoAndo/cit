@@ -1,5 +1,5 @@
 <img src="overview.jpg">
 
-<img src="json1.jpg">
+<img src="json1.JPG">
 
-<img src="json2.jpg">
+<img src="json2.JPG">
