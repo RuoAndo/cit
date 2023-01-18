@@ -19,7 +19,7 @@ try:
 except:
 	pass
 
-comstr2 = "create table events (person_id INTEGER, character_id INTEGER, character_name VARCHAR(20), event_type VARCHAR(20), event_time VARCHAR(20), event_counter INTEGER);"
+comstr2 = "create table events (person_id INTEGER, character_id INTEGER, character_name VARCHAR(20), event_type VARCHAR(20), event_time VARCHAR(20), event_counter INTEGER, HP INTEGER);"
 cur.execute(comstr2)
 conn.commit()
 

@@ -18,13 +18,13 @@ cur.execute(comstr)
 comstr = "insert into player (fname, lname, points, rank) values('hanako', 'sato', '0', 'D');"
 cur.execute(comstr)
 
-comstr = "insert into character (person_id, character_id, character_name, HP, MP, EXP) values(1, 1, 'doraemon', 10, 10, 0);"
+comstr = "insert into character (person_id, character_id, character_name, HP, MP, EXP) values(1, 1, 'doraemon', 100, 50, 0);"
 cur.execute(comstr)
 
-comstr = "insert into character (person_id, character_id, character_name, HP, MP, EXP) values(1, 2, 'akinator', 15, 5, 0);"
+comstr = "insert into character (person_id, character_id, character_name, HP, MP, EXP) values(1, 2, 'akinator', 150, 75, 0);"
 cur.execute(comstr)
 
-comstr = "insert into character (person_id, character_id, character_name, HP, MP, EXP) values(2, 2, 'akinator', 15, 5, 0);"
+comstr = "insert into character (person_id, character_id, character_name, HP, MP, EXP) values(2, 2, 'akinator', 150, 25, 0);"
 cur.execute(comstr)
 
 comstr2 = "create table events (person_id INTEGER, character_id INTEGER, character_name VARCHAR(20), event_type VARCHAR(20), event_time VARCHAR(20), event_counter INTEGER);"
@@ -36,13 +36,13 @@ print(now)
 
 #comstr2 = "create table events (person_id INTEGER, character_id INTEGER, character_name VARCHAR(20), event_type VARCHAR(20), event_time VARCHAR(20), event_counter INTEGER);"
 
-comstr = "insert into events (person_id, character_id, character_name, event_type, event_time, event_counter) values(1, 1, 'doraemon', 'create'," + "'" + str(now) + "'" + ", 1);"
+comstr = "insert into events (person_id, character_id, character_name, event_type, event_time, event_counter, HP) values(1, 1, 'doraemon', 'create'," + "'" + str(now) + "'" + ", 1, 0);"
 cur.execute(comstr)
 
-comstr = "insert into events (person_id, character_id, character_name, event_type, event_time, event_counter) values(1, 2, 'akinator', 'create'," + "'" + str(now) + "'" + ", 2);"
+comstr = "insert into events (person_id, character_id, character_name, event_type, event_time, event_counter, HP) values(1, 2, 'akinator', 'create'," + "'" + str(now) + "'" + ", 2, 0);"
 cur.execute(comstr)
 
-comstr = "insert into events (person_id, character_id, character_name, event_type, event_time, event_counter) values(2, 2, 'akinator', 'create'," + "'" + str(now) + "'" + ", 3);"
+comstr = "insert into events (person_id, character_id, character_name, event_type, event_time, event_counter, HP) values(2, 2, 'akinator', 'create'," + "'" + str(now) + "'" + ", 3, 0);"
 cur.execute(comstr)
 
 # 4.データベースにデータをコミット

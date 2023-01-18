@@ -36,6 +36,8 @@ while i < 500:
 		constr = constr + "event_time : " + str(row[4])
 		constr = constr + ", "	
 		constr = constr + "event_counter : " + str(row[5])
+		constr = constr + ", "
+		constr = constr + "HP : " + str(row[6])
 	
 		constr = constr + "}"
 	

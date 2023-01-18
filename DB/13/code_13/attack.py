@@ -28,16 +28,21 @@ for row in cur:
 	charaID = row[1]
 	charaName = row[2]
 	
-	damage = random.randint(0, 2)	
+	damage = random.randint(10, 20)	
 	currentHP = row[3]
 	nextHP = currentHP - damage
+	
+	print("test damage:" + str(damage))
+	
 	comstr = "update character set HP=" + str(nextHP) + " where character_id = " + str(charaID) + " and person_id=" + str(playerID) + ";"
+	print(comstr)
 	
 	now = datetime.datetime.now()
 	
 	print("Event: " + str(now))
 	print(" SQL: " + comstr)
 	cur.execute(comstr)
+	conn.commit()
 	
 	comstr="select COUNT(*) from events;"
 	cur.execute(comstr)
@@ -49,13 +54,12 @@ for row in cur:
 
 	current_count = record_max + 1;
 
-	comstr = "insert into events (person_id, character_id, character_name, event_type, event_time, event_counter) values(" + str(playerID) + "," + str(charaID) + "," + "'" + str(charaName) + "'" + "," + "'attack'," + "'" + str(now) + "'" + "," + str(current_count) + ");"
+	comstr = "insert into events (person_id, character_id, character_name, event_type, event_time, event_counter, HP) values(" + str(playerID) + "," + str(charaID) + "," + "'" + str(charaName) + "'" + "," + "'attack'," + "'" + str(now) + "'" + "," + str(current_count) + "," + str(currentHP) + ");"
 	
 	print(comstr)
 	cur.execute(comstr)
 	cur.close()
-	
-conn.commit()
+	conn.commit()
 
 #for row in cur:
 #	print(row)
