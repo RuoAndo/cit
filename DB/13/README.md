@@ -1,11 +1,18 @@
 # 0. CSVからJSONファイルへ書き換え
 
-<pre>
-(1, 'taro', 'yamada', 0, 'D', 1, 1, 'doraemon', 14, 10, 0)
-(1, 'taro', 'yamada', 0, 'D', 1, 2, 'akinator', 20, 5, 0)
-(2, 'hanako', 'sato', 0, 'D', 2, 2, 'akinator', 16, 5, 0)
+太郎さんは２つキャラを、花子さんは１つのキャラを持っている。
 
-{"peron_id" : "1",
+CSV (comma separated value) 
+person_ID, first_name, last_name, character_ID, character_name, HP, MP, EXP
+<pre>
+(1, 'taro', 'yamada', 1, 'doraemon', 14, 10, 0)
+(1, 'taro', 'yamada', 2, 'akinator', 20, 5, 0)
+(2, 'hanako', 'sato', 2, 'akinator', 16, 5, 0)
+</pre>
+
+<pre>
+{
+ "person_id" : "1",
  "first_name" : "yamada",
  "last_name": "taro", 
 	"characters" : [
@@ -26,7 +33,8 @@
 	]
 }
 
-{"peron_id" : "2", 
+{
+"person_id" : "2", 
  "first_name" : "hanako",
  "last_name": "sato",
 	"characters" : [
