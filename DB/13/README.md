@@ -1,4 +1,4 @@
-<img src="json1.JPG">
+<img src="json1.JPG" width=70%>
 
 # 0. CSVからJSONファイルへ書き換え
 太郎さんは２つキャラを、花子さんは１つのキャラを持っている
