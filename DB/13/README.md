@@ -59,6 +59,8 @@ JSON
 1. loop_join.py
 一定時間ごとに、各キャラクタのステータスを表示し、HPをランダムに回復させる
 
+<img src="bc.png">
+
 <pre>
 	1-1. select * from player inner join character on character.person_id = player.person_id;
 	1-2. update character set HP=3061 where character_id = 1 and person_id=1;
