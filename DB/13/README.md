@@ -51,3 +51,8 @@ JSON
 	]
 }	 
 </pre>
+
+# 1. プログラム構成
+
+<img src="kousei.png">
+
