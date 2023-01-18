@@ -71,6 +71,8 @@ JSON
 2. warikomi2.ps1
 各キャラクタのHPを減少させる
 
+<img src="nobita2.png">
+
 <pre>
 	2-1. update character set HP=3060 where character_id = 2 and person_id=2;
 	2-2. insert into events (person_id, character_id, character_name, event_type, event_time, event_counter, HP) values(2,2,'akinator','attack','2023-01-18 	16:20:28.796926',213,3074);
