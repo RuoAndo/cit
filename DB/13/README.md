@@ -90,6 +90,8 @@ JSON
 4. show_event.py
 今までの、キャラクタのHPの推移をグラフで表示する
 
+<img src="gantz2.jpg" width=5%>
+
 <pre>
 	4-1. select * from events where person_ID = 1 and character_ID = 1
 </pre>
