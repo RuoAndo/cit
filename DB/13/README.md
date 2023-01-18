@@ -71,7 +71,7 @@ JSON
 2. warikomi2.ps1
 各キャラクタのHPを減少させる
 
-<img src="nobita2.png" width=10%>
+<img src="nobita2.png" width=5%>
 
 <pre>
 	2-1. update character set HP=3060 where character_id = 2 and person_id=2;
