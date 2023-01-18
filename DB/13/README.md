@@ -54,7 +54,7 @@ JSON
 
 # 1. プログラム構成と発行しているSQL文
 
-<img src="kousei.png">
+<img src="kousei2.png">
 
 1. loop_join.py
 一定時間ごとに、各キャラクタのステータスを表示し、HPをランダムに回復させる
