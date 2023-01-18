@@ -59,18 +59,26 @@ JSON
 1. loop_join.py
 一定時間ごとに、各キャラクタのステータスを表示し、HPをランダムに回復させる
 
-	select * from player inner join character on character.person_id = player.person_id;
-	update character set HP=3061 where character_id = 1 and person_id=1;
-	update character set HP=3109 where character_id = 2 and person_id=1;
-	update character set HP=3089 where character_id = 2 and person_id=2;
+	1-1. select * from player inner join character on character.person_id = player.person_id;
+	1-2. update character set HP=3061 where character_id = 1 and person_id=1;
+	1-3. update character set HP=3109 where character_id = 2 and person_id=1;
+	1-4. update character set HP=3089 where character_id = 2 and person_id=2;
 
 2. warikomi2.ps1
 各キャラクタのHPを減少させる
 
-	update character set HP=3060 where character_id = 2 and person_id=2;
-	insert into events (person_id, character_id, character_name, event_type, event_time, event_counter, HP) values(2,2,'akinator','attack','2023-01-18 	16:20:28.796926',213,3074);
+	2-1. update character set HP=3060 where character_id = 2 and person_id=2;
+	2-2. insert into events (person_id, character_id, character_name, event_type, event_time, event_counter, HP) values(2,2,'akinator','attack','2023-01-18 	16:20:28.796926',213,3074);
 
-3. show_event.py
-キャラクタのHPの推移を表示する
+3. loop_show_events
+今まで発生したイベントを表示する
+	
+	3-1. select * from events
+
+4. show_event.py
+今までの、キャラクタのHPの推移をグラフで表示する
+
+	4-1. select * from events where person_ID = 1 and character_ID = 1
+
 
 
