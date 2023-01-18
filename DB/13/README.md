@@ -56,3 +56,22 @@ JSON
 
 <img src="kousei.png">
 
+loop_join.py
+一定時間ごとに、各キャラクタのステータスを表示し、HPをランダムに回復させる
+
+select * from player inner join character on character.person_id = player.person_id;
+
+update character set HP=3061 where character_id = 1 and person_id=1;
+update character set HP=3109 where character_id = 2 and person_id=1;
+update character set HP=3089 where character_id = 2 and person_id=2;
+
+warikomi2.ps1
+各キャラクタのHPを減少させる
+
+update character set HP=3060 where character_id = 2 and person_id=2;
+insert into events (person_id, character_id, character_name, event_type, event_time, event_counter, HP) values(2,2,'akinator','attack','2023-01-18 16:20:28.796926',213,3074);
+
+show_event.py
+キャラクタのHPの推移を表示する
+
+
