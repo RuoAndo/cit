@@ -81,7 +81,7 @@ JSON
 3. loop_show_events
 今まで発生したイベントを表示する
 
-<img src="gantz.jpg">
+<img src="gantz.jpg" width=5%>
 
 <pre>
 	3-1. select * from events
