@@ -71,7 +71,7 @@ JSON
 2. warikomi2.ps1
 各キャラクタのHPを減少させる
 
-<img src="nobita2.png" width=5%>
+<img src="nobita2.png" width=7%>
 
 <pre>
 	2-1. update character set HP=3060 where character_id = 2 and person_id=2;
@@ -80,7 +80,9 @@ JSON
 
 3. loop_show_events
 今まで発生したイベントを表示する
-	
+
+<img src="gantz.jpg">
+
 <pre>
 	3-1. select * from events
 </pre>
