@@ -1,15 +1,16 @@
 # 0. CSVからJSONファイルへ書き換え
-
-太郎さんは２つキャラを、花子さんは１つのキャラを持っている。
-
+太郎さんは２つキャラを、花子さんは１つのキャラを持っている
 CSV (comma separated value) 
 person_ID, first_name, last_name, character_ID, character_name, HP, MP, EXP
+
+CSV
 <pre>
 (1, 'taro', 'yamada', 1, 'doraemon', 14, 10, 0)
 (1, 'taro', 'yamada', 2, 'akinator', 20, 5, 0)
 (2, 'hanako', 'sato', 2, 'akinator', 16, 5, 0)
 </pre>
 
+JSON
 <pre>
 {
  "person_id" : "1",
