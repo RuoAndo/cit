@@ -4,8 +4,9 @@
 
 <img src="gamen.jpg">
 
+<pre>
 loop_join.py: 一定期間ごとにHPとEXPを加算
 attack.py: 
 plot_character.py: 全キャラクターのステータスを表示
-
+</pre>
 
