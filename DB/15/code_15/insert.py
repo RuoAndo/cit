@@ -20,14 +20,21 @@ cur.execute(comstr)
 
 for i in range(100):
 
+
+	tmp = 100 + random.randint(0, 50)
+
 	print(i)
-	comstr = "insert into character (person_id, character_id, character_name, HP, MP, EXP) values(1," + str(i) + ",'doraemon', 100, 50, 0);"
+	comstr = "insert into character (person_id, character_id, character_name, HP, MP, EXP) values(1," + str(i) + ",'doraemon'," + str(tmp) + ",50, 0);"
 	cur.execute(comstr)
 
-	comstr = "insert into character (person_id, character_id, character_name, HP, MP, EXP) values(1," + str(i) + ",'akinator', 150, 75, 0);"
+	tmp = 150 + random.randint(0, 50)
+
+	comstr = "insert into character (person_id, character_id, character_name, HP, MP, EXP) values(1," + str(i) + ",'akinator'," + str(tmp) + ",75, 0);"
 	cur.execute(comstr)
 
-	comstr = "insert into character (person_id, character_id, character_name, HP, MP, EXP) values(2," + str(i) + ",'akinator', 150, 25, 0);"
+	tmp = 200 + random.randint(0, 50)
+
+	comstr = "insert into character (person_id, character_id, character_name, HP, MP, EXP) values(2," + str(i) + ",'akinator'," + str(tmp) + ",25, 0);"
 	cur.execute(comstr)
 
 comstr2 = "create table events (person_id INTEGER, character_id INTEGER, character_name VARCHAR(20), event_type VARCHAR(20), event_time VARCHAR(20), event_counter INTEGER);"
