@@ -10,4 +10,6 @@ attack.py:
 plot_character.py: 全キャラクターのステータスを表示
 </pre>
 
+# 異常検知
+
 <img src="km.png">
