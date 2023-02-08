@@ -10,6 +10,9 @@ attack.py:
 plot_character.py: 全キャラクターのステータスを表示
 </pre>
 
-# 異常検知
-
+# 異常検知をする
+<pre>
+plot_character_2.py: K平均法（クラスタは１つ）
+を実行する
+</pre>
 <img src="km.png">
