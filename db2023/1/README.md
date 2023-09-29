@@ -1,5 +1,4 @@
 # 1. databaseを開く
-
 <pre>
 (base) PS C:\Users\flare\sqlite> .\sqlite3.exe .\sakila_master.db
 SQLite version 3.39.3 2022-09-05 11:02:23
@@ -34,7 +33,8 @@ sqlite> select * from actor limit 10;
 10|CHRISTIAN|GABLE|2020-12-23 07:12:29
 </pre>
 
-# 課題1. 在庫のテーブルから10件表示しなさい。
+# 課題1-1. 在庫のテーブルから10件表示しなさい。
+# 課題1-2. actor_idが自分の出席番号が同じactorのfirst nameとlast nameを表示しなさい。
 
 # 4. actorのschemaを調べる
 <pre>
@@ -72,4 +72,15 @@ sqlite> SELECT actor.actor_id, first_name, last_name, film_id FROM actor INNER J
 1|PENELOPE|GUINESS|438
 1|PENELOPE|GUINESS|499
 </pre>
+
+# 課題1-3. filmとfilm_actorを内部結合し、下記のフィールドを表示しなさい。
+film.title
+film.film_id
+film_actor.actor_id
+
+# 課題1-4. filmとfilm_actorを内部結合した課題1-3のテーブルから、actor_idが自分の出席番号の行を出力しなさい。
+
+
+
+
 
