@@ -74,9 +74,11 @@ sqlite> SELECT actor.actor_id, first_name, last_name, film_id FROM actor INNER J
 </pre>
 
 # 課題1-3. filmとfilm_actorを内部結合し、下記のフィールドを表示しなさい。
+<pre>
 film.title
 film.film_id
 film_actor.actor_id
+</pre>
 
 # 課題1-4. filmとfilm_actorを内部結合した課題1-3のテーブルから、actor_idが自分の出席番号の行を出力しなさい。
 
