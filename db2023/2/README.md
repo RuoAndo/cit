@@ -60,6 +60,8 @@ CREATE TRIGGER actor_trigger_au AFTER UPDATE ON actor
  END;
 </pre>
 
+<img src="inner_join.jpg">
+
 # 5. テーブルfilm_idとactorを結合する (内部結合）
 <pre>
 sqlite> SELECT actor.actor_id, first_name, last_name, film_id FROM actor INNER JOIN film_actor on actor.actor_id = film_actor.actor_id LIMIT 10;
