@@ -6,6 +6,8 @@ Enter ".help" for usage hints.
 sqlite>
 </pre>
 
+<img src="sakila-schemes.jpg">
+
 # 2. tableの表示
 <pre>
 sqlite> .tables
@@ -57,6 +59,8 @@ CREATE TRIGGER actor_trigger_au AFTER UPDATE ON actor
   UPDATE actor SET last_update = DATETIME('NOW')  WHERE rowid = new.rowid;
  END;
 </pre>
+
+<img src="inner_join.jpg">
 
 # 5. テーブルfilm_idとactorを結合する (内部結合）
 <pre>
