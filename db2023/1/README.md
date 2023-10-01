@@ -33,8 +33,8 @@ sqlite> select * from actor limit 10;
 10|CHRISTIAN|GABLE|2020-12-23 07:12:29
 </pre>
 
-# 課題1-1. 在庫のテーブルから10件表示しなさい。
-# 課題1-2. actor_idが自分の出席番号が同じactorのfirst nameとlast nameを表示しなさい。
+# 課題. 在庫のテーブルから10件表示しなさい。
+# 課題. actor_idが自分の出席番号が同じactorのfirst nameとlast nameを表示しなさい。
 
 # 4. actorのschemaを調べる
 <pre>
@@ -73,14 +73,14 @@ sqlite> SELECT actor.actor_id, first_name, last_name, film_id FROM actor INNER J
 1|PENELOPE|GUINESS|499
 </pre>
 
-# 課題1-3. filmとfilm_actorを内部結合し、下記のフィールドを表示しなさい。
+# 課題. filmとfilm_actorを内部結合し、下記のフィールドを表示しなさい。
 <pre>
 film.title
 film.film_id
 film_actor.actor_id
 </pre>
 
-# 課題1-4. filmとfilm_actorを内部結合した課題1-3のテーブルから、actor_idが自分の出席番号の行を出力しなさい。
+# 課題. filmとfilm_actorを内部結合した課題1-3のテーブルから、actor_idが自分の出席番号の行を出力しなさい。
 
 
 
