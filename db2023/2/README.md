@@ -6,6 +6,8 @@ Enter ".help" for usage hints.
 sqlite>
 </pre>
 
+<img src="sakila-schemes.jpg">
+
 # 2. tableの表示
 <pre>
 sqlite> .tables
