@@ -1,4 +1,4 @@
-# 1. csvファイルの読み込み
+# csvファイルの読み込み
 <pre>
 sqlite> .mode csv
 sqlite> .import ./BostonHousing.csv boston
@@ -27,3 +27,5 @@ B： 「1000(Bk - 0.63)」の二乗値。Bk＝「町ごとの黒人の割合」�
 LSTAT： 「低所得者人口の割合」
 MEDV：「住宅価格」（1000ドル単位）の中央値。通常はこの数値が目的変数として使われる
 </pre>
+
+# 課題 データベースから、PTRATIO： 町別の「生徒と先生の比率」の列を取り出しなさい。
