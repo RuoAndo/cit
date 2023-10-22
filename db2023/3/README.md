@@ -1,4 +1,4 @@
-# 前回の続き
+# 0. 前回の続き
 <pre>
 (base) PS C:\Users\flare\OneDrive\cit\db2023\3> cp ..\2\sakila_master.db .
 (base) PS C:\Users\flare\OneDrive\cit\db2023\3> .\sqlite3.exe .\sakila_master.db
@@ -14,7 +14,7 @@ customer                inventory               staff_list
 customer_list           language                store
 </pre>
 
-# .helpでコマンド一覧を表示する
+# 1 .helpでコマンド一覧を表示する
 
 <pre>
 sqlite> .help
@@ -86,7 +86,7 @@ sqlite> .help
 .width NUM1 NUM2 ...     Set minimum column widths for columnar output
 </pre>
 
-# actorのスキーマを表示する
+# 2. actorのスキーマを表示する
 
 <pre>
 sqlite> .schema actor
@@ -109,7 +109,7 @@ CREATE TRIGGER actor_trigger_au AFTER UPDATE ON actor
  END;
  </pre>
 
-# customerの先頭10人を表示する
+# 3. customerの先頭10人を表示する
 
 <pre>
 sqlite> select first_name, last_name from customer limit 10;
@@ -125,11 +125,11 @@ MARGARET|MOORE
 DOROTHY|TAYLOR
 </pre>
 
-# customerのMARY SMITHのデータを表示する
+# 4. customerのMARY SMITHのデータを表示する
 sqlite> select * from customer where first_name="MARY" and last_name="SMITH";
 1|1|MARY|SMITH|MARY.SMITH@sakilacustomer.org|5|1|2006-02-14 22:04:36.000|2020-12-23 07:15:11
 
-# rentalのスキーマを表示する。
+# 5. rentalのスキーマを表示する。
 
 <pre>
 sqlite> .schema rental
@@ -164,7 +164,7 @@ CREATE TRIGGER rental_trigger_au AFTER UPDATE ON rental
  END;
 </pre>
 
-# id番号5のcustomerのレンタル状況を調べる
+# 6. id番号5のcustomerのレンタル状況を調べる
 
 <pre>
 sqlite> select * from rental where customer_id = 5 limit 10;
@@ -180,7 +180,7 @@ sqlite> select * from rental where customer_id = 5 limit 10;
 4889|2005-07-08 20:04:43.000|4463|5|2005-07-13 17:57:43.000|2|2020-12-23 07:16:29
 </pre>
 
-# 内部結合: customerとrentalのテーブルを結合し、customer_idのレンタル状況と名前を表示する。
+# 7. 内部結合: customerとrentalのテーブルを結合し、customer_idのレンタル状況と名前を表示する。
 
 <pre>
 sqlite> SELECT customer.first_name, customer.last_name, rental.customer_id, rental.rental_date FROM rental INNER JOIN customer ON rental.customer_id = customer.customer_id where customer.customer_id = 10;
@@ -211,9 +211,23 @@ DOROTHY|TAYLOR|10|2005-08-20 16:43:28.000
 DOROTHY|TAYLOR|10|2005-08-22 21:59:29.000
 </pre>
 
+# 8. Group by: customerごとのレンタル件数を表示する
 
+<pre>
+sqlite> SELECT customer.first_name, customer.last_name, rental.customer_id, rental.rental_date, count(*) FROM rental INNER JOIN customer ON rental.customer_id = customer.customer_id group by customer.first_name, customer.last_name LIMIT 10;
+AARON|SELBY|375|2005-05-26 21:48:13.000|24
+ADAM|GOOCH|367|2005-05-30 14:49:34.000|22
+ADRIAN|CLARY|525|2005-05-27 17:47:22.000|19
+AGNES|BISHOP|217|2005-05-29 22:14:55.000|23
+ALAN|KAHN|389|2005-05-31 00:16:57.000|26
+ALBERT|CROUSE|352|2005-05-29 14:44:22.000|23
+ALBERTO|HENNING|568|2005-06-16 10:07:10.000|21
+ALEX|GRESHAM|454|2005-05-29 08:08:13.000|33
+ALEXANDER|FENNELL|439|2005-05-25 21:07:59.000|36
+ALFRED|CASILLAS|423|2005-06-15 22:08:06.000|26
+</pre>
   
-# csvファイルの読み込み
+# 9. csvファイルの読み込み
 <pre>
 sqlite> .mode csv
 sqlite> .import ./BostonHousing.csv boston
@@ -225,7 +239,7 @@ CREATE TABLE IF NOT EXISTS "boston"(
  "lstat" TEXT, "medv" TEXT);
 </pre>
 
-#  Boston Housing データセットの項目の説明
+#  10. Boston Housing データセットの項目の説明
 <pre>
 CRIM： 町別の「犯罪率」
 ZN： 25,000平方フィートを超える区画に分類される住宅地の割合＝「広い家の割合」
@@ -243,4 +257,4 @@ LSTAT： 「低所得者人口の割合」
 MEDV：「住宅価格」（1000ドル単位）の中央値。通常はこの数値が目的変数として使われる
 </pre>
 
-# 課題 データベースから、PTRATIO： 町別の「生徒と先生の比率」の列を取り出しなさい。
+# 11. データベースから、PTRATIO： 町別の「生徒と先生の比率」の列を表示。
