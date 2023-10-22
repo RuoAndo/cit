@@ -108,7 +108,111 @@ CREATE TRIGGER actor_trigger_au AFTER UPDATE ON actor
   UPDATE actor SET last_update = DATETIME('NOW')  WHERE rowid = new.rowid;
  END;
  </pre>
- 
+
+# customerの先頭10人を表示する
+
+<pre>
+sqlite> select first_name, last_name from customer limit 10;
+MARY|SMITH
+PATRICIA|JOHNSON
+LINDA|WILLIAMS
+BARBARA|JONES
+ELIZABETH|BROWN
+JENNIFER|DAVIS
+MARIA|MILLER
+SUSAN|WILSON
+MARGARET|MOORE
+DOROTHY|TAYLOR
+</pre>
+
+# customerのMARY SMITHのデータを表示する
+sqlite> select * from customer where first_name="MARY" and last_name="SMITH";
+1|1|MARY|SMITH|MARY.SMITH@sakilacustomer.org|5|1|2006-02-14 22:04:36.000|2020-12-23 07:15:11
+
+# rentalのスキーマを表示する。
+
+<pre>
+sqlite> .schema rental
+CREATE TABLE rental (
+  rental_id INT NOT NULL,
+  rental_date TIMESTAMP NOT NULL,
+  inventory_id INT  NOT NULL,
+  customer_id INT  NOT NULL,
+  return_date TIMESTAMP DEFAULT NULL,
+  staff_id SMALLINT  NOT NULL,
+  last_update TIMESTAMP NOT NULL,
+  PRIMARY KEY (rental_id),
+  CONSTRAINT fk_rental_staff FOREIGN KEY (staff_id) REFERENCES staff (staff_id) ,
+  CONSTRAINT fk_rental_inventory FOREIGN KEY (inventory_id) REFERENCES inventory (inventory_id) ,
+  CONSTRAINT fk_rental_customer FOREIGN KEY (customer_id) REFERENCES customer (customer_id)
+);
+CREATE INDEX idx_rental_fk_inventory_id ON rental(inventory_id)
+;
+CREATE INDEX idx_rental_fk_customer_id ON rental(customer_id)
+;
+CREATE INDEX idx_rental_fk_staff_id ON rental(staff_id)
+;
+CREATE UNIQUE INDEX idx_rental_uq  ON rental (rental_date,inventory_id,customer_id)
+;
+CREATE TRIGGER rental_trigger_ai AFTER INSERT ON rental
+ BEGIN
+  UPDATE rental SET last_update = DATETIME('NOW')  WHERE rowid = new.rowid;
+ END;
+CREATE TRIGGER rental_trigger_au AFTER UPDATE ON rental
+ BEGIN
+  UPDATE rental SET last_update = DATETIME('NOW')  WHERE rowid = new.rowid;
+ END;
+</pre>
+
+# id番号5のcustomerのレンタル状況を調べる
+
+<pre>
+sqlite> select * from rental where customer_id = 5 limit 10;
+731|2005-05-29 07:25:16.000|4124|5|2005-05-30 05:21:16.000|1|2020-12-23 07:15:29
+1085|2005-05-31 11:15:43.000|301|5|2005-06-07 12:02:43.000|1|2020-12-23 07:15:34
+1142|2005-05-31 19:46:38.000|3998|5|2005-06-05 14:03:38.000|1|2020-12-23 07:15:35
+1502|2005-06-15 22:03:14.000|3277|5|2005-06-23 18:42:14.000|2|2020-12-23 07:15:40
+1631|2005-06-16 08:01:02.000|2466|5|2005-06-19 09:04:02.000|1|2020-12-23 07:15:41
+2063|2005-06-17 15:56:53.000|4323|5|2005-06-21 14:19:53.000|1|2020-12-23 07:15:48
+2570|2005-06-19 04:20:13.000|1105|5|2005-06-25 07:00:13.000|1|2020-12-23 07:15:55
+3126|2005-06-20 18:38:22.000|1183|5|2005-06-26 00:00:22.000|1|2020-12-23 07:16:02
+3677|2005-07-06 09:11:58.000|600|5|2005-07-08 10:50:58.000|2|2020-12-23 07:16:11
+4889|2005-07-08 20:04:43.000|4463|5|2005-07-13 17:57:43.000|2|2020-12-23 07:16:29
+</pre>
+
+# 内部結合: customerとrentalのテーブルを結合し、customer_idのレンタル状況と名前を表示する。
+
+<pre>
+sqlite> SELECT customer.first_name, customer.last_name, rental.customer_id, rental.rental_date FROM rental INNER JOIN customer ON rental.customer_id = customer.customer_id where customer.customer_id = 10;
+DOROTHY|TAYLOR|10|2005-05-31 19:36:30.000
+DOROTHY|TAYLOR|10|2005-06-16 20:21:53.000
+DOROTHY|TAYLOR|10|2005-06-17 11:11:14.000
+DOROTHY|TAYLOR|10|2005-06-18 03:26:23.000
+DOROTHY|TAYLOR|10|2005-06-19 20:01:59.000
+DOROTHY|TAYLOR|10|2005-06-20 00:00:55.000
+DOROTHY|TAYLOR|10|2005-07-06 14:13:45.000
+DOROTHY|TAYLOR|10|2005-07-07 03:06:40.000
+DOROTHY|TAYLOR|10|2005-07-07 14:14:13.000
+DOROTHY|TAYLOR|10|2005-07-09 03:12:52.000
+DOROTHY|TAYLOR|10|2005-07-09 04:53:18.000
+DOROTHY|TAYLOR|10|2005-07-09 21:58:57.000
+DOROTHY|TAYLOR|10|2005-07-10 20:41:09.000
+DOROTHY|TAYLOR|10|2005-07-28 05:21:42.000
+DOROTHY|TAYLOR|10|2005-07-28 15:10:55.000
+DOROTHY|TAYLOR|10|2005-07-28 22:34:12.000
+DOROTHY|TAYLOR|10|2005-07-31 15:27:07.000
+DOROTHY|TAYLOR|10|2005-08-01 17:09:59.000
+DOROTHY|TAYLOR|10|2005-08-02 14:55:00.000
+DOROTHY|TAYLOR|10|2005-08-02 19:13:39.000
+DOROTHY|TAYLOR|10|2005-08-17 20:11:35.000
+DOROTHY|TAYLOR|10|2005-08-18 09:19:12.000
+DOROTHY|TAYLOR|10|2005-08-19 19:23:30.000
+DOROTHY|TAYLOR|10|2005-08-20 16:43:28.000
+DOROTHY|TAYLOR|10|2005-08-22 21:59:29.000
+</pre>
+
+
+  
 # csvファイルの読み込み
 <pre>
 sqlite> .mode csv
