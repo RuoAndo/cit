@@ -52,3 +52,9 @@ crim,zn,indus,chas,nox,rm,age,dis
 </pre>
 
 <img src="nox-indus.png">
+
+# 5. JOIN
+
+<img src="film.png">
+
+<img src="film_actor.png">
