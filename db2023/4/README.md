@@ -1,1 +1,1 @@
-<img src="7-6.pnh">
+<img src="7-6.png">
