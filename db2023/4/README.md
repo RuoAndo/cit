@@ -1,4 +1,4 @@
-![image](https://github.com/RuoAndo/cit/assets/8035463/663f76b3-56c7-4a7c-8acb-7759e955576f)# 1. SELECTの実行時間を計測（シングルプロセス）
+# 1. SELECTの実行時間を計測（シングルプロセス）
 <img src="7-6.png">
 
 # 2. 内部結合 (INNER JOIN)
@@ -10,3 +10,8 @@ sqlite> SELECT first_name, last_name, address_id FROM customer LIMIT 5;
 <img src="address.png">
 sqlite> SELECT first_name, last_name, address_id FROM customer LIMIT 5;
 
+<pre>
+JOIN  
+sqlite> SELECT C.first_name, C.last_name, A.address FROM customer C JOIN address A ON A.address_id = C.address_id LIMIT 5;
+</pre>
+<img src="join1.png">
