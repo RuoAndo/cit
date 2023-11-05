@@ -52,3 +52,23 @@ crim,zn,indus,chas,nox,rm,age,dis
 </pre>
 
 <img src="nox-indus.png">
+
+# 5. JOIN
+
+<img src="film.png">
+<img src="film_actor.png">
+
+<pre>
+sqlite> SELECT FA.actor_id, F.title, F.description FROM film_actor FA JOIN film F ON FA.film_id = F.film_id LIMIT 5;
+1|ACADEMY DINOSAUR|A Epic Drama of a Feminist And a Mad Scientist who must Battle a Teacher in The Canadian Rockies
+1|ANACONDA CONFESSIONS|A Lacklusture Display of a Dentist And a Dentist who must Fight a Girl in Australia
+1|ANGELS LIFE|A Thoughtful Display of a Woman And a Astronaut who must Battle a Robot in Berlin
+1|BULWORTH COMMANDMENTS|A Amazing Display of a Mad Cow And a Pioneer who must Redeem a Sumo Wrestler in The Outback
+1|CHEAPER CLYDE|A Emotional Character Study of a Pioneer And a Girl who must Discover a Dog in Ancient Japan
+sqlite> SELECT F.film_id, FA.actor_id, F.title, F.description FROM film_actor FA JOIN film F ON FA.film_id = F.film_id LIMIT 5;
+1|1|ACADEMY DINOSAUR|A Epic Drama of a Feminist And a Mad Scientist who must Battle a Teacher in The Canadian Rockies
+23|1|ANACONDA CONFESSIONS|A Lacklusture Display of a Dentist And a Dentist who must Fight a Girl in Australia
+25|1|ANGELS LIFE|A Thoughtful Display of a Woman And a Astronaut who must Battle a Robot in Berlin
+106|1|BULWORTH COMMANDMENTS|A Amazing Display of a Mad Cow And a Pioneer who must Redeem a Sumo Wrestler in The Outback
+140|1|CHEAPER CLYDE|A Emotional Character Study of a Pioneer And a Girl who must Discover a Dog in Ancient Japan
+</pre>
