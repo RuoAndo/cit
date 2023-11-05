@@ -53,7 +53,7 @@ crim,zn,indus,chas,nox,rm,age,dis
 
 <img src="nox-indus.png">
 
-# 5. JOIN
+# 5. JOIN filmとfilm_actor
 
 <img src="film.png">
 <img src="film_actor.png">
@@ -72,3 +72,5 @@ sqlite> SELECT F.film_id, FA.actor_id, F.title, F.description FROM film_actor FA
 106|1|BULWORTH COMMANDMENTS|A Amazing Display of a Mad Cow And a Pioneer who must Redeem a Sumo Wrestler in The Outback
 140|1|CHEAPER CLYDE|A Emotional Character Study of a Pioneer And a Girl who must Discover a Dog in Ancient Japan
 </pre>
+
+<img src="13-result.png">
