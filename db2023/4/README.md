@@ -50,3 +50,5 @@ crim,zn,indus,chas,nox,rm,age,dis
 505  0.04741   0.0  11.93     0  0.573  6.030  80.8  2.5050
 [506 rows x 8 columns]
 </pre>
+
+<img src="nox-indus.png">
