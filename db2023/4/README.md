@@ -78,3 +78,13 @@ pythonで実行し、結果をリストで取得。
 </pre>
 
 <img src="13-result.png">
+
+#6 Group By
+<pre>
+sqlite> SELECT A.first_name, A.last_name, FA.actor_id, FA.film_id, count(*) FROM actor A JOIN film_actor FA ON A.actor_id = FA.actor_id GROUP BY A.first_name, A.last_name limit 5;
+ADAM|GRANT|71|26|18
+ADAM|HOPPER|132|81|22
+AL|GARLAND|165|72|26
+ALAN|DREYFUSS|173|49|27
+ALBERT|JOHANSSON|146|12|33
+</pre>
