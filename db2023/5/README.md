@@ -12,7 +12,7 @@ sqlite> SELECT actor.actor_id, first_name, last_name, film_id FROM actor JOIN fi
 1|PENELOPE|GUINESS|140
 </pre>
   
-# 2. actorとfilm_idを内部結合してランダムに5件表示
+# 3. actorとfilm_idを内部結合してランダムに5件表示
 
 <pre>
 sqlite> SELECT actor.actor_id, first_name, last_name, film_id FROM actor JOIN film_actor ON actor.actor_id = film_actor.actor_id ORDER BY RANDOM() LIMIT 5;
@@ -29,4 +29,14 @@ sqlite> SELECT actor.actor_id, first_name, last_name, film_id FROM actor JOIN fi
 181|MATTHEW|CARREY|286
 </pre>
 
+# 4. actorとfilm_idを内部結合して、actor名ごとにカウント（actorが出演している数を数える）
+
+<pre>
+sqlite> SELECT actor.actor_id, first_name, last_name, film_id, count(*) from actor JOIN film_actor ON actor.actor_id = film_actor.actor_id GROUP BY first_name HAVING count(*) > 1 LIMIT 5;
+71|ADAM|GRANT|26|40
+165|AL|GARLAND|72|26
+173|ALAN|DREYFUSS|49|27
+125|ALBERT|NOLTE|62|64
+29|ALEC|WAYNE|10|29
+</pre>
 
