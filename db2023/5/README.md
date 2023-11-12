@@ -12,6 +12,8 @@ sqlite> SELECT actor.actor_id, first_name, last_name, film_id FROM actor JOIN fi
 1|PENELOPE|GUINESS|140
 </pre>
   
+# 2. actorとfilm_idを内部結合してランダムに5件表示
+
 <pre>
 sqlite> SELECT actor.actor_id, first_name, last_name, film_id FROM actor JOIN film_actor ON actor.actor_id = film_actor.actor_id ORDER BY RANDOM() LIMIT 5;
 133|RICHARD|PENN|342
@@ -27,4 +29,4 @@ sqlite> SELECT actor.actor_id, first_name, last_name, film_id FROM actor JOIN fi
 181|MATTHEW|CARREY|286
 </pre>
 
-# 2. actorとfilm_idを内部結合してランダムに５件表示
+
