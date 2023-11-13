@@ -68,8 +68,11 @@ sqlite> SELECT * from ACCESS LIMIT 5;
 # 6. DBのアクセスログをcsvにエクスポート
 
 <img src="dataframe1.png">
-
 <img src="dataframe2.png">
+
+# 7. Dataframe Union
+
+<img src="dataframe1.png">
 
 
 
