@@ -40,7 +40,7 @@ sqlite> SELECT actor.actor_id, first_name, last_name, film_id, count(*) from act
 29|ALEC|WAYNE|10|29
 </pre>
 
-# 5. Access logを解析
+# 5. Access logをDBに格納
 <pre>
 (base) PS C:\Users\flare\OneDrive\cit\db2023\5> head -n 5 .\access_log.txt
 10.185.139.213 - - [19/Oct/2014:04:23:35 +0900] "GET / HTTP/1.0" 200 20 "-" "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.143 Safari/537.36"
