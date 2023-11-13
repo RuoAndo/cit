@@ -65,5 +65,11 @@ sqlite> SELECT * from ACCESS LIMIT 5;
 4|[19/Oct/2014:05:46:42 +0900]|10.249.79.50
 </pre>
 
+# 6. DBのアクセスログをcsvにエクスポート
+
+<img src="dataframe1.png">
+
+<img src="dataframe2.png">
+
 
 
