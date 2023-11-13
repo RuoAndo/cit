@@ -72,6 +72,7 @@ sqlite> SELECT * from ACCESS LIMIT 5;
 
 # 7. Dataframe Union
 
+6のデータをdataframeでunion (concat)
 <img src="dataframe1.png">
 
 
