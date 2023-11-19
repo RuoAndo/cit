@@ -151,7 +151,10 @@ sqlite> SELECT film_actor.film_id, film_actor.actor_id, count(*) FROM actor JOIN
 </pre>
 
 # 7. Dataframe 
+<pre>
 7.1 Union - 6のデータをdataframeでunion (concat)
+</pre>
+
 <img src="dataframe1.png">
 <img src="union1.png">
 
@@ -206,4 +209,17 @@ Type "help", "copyright", "credits" or "license" for more information.
 2     Arizona           AZ
 3    Arkansas           AR
 4  California           CA
+</pre>
+
+7.3 datasetをキーを指定して結合(merge)
+<pre>
+>>> pd.merge(data1, data2, on='state')
+                   state  area (sq. mi) abbreviation
+0                Alabama          52423           AL
+1                 Alaska         656425           AK
+2                Arizona         114006           AZ
+3               Arkansas          53182           AR
+4             California         163707           CA
+5               Colorado         104100           CO
+6            Connecticut           5544           CT
 </pre>
