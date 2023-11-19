@@ -46,7 +46,7 @@ film_id,title,description,actor_id,last_update
 106,"BULWORTH COMMANDMENTS","A Amazing Display of a Mad Cow And a Pioneer who must Redeem a Sumo Wrestler in The Outback",1,"2020-12-23 07:13:43"
 </pre>
 
-# 2. 第１正規形(1NF)の作成
+# 2. 第１正規形(1NF)の作成とCSVファイルへのエクスポート
 2.1 CSVファイルから第２正規形のテーブルをインポートして、テーブルの名前をnf (normal form)として、内容を3件表示
 <pre>
 (base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\6> .\sqlite3.exe .\sakila_master.db
