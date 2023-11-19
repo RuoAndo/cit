@@ -219,3 +219,30 @@ Type "help", "copyright", "credits" or "license" for more information.
 5               Colorado         104100           CO
 6            Connecticut           5544           CT
 </pre>
+
+#7 機械学習
+
+iris(アヤメ)のデータセットを読み込む
+<pre>
+(base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\6> python
+Python 3.8.5 (default, Sep  3 2020, 21:29:08) [MSC v.1916 64 bit (AMD64)] :: Anaconda, Inc. on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import pandas as pd
+>>> from sklearn import datasets, model_selection, svm, metrics
+>>> iris_data = pd.read_csv('iris.csv')
+>>> iris_label = pd.read_csv('iris_label.csv')
+>>> print(iris_data.head())
+   sepal.length  sepal.width  petal.length  petal.width variety
+0           5.1          3.5           1.4          0.2  Setosa
+1           4.9          3.0           1.4          0.2  Setosa
+2           4.7          3.2           1.3          0.2  Setosa
+3           4.6          3.1           1.5          0.2  Setosa
+4           5.0          3.6           1.4          0.2  Setosa
+>>> print(iris_label.head())
+   label
+0      1
+1      1
+2      1
+3      1
+4      1
+</pre>
