@@ -220,7 +220,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 6            Connecticut           5544           CT
 </pre>
 
-#7 機械学習
+#　7 機械学習
 
 iris(アヤメ)のデータセットを読み込む
 <pre>
