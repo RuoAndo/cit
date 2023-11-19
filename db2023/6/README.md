@@ -151,9 +151,7 @@ sqlite> SELECT film_actor.film_id, film_actor.actor_id, count(*) FROM actor JOIN
 </pre>
 
 # 6. Dataframe 
-<pre>
 6.1 Union - 6のデータをdataframeでunion (concat)
-</pre>
 <img src="dataframe1.png">
 <img src="union1.png">
 <pre>
