@@ -150,9 +150,8 @@ sqlite> SELECT film_actor.film_id, film_actor.actor_id, count(*) FROM actor JOIN
 249|2|13
 </pre>
 
-# 7. Dataframe Union
-6のデータをdataframeでunion (concat)
-
+# 7. Dataframe 
+7.1 Union - 6のデータをdataframeでunion (concat)
 <img src="dataframe1.png">
 <img src="union1.png">
 
@@ -176,4 +175,35 @@ sqlite> SELECT film_actor.film_id, film_actor.actor_id, count(*) FROM actor JOIN
 >>> a12.head  
 </pre>
 
+7.2 csvファイルを読み込んでデータセットを見る
 
+<pre>
+(base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\6> python
+Python 3.8.5 (default, Sep  3 2020, 21:29:08) [MSC v.1916 64 bit (AMD64)] :: Anaconda, Inc. on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import pandas as pd
+>>> data = pd.read_csv('state_population.csv')
+>>> data.head()
+  state/region     ages  year  population
+0           AL  under18  2012   1117489.0
+1           AL    total  2012   4817528.0
+2           AL  under18  2010   1130966.0
+3           AL    total  2010   4785570.0
+4           AL  under18  2011   1125763.0
+>>> data1 = pd.read_csv('state_areas.csv')
+>>> data1.head()
+        state  area (sq. mi)
+0     Alabama          52423
+1      Alaska         656425
+2     Arizona         114006
+3    Arkansas          53182
+4  California         163707
+>>> data2 = pd.read_csv('state_abbrevs.csv')
+>>> data2.head()
+        state abbreviation
+0     Alabama           AL
+1      Alaska           AK
+2     Arizona           AZ
+3    Arkansas           AR
+4  California           CA
+</pre>
