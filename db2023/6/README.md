@@ -150,14 +150,12 @@ sqlite> SELECT film_actor.film_id, film_actor.actor_id, count(*) FROM actor JOIN
 249|2|13
 </pre>
 
-# 7. Dataframe 
+# 6. Dataframe 
 <pre>
-7.1 Union - 6のデータをdataframeでunion (concat)
+6.1 Union - 6のデータをdataframeでunion (concat)
 </pre>
-
 <img src="dataframe1.png">
 <img src="union1.png">
-
 <pre>
 >>> import pandas as pd
 >>> a1 = pd.read_csv("access_log_tmp_1.csv")
@@ -178,8 +176,7 @@ sqlite> SELECT film_actor.film_id, film_actor.actor_id, count(*) FROM actor JOIN
 >>> a12.head  
 </pre>
 
-7.2 csvファイルを読み込んでデータセットを見る
-
+6.2 csvファイルを読み込んでデータセットを見る
 <pre>
 (base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\6> python
 Python 3.8.5 (default, Sep  3 2020, 21:29:08) [MSC v.1916 64 bit (AMD64)] :: Anaconda, Inc. on win32
@@ -211,7 +208,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 4  California           CA
 </pre>
 
-7.3 datasetをキーを指定して結合(merge)
+6.3 datasetをキーを指定して結合(merge)
 <pre>
 >>> pd.merge(data1, data2, on='state')
                    state  area (sq. mi) abbreviation
