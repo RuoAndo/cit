@@ -90,3 +90,29 @@ actor_id,first_name,last_name,last_update,film_id,last_update,title,description
 1,PENELOPE,GUINESS,"2020-12-23 07:12:29",25,"2020-12-23 07:13:43","ANGELS LIFE","A Thoughtful Display of a Woman And a Astronaut who must Battle a Robot in Berlin"
 1,PENELOPE,GUINESS,"2020-12-23 07:12:29",106,"2020-12-23 07:13:43","BULWORTH COMMANDMENTS","A Amazing Display of a Mad Cow And a Pioneer who must Redeem a Sumo Wrestler in The Outback"
 </pre>
+
+# 3. 重複を取り除く DISTINCT
+<pre>
+sqlite> SELECT * FROM actor LIMIT 3;
+1|PENELOPE|GUINESS|2020-12-23 07:12:29
+2|NICK|WAHLBERG|2020-12-23 07:12:29
+3|ED|CHASE|2020-12-23 07:12:29
+sqlite> SELECT DISTINCT * FROM actor LIMIT 3;
+1|PENELOPE|GUINESS|2020-12-23 07:12:29
+2|NICK|WAHLBERG|2020-12-23 07:12:29
+3|ED|CHASE|2020-12-23 07:12:29
+sqlite> SELECT DISTINCT count(*) FROM actor;
+200
+</pre>
+<pre>
+sqlite> SELECT * FROM actor LIMIT 1;
+1|PENELOPE|GUINESS|2020-12-23 07:12:29
+sqlite> SELECT * FROM film_actor LIMIT 1;
+1|1|2020-12-23 07:13:43
+sqlite> SELECT actor.actor_id,film_actor.film_id FROM actor JOIN film_actor ON actor.actor_id = film_actor.actor_id GROUP BY actor.actor_id LIMIT 5;
+1|1
+2|3
+3|17
+4|23
+5|19
+</pre>
