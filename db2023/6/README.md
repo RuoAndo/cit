@@ -149,3 +149,35 @@ sqlite> SELECT film_actor.film_id, film_actor.actor_id, count(*) FROM actor JOIN
 188|31|13
 249|2|13
 </pre>
+
+# 7. Dataframe Union
+6のデータをdataframeでunion (concat)
+
+<img src="dataframe1.png">
+<img src="union1.png">
+
+<pre>
+>>> import pandas as pd
+>>> a1 = pd.read_csv("access_log_tmp_1.csv")
+>>> a1.head
+<bound method NDFrame.head of     id                            ts             ip
+0   60  [20/Oct/2014:09:33:28 +0900]  10.161.58.215
+1   36  [20/Oct/2014:01:04:11 +0900]   10.249.64.10
+2   86  [20/Oct/2014:16:16:27 +0900]  10.92.177.238
+3  270  [21/Oct/2014:15:54:14 +0900]   38.0.2125.59
+4  215  [21/Oct/2014:06:04:55 +0900]   10.213.25.66
+5  275  [21/Oct/2014:18:04:35 +0900]   10.249.67.66
+6  257  [21/Oct/2014:13:37:39 +0900]   10.249.67.58
+7  140  [21/Oct/2014:06:04:24 +0900]   10.249.67.66
+8  242  [21/Oct/2014:11:24:30 +0900]   10.213.25.66
+9  216  [21/Oct/2014:06:04:56 +0900]   10.213.25.66>
+>>> a2 = pd.read_csv("access_log_tmp_2.csv")
+>>> a12 = pd.concat([a1,a2], ignore_header=True)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: concat() got an unexpected keyword argument 'ignore_header'
+>>> a12 = pd.concat([a1,a2], ignore_index=True)
+>>> a12.head  
+</pre>
+
+
