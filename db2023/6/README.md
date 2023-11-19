@@ -221,7 +221,38 @@ Type "help", "copyright", "credits" or "license" for more information.
 </pre>
 
 # 7. DataFrameと機械学習
-7.1 iris(アヤメ)のデータセットを読み込む
+7.1 iris(アヤメ)のデータセットを読み込んで可視化
+<pre>
+(base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\6> python
+Python 3.8.5 (default, Sep  3 2020, 21:29:08) [MSC v.1916 64 bit (AMD64)] :: Anaconda, Inc. on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import pandas as pd
+>>> from sklearn import datasets, model_selection, svm, metrics
+>>> iris_data = pd.read_csv('iris.csv')
+>>> print(iris_data.head())
+   sepal.length  sepal.width  petal.length  petal.width variety
+0           5.1          3.5           1.4          0.2  Setosa
+1           4.9          3.0           1.4          0.2  Setosa
+2           4.7          3.2           1.3          0.2  Setosa
+3           4.6          3.1           1.5          0.2  Setosa
+4           5.0          3.6           1.4          0.2  Setosa
+>>> iris_label = pd.read_csv('iris_label.csv')
+>>> print(iris_label.head())
+   label
+0      1
+1      1
+2      1
+3      1
+4      1
+>>> import matplotlib.pyplot as plt
+>>> X = iris_data["sepal.length"]
+>>> Y = iris_data["sepal.width"]
+>>> plt.scatter(X,Y)
+<matplotlib.collections.PathCollection object at 0x000001C78B129F70>
+>>> plt.show()
+</pre>
+
+7.2 Support Vector Machine: iris(アヤメ)のデータセットを読み込む
 <pre>
 (base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\6> python
 Python 3.8.5 (default, Sep  3 2020, 21:29:08) [MSC v.1916 64 bit (AMD64)] :: Anaconda, Inc. on win32
@@ -245,7 +276,8 @@ Type "help", "copyright", "credits" or "license" for more information.
 3      1
 4      1
 </pre>
-7.2 学習と予測
+
+7.3 Support Vector Machine: 学習と予測
 <pre>
 >>> data_train_2 = data_train.drop('variety', axis=1)
 >>> clf = svm.SVC()
