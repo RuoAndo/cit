@@ -140,7 +140,7 @@ sqlite> SELECT film_actor.film_id, film_actor.actor_id FROM actor JOIN film_acto
 </pre>
 
 # 5. 集計 GROUP BY と条件設定HAVING
-actorが10人以上出演しているfilmを検索し、5件を表示
+5.1 actorが10人以上出演しているfilmを検索し、5件を表示
 <pre>
 sqlite> SELECT film_actor.film_id, film_actor.actor_id, count(*) FROM actor JOIN film_actor ON actor.actor_id = film_actor.actor_id GROUP BY film_id HAVING count(*) > 10 LIMIT 5;
 34|12|12
