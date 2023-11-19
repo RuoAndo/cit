@@ -1,5 +1,4 @@
 # 第２正規形(2NF)の作成
-
 <pre>
 sqlite> SELECT film_id, title, description FROM film LIMIT 5;
 1|ACADEMY DINOSAUR|A Epic Drama of a Feminist And a Mad Scientist who must Battle a Teacher in The Canadian Rockies
@@ -8,7 +7,6 @@ sqlite> SELECT film_id, title, description FROM film LIMIT 5;
 4|AFFAIR PREJUDICE|A Fanciful Documentary of a Frisbee And a Lumberjack who must Chase a Monkey in A Shark Tank
 5|AFRICAN EGG|A Fast-Paced Documentary of a Pastry Chef And a Dentist who must Pursue a Forensic Psychologist in The Gulf of Mexico
 </pre>
-
 <pre>
 sqlite> SELECT actor_id, film_id, last_update FROM film_actor LIMIT 5;
 1|1|2020-12-23 07:13:43
@@ -17,3 +15,32 @@ sqlite> SELECT actor_id, film_id, last_update FROM film_actor LIMIT 5;
 1|106|2020-12-23 07:13:43
 1|140|2020-12-23 07:13:43
 </pre>
+<pre>
+sqlite> SELECT F.film_id, F.title, F.description, FA.actor_id, FA.last_update FROM film F JOIN film_actor FA ON F.film_id = FA.film_id LIMIT 5;
+1|ACADEMY DINOSAUR|A Epic Drama of a Feminist And a Mad Scientist who must Battle a Teacher in The Canadian Rockies|1|2020-12-23 07:13:43
+23|ANACONDA CONFESSIONS|A Lacklusture Display of a Dentist And a Dentist who must Fight a Girl in Australia|1|2020-12-23 07:13:43
+25|ANGELS LIFE|A Thoughtful Display of a Woman And a Astronaut who must Battle a Robot in Berlin|1|2020-12-23 07:13:43
+106|BULWORTH COMMANDMENTS|A Amazing Display of a Mad Cow And a Pioneer who must Redeem a Sumo Wrestler in The Outback|1|2020-12-23 07:13:43
+140|CHEAPER CLYDE|A Emotional Character Study of a Pioneer And a Girl who must Discover a Dog in Ancient Japan|1|2020-12-23 07:13:43
+</pre>
+<pre>
+sqlite> .headers on
+sqlite> .mode csv
+sqlite> .once 6_1INF_1.csv
+sqlite> SELECT F.film_id, F.title, F.description, FA.actor_id, FA.last_update FROM film F JOIN film_actor FA ON F.film_id = FA.film_id;
+</pre>
+CSVファイルにエクスポート
+<pre>
+sqlite> .headers on
+sqlite> .mode csv
+sqlite> .once 6_1INF_1.csv
+sqlite> SELECT F.film_id, F.title, F.description, FA.actor_id, FA.last_update FROM film F JOIN film_actor FA ON F.film_id = FA.film_id;
+</pre>
+<pre>
+(base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\6> head -n 5 .\6_1INF_1.csv
+film_id,title,description,actor_id,last_update
+1,"ACADEMY DINOSAUR","A Epic Drama of a Feminist And a Mad Scientist who must Battle a Teacher in The Canadian Rockies",1,"2020-12-23 07:13:43"
+23,"ANACONDA CONFESSIONS","A Lacklusture Display of a Dentist And a Dentist who must Fight a Girl in Australia",1,"2020-12-23 07:13:43"
+25,"ANGELS LIFE","A Thoughtful Display of a Woman And a Astronaut who must Battle a Robot in Berlin",1,"2020-12-23 07:13:43"
+</pre>
+106,"BULWORTH COMMANDMENTS","A Amazing Display of a Mad Cow And a Pioneer who must Redeem a Sumo Wrestler in The Outback",1,"2020-12-23 07:13:43"
