@@ -172,10 +172,6 @@ sqlite> SELECT film_actor.film_id, film_actor.actor_id, count(*) FROM actor JOIN
 8  242  [21/Oct/2014:11:24:30 +0900]   10.213.25.66
 9  216  [21/Oct/2014:06:04:56 +0900]   10.213.25.66>
 >>> a2 = pd.read_csv("access_log_tmp_2.csv")
->>> a12 = pd.concat([a1,a2], ignore_header=True)
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-TypeError: concat() got an unexpected keyword argument 'ignore_header'
 >>> a12 = pd.concat([a1,a2], ignore_index=True)
 >>> a12.head  
 </pre>
