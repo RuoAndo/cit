@@ -92,6 +92,7 @@ actor_id,first_name,last_name,last_update,film_id,last_update,title,description
 </pre>
 
 # 3. 重複を取り除く DISTINCT
+3.1 レンタルしている映画の中で、actorは何人いるのか数える
 <pre>
 sqlite> SELECT * FROM actor LIMIT 3;
 1|PENELOPE|GUINESS|2020-12-23 07:12:29
@@ -104,6 +105,7 @@ sqlite> SELECT DISTINCT * FROM actor LIMIT 3;
 sqlite> SELECT DISTINCT count(*) FROM actor;
 200
 </pre>
+3.2 参考
 <pre>
 sqlite> SELECT * FROM actor LIMIT 1;
 1|PENELOPE|GUINESS|2020-12-23 07:12:29
@@ -115,4 +117,35 @@ sqlite> SELECT actor.actor_id,film_actor.film_id FROM actor JOIN film_actor ON a
 3|17
 4|23
 5|19
+</pre>
+
+# 4. 集計 GROUP BY
+4-1. actorとfilm_actorを結合して、film_id -> actor_idの順番で表示
+<pre>
+sqlite> SELECT film_actor.film_id, film_actor.actor_id FROM actor JOIN film_actor ON actor.actor_id = film_actor.actor_id LIMIT 5;
+1|1
+23|1
+25|1
+106|1
+140|1
+</pre>
+4-2. filmごとに、出演しているactorの数を数える
+<pre>
+sqlite> SELECT film_actor.film_id, film_actor.actor_id FROM actor JOIN film_actor ON actor.actor_id = film_actor.actor_id GROUP BY film_id LIMIT 5;
+1|1
+2|19
+3|2
+4|41
+5|51
+</pre>
+
+# 5. 集計 GROUP BY と条件設定HAVING
+actorが10人以上出演しているfilmを検索し、5件を表示
+<pre>
+sqlite> SELECT film_actor.film_id, film_actor.actor_id, count(*) FROM actor JOIN film_actor ON actor.actor_id = film_actor.actor_id GROUP BY film_id HAVING count(*) > 10 LIMIT 5;
+34|12|12
+87|3|13
+146|5|13
+188|31|13
+249|2|13
 </pre>
