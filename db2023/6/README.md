@@ -222,6 +222,9 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 # 7. DataFrameと機械学習
 7.1 iris(アヤメ)のデータセットを読み込んで可視化
+
+<img src="petal.png">
+
 <pre>
 (base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\6> python
 Python 3.8.5 (default, Sep  3 2020, 21:29:08) [MSC v.1916 64 bit (AMD64)] :: Anaconda, Inc. on win32
