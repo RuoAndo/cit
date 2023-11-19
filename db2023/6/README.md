@@ -1,3 +1,5 @@
+<img src="sakila_schemes.jpg>
+
 # 1. 第２正規形(2NF)の作成とCSVファイルへのエクスポート
 1-1. filmテーブルの表示（5件表示）
 <pre>
@@ -26,7 +28,7 @@ sqlite> SELECT F.film_id, F.title, F.description, FA.actor_id, FA.last_update FR
 106|BULWORTH COMMANDMENTS|A Amazing Display of a Mad Cow And a Pioneer who must Redeem a Sumo Wrestler in The Outback|1|2020-12-23 07:13:43
 140|CHEAPER CLYDE|A Emotional Character Study of a Pioneer And a Girl who must Discover a Dog in Ancient Japan|1|2020-12-23 07:13:43
 </pre>
-1.4 filmテーブルとfilm_actorを内部結合してCSVファイルにエクスポート(6_2NF_1.csv)
+1.4 filmテーブルとfilm_actorを内部結合してCSVファイルにエクスポート(6_2NF_1.csv) 2NF:第2正規形
 <pre>
 (base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\6> .\sqlite3.exe .\sakila_master.db
 SQLite version 3.39.3 2022-09-05 11:02:23
@@ -72,7 +74,7 @@ sqlite> SELECT A.actor_id, A.first_name, A.last_name, A.last_update, nf.film_id,
 1,PENELOPE,GUINESS,"2020-12-23 07:12:29",106,"2020-12-23 07:13:43","BULWORTH COMMANDMENTS","A Amazing Display of a Mad Cow And a Pioneer who must Redeem a Sumo Wrestler in The Outback"
 1,PENELOPE,GUINESS,"2020-12-23 07:12:29",140,"2020-12-23 07:13:43","CHEAPER CLYDE","A Emotional Character Study of a Pioneer And a Girl who must Discover a Dog in Ancient Japan"
 </pre>
-2.3 作成した第１正規形(1NF)を、CSVファイルにエクスポート
+2.3 作成した第１正規形(1NF)を、CSVファイルにエクスポート(6_1NF_1.csv)
 <pre>
 sqlite> .headers on
 sqlite> .mode csv
