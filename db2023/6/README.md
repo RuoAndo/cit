@@ -1,4 +1,4 @@
-<img src="sakila_schemes.jpg">
+<img src="sakila-schemes.jpg">
 
 # 1. 第２正規形(2NF)の作成とCSVファイルへのエクスポート
 1-1. filmテーブルの表示（5件表示）
