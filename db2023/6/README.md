@@ -220,7 +220,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 6            Connecticut           5544           CT
 </pre>
 
-#　7. DataFrameと機械学習
+# 7. DataFrameと機械学習
 7.1 iris(アヤメ)のデータセットを読み込む
 <pre>
 (base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\6> python
