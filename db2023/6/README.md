@@ -220,9 +220,8 @@ Type "help", "copyright", "credits" or "license" for more information.
 6            Connecticut           5544           CT
 </pre>
 
-#　7 機械学習
-
-iris(アヤメ)のデータセットを読み込む
+#　7. DataFrameと機械学習
+7.1 iris(アヤメ)のデータセットを読み込む
 <pre>
 (base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\6> python
 Python 3.8.5 (default, Sep  3 2020, 21:29:08) [MSC v.1916 64 bit (AMD64)] :: Anaconda, Inc. on win32
@@ -246,3 +245,18 @@ Type "help", "copyright", "credits" or "license" for more information.
 3      1
 4      1
 </pre>
+7.2 学習と予測
+<pre>
+>>> data_train_2 = data_train.drop('variety', axis=1)
+>>> clf = svm.SVC()
+>>> clf.fit(data_train_2, label_train)
+C:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py:72: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  return f(**kwargs)
+SVC()
+
+>>> data_test_2 = data_test.drop('variety', axis = 1)
+>>> pre = clf.predict(data_test_2)
+>>> print(pre)
+[1 1 3 1 1 2 1 3 1 2 2 3 1 1 1 2 3 3 2 2 1 3 3 3 1 1 3 2 2 2 3 1 3 2 1 3 3
+ 1]
+ </pre>
