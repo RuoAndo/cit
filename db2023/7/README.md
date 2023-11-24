@@ -1,4 +1,4 @@
-# 0. コンピュータのシステム負荷をデータベース化する
+# 0. コンピュータのシステム負荷をデータベース化する(1)
 
 0.0 typeperfの実行
 <pre>
@@ -29,6 +29,12 @@ https://pgecons-sec-tech.github.io/tech-report/html_wg3_windows_2018/wg3_windows
 "11/24/2023 21:06:17.101","87.928489142255415345","87.928489142255415345","90.946366856691568614","95.473183428345777202","90.569136970991380053","52.812860002632554313","54.321798859850623842","55.830737717068700476","60.357554288722923275","55.830737717068700476"
 "11/24/2023 21:06:18.135","69.770198368441981529","71.281688450019885295","65.235728123708284443","68.258708286864091974","68.636575970490298459","33.252781794713818897","31.741291713135915131","42.321722284181220175","37.787252039447523089","36.275761957869619323"
 </pre>
+
+0.2 プロットする
+<pre>
+(base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\7> python .\07_read_csv.py
+</pre>
+<img src="typperf_plot.png" width=50%>
 
 # 1.playerとcharacterのテーブルを作成
 
@@ -106,6 +112,8 @@ plt.show()
 <img src="weighted_random.png">
 
 1.4 doraemonに重みを付ける - 07_insert_character_repeat_weighted.pyを実行
+
+<img src="doraemon.png">
 
 <pre>
 sqlite> SELECT C.character_name, count(*) FROM player p INNER JOIN character C on P.player_id = C.player_id GROUP BY character_name ORDER BY count(*) DESC;
