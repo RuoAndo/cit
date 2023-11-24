@@ -71,6 +71,7 @@ plt.show()
   
 <img src="weighted_random.png">
 
+doraemonに重みを付ける
 
 <pre>
 sqlite> SELECT C.character_name, count(*) FROM player p INNER JOIN character C on P.player_id = C.player_id GROUP BY character_name ORDER BY count(*) DESC;
