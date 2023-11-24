@@ -1,4 +1,4 @@
-#1 playerとcharacterのテーブルを作成
+# 1.playerとcharacterのテーブルを作成
 
 <pre>
 (base) C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023>python 07_insert_player_repeat.py
@@ -10,7 +10,7 @@ insert into player (player_id, fname, lname, points, rank) values('1','okcGw','V
 (base) C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023>python 07_insert_character_repeat.py  
 </pre>
 
-人気のcharacterを調べる
+1.1 人気のcharacterを調べる
 
 <pre>
 (base) C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023>sqlite3.exe cit-db-2023-07.db
@@ -36,3 +36,4 @@ sqlite> SELECT P.player_id, P.fname, P.lname, C.character_id, C.character_name, 
 1|okcGw|Vawbp|119|doraemon|222
 1|okcGw|Vawbp|65|golgo|201
 </pre>
+
