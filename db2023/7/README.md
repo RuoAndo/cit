@@ -1,5 +1,7 @@
 # 1.playerとcharacterのテーブルを作成
 
+1.1 07_insert_player_repeat.pyと07_insert_character_repeat.pyを実行
+
 <pre>
 (base) C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023>python 07_insert_player_repeat.py
 insert into player (player_id, fname, lname, points, rank) values('0','yvKis','JMxwm','7','X');
@@ -10,7 +12,7 @@ insert into player (player_id, fname, lname, points, rank) values('1','okcGw','V
 (base) C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023>python 07_insert_character_repeat.py  
 </pre>
 
-1.1 人気のcharacterを調べる
+1.2 人気のcharacterを調べる
 
 <pre>
 sqlite> SELECT C.character_name, count(*) FROM player p INNER JOIN character C on P.player_id = C.player_id GROUP BY character_name ORDER BY count(*) DESC;
@@ -33,7 +35,7 @@ golgo|186
 begita|180
 </pre>
 
-1.2 乱数に偏りをもたせる
+1.3 乱数に偏りをもたせる
 
 <pre>
 import random
