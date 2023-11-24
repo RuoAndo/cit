@@ -113,6 +113,8 @@ plt.show()
 
 1.4 doraemonに重みを付ける - 07_insert_character_repeat_weighted.pyを実行
 
+<img src="doraemon.png">
+
 <pre>
 sqlite> SELECT C.character_name, count(*) FROM player p INNER JOIN character C on P.player_id = C.player_id GROUP BY character_name ORDER BY count(*) DESC;
 doraemon|707
