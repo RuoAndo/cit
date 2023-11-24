@@ -124,4 +124,6 @@ akinator|64
 golgo|59
 </pre>
 
+1.5 第2正規形→第1正規形　第2正規形→第3正規形
+
 <img src="DB-2023-7th1NF-2NF-3NF.png" width=70%>
