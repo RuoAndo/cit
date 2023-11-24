@@ -14,6 +14,8 @@ https://pgecons-sec-tech.github.io/tech-report/html_wg3_windows_2018/wg3_windows
 コマンドは、正しく完了しました。
 </pre>
 
+<img src="typperf_plot.png" width=50%>
+
 0.1 csvファイルへダンプ（保存）
 <pre>
 (base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\7> typeperf.exe -cf list.txt -si 1 -sc 100 -o 1.csv
