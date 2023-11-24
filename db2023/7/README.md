@@ -35,7 +35,42 @@ begita|180
 
 1.2 乱数に偏りをもたせる
 
+<pre>
+import random
+import matplotlib.pyplot as plt 
+
+cycle = 1000
+
+val_list = [1,2,3,4,5]
+result_list = [random.choices(val_list)[0] for _ in range(cycle)]
+
+print(result_list)
+
+plt.hist(result_list)
+plt.show()
+</pre>
+
 <img src="random.png">
+
+<pre>
+import random
+import matplotlib.pyplot as plt 
+
+
+cycle = 1000
+
+val_list = [1,2,3,4,5]
+weight_list = [10,1,1,1,1]
+
+result_list = [random.choices(val_list, weights=weight_list)[0] for _ in range(cycle)]
+print(result_list)
+
+plt.hist(result_list)
+plt.show()
+</pre>
+  
+<img src="weighted_random.png">
+
 
 <pre>
 sqlite> SELECT C.character_name, count(*) FROM player p INNER JOIN character C on P.player_id = C.player_id GROUP BY character_name ORDER BY count(*) DESC;
