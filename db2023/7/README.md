@@ -124,4 +124,4 @@ akinator|64
 golgo|59
 </pre>
 
-<img src="DB-2023-7th1NF-2NF-3NF.png" width=70% style="transform:rotate(180deg);>
+<img src="DB-2023-7th1NF-2NF-3NF.png" width=70%>
