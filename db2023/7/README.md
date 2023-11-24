@@ -35,6 +35,8 @@ begita|180
 
 1.2 乱数に偏りをもたせる
 
+<img src="random.png">
+
 <pre>
 sqlite> SELECT C.character_name, count(*) FROM player p INNER JOIN character C on P.player_id = C.player_id GROUP BY character_name ORDER BY count(*) DESC;
 doraemon|707
