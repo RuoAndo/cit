@@ -1,0 +1,2 @@
+# playerとcharacterのテーブルを作成
+
