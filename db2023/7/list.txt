@@ -1,0 +1,2 @@
+\Processor(*)\% Processor Time
+\Processor(*)\% User Time

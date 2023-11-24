@@ -1,0 +1,10 @@
+(base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\7> typeperf.exe -cf list.txt -si 2 -sc 3
+
+"(PDH-CSV 4.0)","\\DESKTOP-8FOAVTD\Processor(0)\% Processor Time","\\DESKTOP-8FOAVTD\Processor(1)\% Processor Time","\\DESKTOP-8FOAVTD\Processor(2)\% Processor Time","\\DESKTOP-8FOAVTD\Processor(3)\% Processor Time","\\DESKTOP-8FOAVTD\Processor(_Total)\% Processor Time","\\DESKTOP-8FOAVTD\Processor(0)\% User Time","\\DESKTOP-8FOAVTD\Processor(1)\% User Time","\\DESKTOP-8FOAVTD\Processor(2)\% User Time","\\DESKTOP-8FOAVTD\Processor(3)\% User Time","\\DESKTOP-8FOAVTD\Processor(_Total)\% User Time"
+"11/23/2023 15:05:31.011","60.654237","54.096610","58.865794","60.058089","58.418685","38.749615","41.730354","48.287981","45.903390","43.667837"
+"11/23/2023 15:05:33.029","14.770235","6.247259","12.445787","12.445787","11.477265","8.522976","3.099264","9.297793","6.198528","6.779638"
+"11/23/2023 15:05:35.046","31.041321","17.869438","21.743521","22.518338","23.293155","13.946699","11.622249","16.271149","11.622249","13.365589"
+                        　　　　　　　　　　　　　　
+コマンドは、正しく完了しました。
+
+https://pgecons-sec-tech.github.io/tech-report/html_wg3_windows_2018/wg3_windows_2018.html
