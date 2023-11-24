@@ -1,3 +1,5 @@
+<img src="sakila-schemes.jpg">
+
 # 0. コンピュータのシステム負荷をデータベース化する(1)
 
 0.0 typeperfの実行
