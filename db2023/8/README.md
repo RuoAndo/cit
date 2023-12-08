@@ -45,5 +45,7 @@ sqlite> select * from event where date(ts) == '2023-12-12' LIMIT 5;
 2023-12-12 14:05:38|50|23|doraemon|93
 2023-12-12 10:56:05|13|10|bikkuriko|68
 2023-12-12 15:23:02|12|18|doraemon|8
-</pre>
 2023-12-12 10:40:16|81|4|doraemon|90
+</pre>
+
+
