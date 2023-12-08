@@ -47,5 +47,12 @@ sqlite> select * from event where date(ts) == '2023-12-12' LIMIT 5;
 2023-12-12 15:23:02|12|18|doraemon|8
 2023-12-12 10:40:16|81|4|doraemon|90
 </pre>
-
-
+イベントを多く生成しているplayer_idを検索
+<pre>
+sqlite> select player_id, count(*) from event where date(ts) == '2023-12-12' group by player_id ORDER BY count(*) DESC LIMIT 5;
+24|12
+6|12
+29|11
+5|11
+16|10
+</pre>
