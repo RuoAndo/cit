@@ -13,6 +13,7 @@ where chr=3 AND chr=4
 region exonic
 </pre>
 
+
 # 2. Eventテーブルを作成
 <pre>
 (base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\8> python .\08_createEventTable.py
