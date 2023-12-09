@@ -104,6 +104,7 @@ sqlite> SELECT character.character_id, count(*) FROM event INNER JOIN character 
 </pre>
 
 # 4. sQL - csv - STL
+DBをcsvにエクスポート
 <pre>
 2023-12-09 12:50:27|41|20||31
 2023-12-10 14:08:50|81|29||7
@@ -114,7 +115,6 @@ sqlite> .mode csv
 sqlite> .once 1.csv
 sqlite> select * from event limit 100;
 </pre>
-
 <pre>
 (base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\8> head -n 5 .\1.csv
 ts,character_id,player_id,character_name,character_id_attacked
@@ -123,3 +123,29 @@ ts,character_id,player_id,character_name,character_id_attacked
 "2023-12-12 11:40:09",54,2,,7
 "2023-12-10 12:53:35",19,8,,54
 </pre>
+csvファイルをパース1
+<pre>
+root@flare-Precision-Tower-7910:~/cit/db2023/8# ./a.out | head -n 15
+ts
+character_id
+player_id
+character_name
+character_id_attacked
+
+2023-12-13 14:02:44
+10
+26
+41
+2023-12-12 08:25:54
+56
+14
+</pre>
+csvファイルをパース2
+<pre>
+root@flare-Precision-Tower-7910:~/cit/db2023/8# g++ 2.cpp
+root@flare-Precision-Tower-7910:~/cit/db2023/8# ./a.out 
+2023-12-12 11:40:09
+54
+2
+</pre>  
+
