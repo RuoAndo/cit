@@ -17,13 +17,19 @@
 </pre>
 <img src="x3.png">
 <pre>
-# ./a.out 
-fields chr
-fields pos
-fields chrom
-from variants
-where chr=3 AND chr=4 
-region exonic
+
+<pre>
+root@flare-Precision-Tower-7910:~/cit/db2023/8# g++ x3-sql-parser.cpp -lboost_system
+In file included from x3-sql-parser.cpp:1:0:
+/usr/include/boost/spirit.hpp:18:4: warning: #warning "This header is deprecated. Please use: boost/spirit/include/classic.hpp" [-Wcpp]
+ #  warning "This header is deprecated. Please use: boost/spirit/include/classic.hpp"
+    ^~~~~~~
+root@flare-Precision-Tower-7910:~/cit/db2023/8# ./a.out 
+fields ts
+fields playerID
+from event
+where playerID =3 AND characterID=4
+region 
 </pre>
 
 # 2. SQLの実装：Semantic Action (boost spirit::qi)
