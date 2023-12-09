@@ -102,3 +102,24 @@ sqlite> SELECT character.character_id, count(*) FROM event INNER JOIN character 
 79|49
 70|49 
 </pre>
+
+# 4. sQL <->
+<pre>
+2023-12-09 12:50:27|41|20||31
+2023-12-10 14:08:50|81|29||7
+2023-12-13 11:03:17|83|20||22
+2023-12-12 14:30:28|70|27||36
+sqlite> .headers on
+sqlite> .mode csv
+sqlite> .once 1.csv
+sqlite> select * from event limit 100;
+</pre>
+
+<pre>
+(base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\8> head -n 5 .\1.csv
+ts,character_id,player_id,character_name,character_id_attacked
+"2023-12-13 14:02:44",10,26,,41
+"2023-12-12 08:25:54",56,14,,38
+"2023-12-12 11:40:09",54,2,,7
+"2023-12-10 12:53:35",19,8,,54
+</pre>
