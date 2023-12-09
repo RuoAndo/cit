@@ -7,6 +7,9 @@
 -a----        2023/12/09      9:28           1570 08_insert_character_repeat_weighted.py
 -a----        2023/12/09      9:28           1567 08_insert_player_repeat.py
 </pre>
+テーブルの結合
+<img src="join.png">
+
 # 1. Boost Spiript::X3でSQL文をparseする
 <pre>
 # g++ x3-sql-parser.cpp -std=c++17 -lboost_system
@@ -233,3 +236,9 @@ $ ./file_tokenizer_2 random_data.txt
 117.88.246.184,97.107.233.213,
 27.171.223.235,233.246.67.135,
 </pre>
+
+# 5.　サブクエリ（SQL文を入れ子にする）
+
+
+
+
