@@ -122,7 +122,8 @@ ts,character_id,player_id,character_name,character_id_attacked
 </pre>
 csvファイルをパース1
 <pre>
-root@flare-Precision-Tower-7910:~/cit/db2023/8# ./a.out | head -n 15
+root@flare-Precision-Tower-7910:~/cit/db2023/8# g++ -o 1 1.cpp
+root@flare-Precision-Tower-7910:~/cit/db2023/8# ./1 1.csv 
 ts
 character_id
 player_id
@@ -133,14 +134,11 @@ character_id_attacked
 10
 26
 41
-2023-12-12 08:25:54
-56
-14
 </pre>
-csvファイルをパース2
+csvファイルをパース2（ヘッダをスキップ）
 <pre>
-root@flare-Precision-Tower-7910:~/cit/db2023/8# g++ 2.cpp
-root@flare-Precision-Tower-7910:~/cit/db2023/8# ./a.out 
+root@flare-Precision-Tower-7910:~/cit/db2023/8# g++ -o 2 2.cpp
+root@flare-Precision-Tower-7910:~/cit/db2023/8# ./2
 2023-12-12 11:40:09
 54
 2
