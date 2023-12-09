@@ -26,7 +26,7 @@ where chr=3 AND chr=4
 region exonic
 </pre>
 
-# 2. Semantic Action (boost spirit::qi)
+# 2. SQLの実装：Semantic Action (boost spirit::qi)
 <img src="sa1.png">
 <pre>
 [root@ik1-314-17351 8]# time g++ csv_semantic_action.cpp                                                                                                                                                                                     
