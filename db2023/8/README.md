@@ -22,7 +22,7 @@ where chr=3 AND chr=4
 region exonic
 </pre>
 
-# 2. Semantic Action
+# 2. Semantic Action (boost spirit::qi)
 <img src="sa1.png">
 <pre>
 [root@ik1-314-17351 8]# time g++ csv_semantic_action.cpp                                                                                                                                                                                     
@@ -112,7 +112,7 @@ sqlite> SELECT character.character_id, count(*) FROM event INNER JOIN character 
 70|49 
 </pre>
 
-# 4. SQLの実装: SQL - csv - STL - serialize
+# 4. SQLの実装: csv -> STL -> serialize -> dbファイル
 DBをcsvにエクスポート
 <pre>
 2023-12-09 12:50:27|41|20||31
