@@ -123,8 +123,7 @@ ts,character_id,player_id,character_name,character_id_attacked
 "2023-12-12 11:40:09",54,2,,7
 "2023-12-10 12:53:35",19,8,,54
 </pre>
-
-csvファイルをパース
+csvファイルをパース1
 <pre>
 root@flare-Precision-Tower-7910:~/cit/db2023/8# ./a.out | head -n 15
 ts
@@ -141,3 +140,12 @@ character_id_attacked
 56
 14
 </pre>
+csvファイルをパース2
+<pre>
+root@flare-Precision-Tower-7910:~/cit/db2023/8# g++ 2.cpp
+root@flare-Precision-Tower-7910:~/cit/db2023/8# ./a.out 
+2023-12-12 11:40:09
+54
+2
+</pre>  
+
