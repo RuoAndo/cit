@@ -158,6 +158,8 @@ root@flare-Precision-Tower-7910:~/cit/db2023/8# ./a.out
 2
 </pre>  
 csvファイルをパース3
+<img src="boost-spirit.png">
+gcc-8.2をインストール
 <pre>
 [root@ik1-314-17351 build]# 
 
