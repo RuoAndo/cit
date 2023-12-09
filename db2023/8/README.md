@@ -90,28 +90,7 @@ sqlite> select player_id, count(*) from event where date(ts) == '2023-12-12' gro
 5|11
 16|10
 </pre>
-Playerテーブルと結合する
-<pre>
-sqlite> SELECT event.ts, event.player_id, player.fname, player.lname FROM event INNER JOIN player ON event.player_id = player.player_id LIMIT 10;
-2023-12-12 09:25:15|4|CHYkG|Mvcnb
-2023-12-11 09:09:34|28|fCpAb|stFiu
-2023-12-09 12:17:09|8|CpGxa|MMspe
-2023-12-12 09:38:31|21|ZVyJZ|byfCG
-2023-12-10 15:16:14|29|fELpq|xmWgU
-2023-12-12 12:49:09|24|rStNz|dEtfd
-2023-12-11 08:46:21|5|oSLXK|jXJcl
-2023-12-10 13:17:41|3|CNFKg|lmnyB
-2023-12-12 11:06:33|29|fELpq|xmWgU
-2023-12-13 11:47:55|4|CHYkG|Mvcnb
-</pre>
-<pre>
-sqlite> SELECT event.player_id, player.fname, player.lname, count(*) FROM event INNER JOIN player ON event.player_id = player.player_id GROUP BY event.player_id ORDER BY count(*) DESC LIMIT 5;
-28|fCpAb|stFiu|49
-13|lHlMM|xBpBc|44
-5|oSLXK|jXJcl|44
-2|rDReG|dzLQZ|44
-27|jxlWi|UEgtI|40
-</pre>
+Characterテーブルと結合する
 <pre>
 sqlite> SELECT character.character_id, count(*) FROM event INNER JOIN character ON event.character_id = character.character_id GROUP by character.character_id ORDER BY count(*) DESC LIMIT 5;
 26|57
@@ -122,7 +101,7 @@ sqlite> SELECT character.character_id, count(*) FROM event INNER JOIN character 
 </pre>
 
 # 4. SQLの実装: csv -> STL -> serialize -> dbファイル
-DBをcsvにエクスポート
+DBでselect * from event limit 100;を実行した結果を、csvにエクスポート
 <pre>
 2023-12-09 12:50:27|41|20||31
 2023-12-10 14:08:50|81|29||7
