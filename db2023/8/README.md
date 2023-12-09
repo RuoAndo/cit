@@ -221,7 +221,19 @@ $ ./file_tokenizer_2 random_data.txt
 </pre>
 
 # 5.　サブクエリ（SQL文を入れ子にする）
-
-
-
+<pre>
+(base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\8> sqlite3.exe .\cit-db-2023-08.db
+SQLite version 3.33.0 2020-08-14 13:23:32
+Enter ".help" for usage hints.
+sqlite> ./tables
+Error: unknown command or invalid arguments:  "/tables". Enter ".help" for help
+sqlite> .tables
+character  event      player
+sqlite> cd
+(base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\8> sqlite3.exe .\sakila_master.db
+SQLite version 3.33.0 2020-08-14 13:23:32
+Enter ".help" for usage hints.
+sqlite> select customer_id, first_name, last_name FROM customer WHERE customer_id = (SELECT MAX(customer_id) FROM customer);
+599|AUSTIN|CINTRON
+</pre>
 
