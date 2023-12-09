@@ -112,7 +112,7 @@ sqlite> SELECT character.character_id, count(*) FROM event INNER JOIN character 
 70|49 
 </pre>
 
-# 4. DBの作成: SQL - csv - STL - serialize
+# 4. SQLの実装: SQL - csv - STL - serialize
 DBをcsvにエクスポート
 <pre>
 2023-12-09 12:50:27|41|20||31
@@ -158,8 +158,11 @@ root@flare-Precision-Tower-7910:~/cit/db2023/8# ./a.out
 2
 </pre>  
 csvファイルをパース3
+
 <img src="boost-spirit.png">
+
 gcc-8.2をインストール
+
 <pre>
 [root@ik1-314-17351 build]# 
 
