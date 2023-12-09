@@ -185,12 +185,14 @@ gcc-8.2をインストール
  1049  /usr/local/bin/gcc --version
  1050  vi /etc/ld.so.conf
  1051  ldconfig -v
- 
+
+IPアドレスのcsvファイルの生成とパース
+	
  1114  /usr/local/bin/g++ -o genData genData.cpp 
  1127  /usr/local/bin/g++ -o file_tokenizer_2 file_tokenizer_2.cpp 
  1129  ./genData 10
  1130  ./file_tokenizer_2 random_data.txt 
- 
+	
  [root@ik1-314-17351 boost]# ./file_tokenizer_2 random_data.txt 
 	37.142.99.146,32.26.247.61,
 	14.134.187.87,204.95.56.148,
@@ -202,4 +204,32 @@ gcc-8.2をインストール
 	231.129.235.136,150.216.223.239,
 	32.137.88.241,210.58.72.63,
 	233.24.196.108,126.205.84.52,
+</pre>
+
+<pre>
+$ g++ -o genData genData.cpp
+$ g++ -o file_tokenizer_2 file_tokenizer_2.cpp -lboost_system
+$ ./genData 10
+$ ./file_tokenizer_2 random_data.txt
+</pre>
+
+<pre>
+# ./genData 5
+# cat random_data.txt
+"2019/07/02 02:02:09.751","2019/07/02 02:02:09","2019/07/02 02:02:09","841","157.5.64.63","25846","4d","142.235.176.160","51321","ch","rY6","X71sCpPv0","qI2","RGpXY","iMwCkmZT","8","gaENgEaZrXaMNwvgsT9yEwmn1d","912","198","336","769","278","554","rand-pa1"
+"2019/07/02 07:07:30.535","2019/07/02 07:07:30","2019/07/02 07:07:30","478","195.15.15.6","41214","xl","174.106.42.1","23907","lN","y2I","tUWMHwQsT","Rs0","gwZr3","t8q56ToO","5","TEjnUjn2Q3wKsO2NexBZmqBzWL","953","917","636","718","142","607","rand-pa1"
+"2019/07/02 09:09:22.707","2019/07/02 09:09:22","2019/07/02 09:09:22","17","189.77.208.181","15918","B1","28.212.101.232","8994","oa","IQF","d6Eyq2whQ","tI5","GFBTy","TtrhQOCK","8","dILVXueUQWn6RXxIwN8pkmK9NA","157","401","130","109","999","219","rand-pa1"
+"2019/07/02 14:14:42.200","2019/07/02 14:14:42","2019/07/02 14:14:42","513","117.88.246.184","54992","FN","97.107.233.213","40150","uj","0l1","mF69SCdKY","Ayr","3jus4","qhk1yXZ9","3","c9EDV9ouapatROTo7qePopjNjN","638","525","494","973","293","772","rand-pa1"
+"2019/07/02 15:15:45.559","2019/07/02 15:15:45","2019/07/02 15:15:45","527","27.171.223.235","50457","FB","233.246.67.135","26229","Q1","c3o","KvfhdcrQp","3nO","OTGy8","qll7vszg","9","0jqVfVY2k2Pwk2ziXXwfa1VvUE","284","353","808","920","70","950","rand-pa1"
+</pre>
+
+# Note: IP Addresses are randomly generated. 
+
+<pre>
+$ ./file_tokenizer_2 random_data.txt
+157.5.64.63,142.235.176.160,
+195.15.15.6,174.106.42.1,
+189.77.208.181,28.212.101.232,
+117.88.246.184,97.107.233.213,
+27.171.223.235,233.246.67.135,
 </pre>
