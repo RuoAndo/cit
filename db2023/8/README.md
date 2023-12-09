@@ -103,7 +103,7 @@ sqlite> SELECT character.character_id, count(*) FROM event INNER JOIN character 
 70|49 
 </pre>
 
-# 4. sQL - csv - STL
+# 4. DBの作成: SQL - csv - STL - serialize
 DBをcsvにエクスポート
 <pre>
 2023-12-09 12:50:27|41|20||31
