@@ -13,6 +13,9 @@ where chr=3 AND chr=4
 region exonic
 </pre>
 
+# 2. Semantic Action
+<img src="sa1.png">
+
 
 # 2. Eventテーブルを作成
 <pre>
