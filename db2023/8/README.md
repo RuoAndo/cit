@@ -13,8 +13,24 @@ where chr=3 AND chr=4
 region exonic
 </pre>
 
+# 2. Semantic Action
+<img src="sa1.png">
+<pre>
+[root@ik1-314-17351 8]# time g++ csv_semantic_action.cpp                                                                                                                                                                                     
 
-# 2. Eventテーブルを作成
+real    0m3.254s
+user    0m3.042s
+sys     0m0.205s
+[root@ik1-314-17351 8]# ./a.out 
+1,2,3
+3 integers parsed
+1 2 3
+error
+x: 1 y: 2.0 x: 3 y: -4.5
+2 pts parsed
+</pre>
+  
+# 3. Eventテーブルを作成
 <pre>
 (base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\8> python .\08_createEventTable.py
 INSERTED: 0
