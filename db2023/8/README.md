@@ -147,7 +147,7 @@ csvファイルをパース3
 
 <img src="boost-spirit.png">
 
-gcc-8.2をインストール
+# gcc-8.2をインストール
 
 <pre>
 [root@ik1-314-17351 build]# 
@@ -190,6 +190,18 @@ IPアドレスのcsvファイルの生成とパース
 	231.129.235.136,150.216.223.239,
 	32.137.88.241,210.58.72.63,
 	233.24.196.108,126.205.84.52,
+</pre>
+
+# Boostをインストール
+
+<pre>
+ 1031  gcc --version
+ 1032  g++ --version
+ 1033  wget https://boostorg.jfrog.io/artifactory/main/release/1.83.0/source/boost_1_83_0.tar.gz
+ 1034  tar zxvf boost_1_83_0.tar.gz 
+ 1035  cd boost_1_83_0
+ 1036  time ./bootstrap.sh --prefix=/usr/local/
+ 1037  time ./b2 install
 </pre>
 
 <pre>
