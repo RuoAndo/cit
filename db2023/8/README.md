@@ -30,7 +30,7 @@ x: 1 y: 2.0 x: 3 y: -4.5
 2 pts parsed
 </pre>
   
-# 2. Eventテーブルを作成
+# 3. Eventテーブルを作成
 <pre>
 (base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\8> python .\08_createEventTable.py
 INSERTED: 0
