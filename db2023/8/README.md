@@ -1,3 +1,12 @@
+<img src="sakila-schemes.jpg">
+
+# 0. cit-db-2023-08.dbの作成
+下記の３つのファイルを実行
+<pre>
+-a----        2023/12/09      9:45           1910 08_createEventTable.py
+-a----        2023/12/09      9:28           1570 08_insert_character_repeat_weighted.py
+-a----        2023/12/09      9:28           1567 08_insert_player_repeat.py
+</pre>
 # 1. Boost Spiript::X3でSQL文をparseする
 <pre>
 # g++ x3-sql-parser.cpp -std=c++17 -lboost_system
