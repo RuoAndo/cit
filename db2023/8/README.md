@@ -148,4 +148,44 @@ root@flare-Precision-Tower-7910:~/cit/db2023/8# ./a.out
 54
 2
 </pre>  
+csvファイルをパース3
+<pre>
+[root@ik1-314-17351 build]# 
 
+ 1036  curl -LO http://ftp.tsukuba.wide.ad.jp/software/gcc/releases/gcc-8.2.0/gcc-8.2.0.tar.gz
+ 1037  curl -LO http://ftp.tsukuba.wide.ad.jp/software/gcc/releases/gcc-8.2.0/sha512.sum
+ 1038  cd /usr/local/src/gcc-8.2.0/
+ 1041  tar zxvf gcc-8.2.0.tar.gz 
+ 1042  cd /usr/local/src/gcc-8.2.0/
+ 1043  ./contrib/download_prerequisites
+ 1044  mkdir build
+ 1045  cd build/
+ 1046  ../configure --enable-languages=c,c++ --prefix=/usr/local --disable-bootstrap --disable-multilib
+ 1047  time make
+ 
+	real    24m28.134s
+	user    20m39.523s
+	sys     2m16.913s
+ 
+ 1048  make install
+ 1049  /usr/local/bin/gcc --version
+ 1050  vi /etc/ld.so.conf
+ 1051  ldconfig -v
+ 
+ 1114  /usr/local/bin/g++ -o genData genData.cpp 
+ 1127  /usr/local/bin/g++ -o file_tokenizer_2 file_tokenizer_2.cpp 
+ 1129  ./genData 10
+ 1130  ./file_tokenizer_2 random_data.txt 
+ 
+ [root@ik1-314-17351 boost]# ./file_tokenizer_2 random_data.txt 
+	37.142.99.146,32.26.247.61,
+	14.134.187.87,204.95.56.148,
+	224.151.190.177,122.11.49.223,
+	214.53.181.145,0.39.143.20,
+	33.252.56.182,20.5.83.235,
+	203.180.56.102,10.213.229.137,
+	130.194.194.175,28.141.109.3,
+	231.129.235.136,150.216.223.239,
+	32.137.88.241,210.58.72.63,
+	233.24.196.108,126.205.84.52,
+</pre>
