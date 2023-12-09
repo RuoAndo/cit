@@ -61,7 +61,7 @@ namespace VQL
 
 int main(int argc, char **argv)
 {
-  std::string query = "SELECT chr,   pos,chrom FROM variants WHERE chr=3 AND chr=4 REGION exonic";
+  std::string query = "SELECT ts, player_id FROM event WHERE player_id=3 AND character_id=4";
   bool success = false;
 
   auto results = VQL::parse(query.begin(), query.end(), success);
