@@ -103,7 +103,7 @@ sqlite> SELECT character.character_id, count(*) FROM event INNER JOIN character 
 70|49 
 </pre>
 
-# 4. sQL <->
+# 4. sQL - csv - STL
 <pre>
 2023-12-09 12:50:27|41|20||31
 2023-12-10 14:08:50|81|29||7
