@@ -1,6 +1,5 @@
-#include <boost/spirit.hpp>
-//#include <boost/spirit/include/classic.hpp>
-#include <boost/spirit/home/x3.hpp>
+//#include <boost/spirit.hpp>
+#include <boost/spirit/include/classic.hpp>
 #include <string>
 #include <typeinfo>
 
@@ -12,14 +11,14 @@ namespace VQL
   {
     using namespace boost::spirit::x3;
 
-    using boost::spirit::x3::lexeme;
-    using boost::spirit::x3::alpha;
-    using boost::spirit::x3::phrase_parse;
-    using boost::spirit::x3::ascii::space;
-    using boost::spirit::x3::_attr;
+    using x3::lexeme;
+    using x3::alpha;
+    using x3::phrase_parse;
+    using x3::ascii::space;
+    using x3::_attr;
 
 
-    std::vector<std::string> select;
+    vector<std::string> select;
     std::string from;
     std::string where;
     std::string region;
@@ -30,20 +29,20 @@ namespace VQL
     auto toRegion = [&](auto & ctx) {region = _attr(ctx);};
 
 
-    auto keywords = boost::spirit::x3::lit("SELECT") |
-      boost::spirit::x3::lit("FROM")   |
-      boost::spirit::x3::lit("WHERE")  |
-      boost::spirit::x3::lit("REGION");
+    auto keywords = x3::lit("SELECT") |
+      x3::lit("FROM")   |
+      x3::lit("WHERE")  |
+      x3::lit("REGION");
 
-    auto word     = *(boost::spirit::x3::alnum - keywords);
-    auto cond     = *(boost::spirit::x3::char_ - keywords);
+    auto word     = *(x3::alnum - keywords);
+    auto cond     = *(x3::char_ - keywords);
 
 
     success = phrase_parse(begin, end,
                            "SELECT" >>
                            (word % ",")[toSelect] >>
                            ("FROM"  >> word[toFrom]) >>
-                           -("WHERE" >> boost::spirit::x3::lexeme[cond][toWhere]) >>
+                           -("WHERE" >> x3::lexeme[cond][toWhere]) >>
                            -("REGION" >> word[toRegion])
                            ,
                            space
@@ -61,7 +60,7 @@ namespace VQL
 
 int main(int argc, char **argv)
 {
-  std::string query = "SELECT ts, player_id FROM event WHERE player_id=3 AND character_id=4";
+  std::string query = "SELECT chr,   pos,chrom FROM variants WHERE chr=3 AND chr=4 REGION exonic";
   bool success = false;
 
   auto results = VQL::parse(query.begin(), query.end(), success);

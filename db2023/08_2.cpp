@@ -1,0 +1,51 @@
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <string>
+#include <boost/tokenizer.hpp>
+
+
+std::vector < std::vector< std::string > > parse_csv(const char* filepath)
+{
+  std::vector< std::vector< std::string > > cells;
+  std::string line;
+  std::ifstream ifs(filepath);
+
+   while (std::getline(ifs, line)) {
+
+    std::vector< std::string > data;
+
+    boost::tokenizer< boost::escaped_list_separator< char > > tokens(line);
+    for (const std::string& token : tokens) {
+      data.push_back(token);
+    }
+
+     cells.push_back(data);
+  }
+
+  return cells;
+}
+
+
+
+int main(void)
+{
+
+  static int line_counter = 0;
+  
+  const auto cells = parse_csv("1.csv");
+  for (const auto& rows : cells) {
+    
+    if(line_counter > 2)
+      {
+	for (const auto& cell : rows) {
+	  std::cout << cell << std::endl;
+	}
+      }
+  
+    line_counter++; 
+    // std::cout << std::endl;
+  }
+
+  return 0;
+}
