@@ -250,7 +250,13 @@ sqlite> select customer_id, first_name, last_name FROM customer WHERE customer_i
 </pre>
 
 # 6. SQL driver: C++で実装
-コールバック関数
+
+コールバック関数（処理が完了した際に呼び出される関数）
 
 <img src="callback.png">
+
+SELECT文の実行
+
+<img src="callback2.png">
+
 
