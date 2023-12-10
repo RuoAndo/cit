@@ -250,7 +250,6 @@ sqlite> select customer_id, first_name, last_name FROM customer WHERE customer_i
 </pre>
 
 # 6. SQL driver: C++で実装
-
 コールバック関数
 
 <img src="callback.png">
