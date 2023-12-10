@@ -16,14 +16,19 @@
 # g++ x3-sql-parser.cpp -std=c++17 -lboost_system
 </pre>
 <img src="x3.png">
+
 <pre>
-# ./a.out 
-fields chr
-fields pos
-fields chrom
-from variants
-where chr=3 AND chr=4 
-region exonic
+root@flare-Precision-Tower-7910:~/cit/db2023/8# g++ x3-sql-parser.cpp -lboost_system
+In file included from x3-sql-parser.cpp:1:0:
+/usr/include/boost/spirit.hpp:18:4: warning: #warning "This header is deprecated. Please use: boost/spirit/include/classic.hpp" [-Wcpp]
+ #  warning "This header is deprecated. Please use: boost/spirit/include/classic.hpp"
+    ^~~~~~~
+root@flare-Precision-Tower-7910:~/cit/db2023/8# ./a.out 
+fields ts
+fields playerID
+from event
+where playerID =3 AND characterID=4
+region 
 </pre>
 
 # 2. SQLの実装：Semantic Action (boost spirit::qi)
@@ -85,28 +90,7 @@ sqlite> select player_id, count(*) from event where date(ts) == '2023-12-12' gro
 5|11
 16|10
 </pre>
-Playerテーブルと結合する
-<pre>
-sqlite> SELECT event.ts, event.player_id, player.fname, player.lname FROM event INNER JOIN player ON event.player_id = player.player_id LIMIT 10;
-2023-12-12 09:25:15|4|CHYkG|Mvcnb
-2023-12-11 09:09:34|28|fCpAb|stFiu
-2023-12-09 12:17:09|8|CpGxa|MMspe
-2023-12-12 09:38:31|21|ZVyJZ|byfCG
-2023-12-10 15:16:14|29|fELpq|xmWgU
-2023-12-12 12:49:09|24|rStNz|dEtfd
-2023-12-11 08:46:21|5|oSLXK|jXJcl
-2023-12-10 13:17:41|3|CNFKg|lmnyB
-2023-12-12 11:06:33|29|fELpq|xmWgU
-2023-12-13 11:47:55|4|CHYkG|Mvcnb
-</pre>
-<pre>
-sqlite> SELECT event.player_id, player.fname, player.lname, count(*) FROM event INNER JOIN player ON event.player_id = player.player_id GROUP BY event.player_id ORDER BY count(*) DESC LIMIT 5;
-28|fCpAb|stFiu|49
-13|lHlMM|xBpBc|44
-5|oSLXK|jXJcl|44
-2|rDReG|dzLQZ|44
-27|jxlWi|UEgtI|40
-</pre>
+Characterテーブルと結合する
 <pre>
 sqlite> SELECT character.character_id, count(*) FROM event INNER JOIN character ON event.character_id = character.character_id GROUP by character.character_id ORDER BY count(*) DESC LIMIT 5;
 26|57
@@ -117,7 +101,7 @@ sqlite> SELECT character.character_id, count(*) FROM event INNER JOIN character 
 </pre>
 
 # 4. SQLの実装: csv -> STL -> serialize -> dbファイル
-DBをcsvにエクスポート
+DBでselect * from event limit 100;を実行した結果を、csvにエクスポート
 <pre>
 2023-12-09 12:50:27|41|20||31
 2023-12-10 14:08:50|81|29||7
@@ -138,7 +122,8 @@ ts,character_id,player_id,character_name,character_id_attacked
 </pre>
 csvファイルをパース1
 <pre>
-root@flare-Precision-Tower-7910:~/cit/db2023/8# ./a.out | head -n 15
+root@flare-Precision-Tower-7910:~/cit/db2023/8# g++ -o 1 1.cpp
+root@flare-Precision-Tower-7910:~/cit/db2023/8# ./1 1.csv 
 ts
 character_id
 player_id
@@ -149,14 +134,11 @@ character_id_attacked
 10
 26
 41
-2023-12-12 08:25:54
-56
-14
 </pre>
-csvファイルをパース2
+csvファイルをパース2（ヘッダをスキップ）
 <pre>
-root@flare-Precision-Tower-7910:~/cit/db2023/8# g++ 2.cpp
-root@flare-Precision-Tower-7910:~/cit/db2023/8# ./a.out 
+root@flare-Precision-Tower-7910:~/cit/db2023/8# g++ -o 2 2.cpp
+root@flare-Precision-Tower-7910:~/cit/db2023/8# ./2
 2023-12-12 11:40:09
 54
 2
@@ -165,7 +147,7 @@ csvファイルをパース3
 
 <img src="boost-spirit.png">
 
-gcc-8.2をインストール
+# gcc-8.2をインストール
 
 <pre>
 [root@ik1-314-17351 build]# 
@@ -210,6 +192,18 @@ IPアドレスのcsvファイルの生成とパース
 	233.24.196.108,126.205.84.52,
 </pre>
 
+# Boost (1.83)をインストール
+
+<pre>
+ 1031  gcc --version
+ 1032  g++ --version
+ 1033  wget https://boostorg.jfrog.io/artifactory/main/release/1.83.0/source/boost_1_83_0.tar.gz
+ 1034  tar zxvf boost_1_83_0.tar.gz 
+ 1035  cd boost_1_83_0
+ 1036  time ./bootstrap.sh --prefix=/usr/local/
+ 1037  time ./b2 install
+</pre>
+
 <pre>
 $ g++ -o genData genData.cpp
 $ g++ -o file_tokenizer_2 file_tokenizer_2.cpp -lboost_system
@@ -239,7 +233,19 @@ $ ./file_tokenizer_2 random_data.txt
 </pre>
 
 # 5.　サブクエリ（SQL文を入れ子にする）
-
-
-
+<pre>
+(base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\8> sqlite3.exe .\cit-db-2023-08.db
+SQLite version 3.33.0 2020-08-14 13:23:32
+Enter ".help" for usage hints.
+sqlite> ./tables
+Error: unknown command or invalid arguments:  "/tables". Enter ".help" for help
+sqlite> .tables
+character  event      player
+sqlite> cd
+(base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\8> sqlite3.exe .\sakila_master.db
+SQLite version 3.33.0 2020-08-14 13:23:32
+Enter ".help" for usage hints.
+sqlite> select customer_id, first_name, last_name FROM customer WHERE customer_id = (SELECT MAX(customer_id) FROM customer);
+599|AUSTIN|CINTRON
+</pre>
 
