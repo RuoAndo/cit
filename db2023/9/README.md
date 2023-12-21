@@ -29,3 +29,12 @@ sqlite> SELECT character_id_dst, count(*) FROM event GROUP BY character_id_dst O
 94|16
 54|16
 </pre>
+
+# 1. HP, MPの分布を作成
+<pre>
+sqlite> .headers on
+sqlite> .mode csv
+sqlite> .once 9_1.csv
+sqlite> SELECT HP, MP from character;
+</pre>
+
