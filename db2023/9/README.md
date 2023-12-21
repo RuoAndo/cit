@@ -36,7 +36,6 @@ sqlite> .mode csv
 sqlite> .once 9_1.csv
 sqlite> SELECT HP, MP from character;
 </pre>
-
 <pre>
 (base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\9> head -n 5 .\9_1.csv
 HP,MP
@@ -45,4 +44,9 @@ HP,MP
 60,51
 34,72
 </pre>
+<pre>
+(base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\9> python .\09_scatter_HP_MP_2.py
+</pre>
+<img src="HPMP.png">
+
 
