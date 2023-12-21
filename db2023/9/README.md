@@ -37,3 +37,12 @@ sqlite> .once 9_1.csv
 sqlite> SELECT HP, MP from character;
 </pre>
 
+<pre>
+(base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\9> head -n 5 .\9_1.csv
+HP,MP
+6,53
+43,92
+60,51
+34,72
+</pre>
+
