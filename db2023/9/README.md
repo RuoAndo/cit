@@ -76,7 +76,7 @@ HP,MP
 <img src="HPMP.png">
 
 2.2 攻撃を受けたキャラクタのヒストグラムを作成
-pythonメソッドを使う
+pythonのcollectionsメソッドを使う
 <pre>
 import collections
 c = collections.Counter(dict_list)
