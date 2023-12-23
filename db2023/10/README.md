@@ -1,4 +1,10 @@
-# 0. event テーブルの作成
+# 0. データベースcit-db-2023-10.dbの作成
+0.1 下記の３つのプログラムを実行
+<pre>
+-a---l        2023/12/23     16:26           2143 10_create_event_table.py
+-a---l        2023/12/23     16:37           1572 10_insert_character_repeat_weighted.py
+-a---l        2023/12/23     16:37           1584 10_insert_player_repeat.py
+</pre>
 <pre>
 ts TIMESTAMP,  : タイムスタンプ
 character_id_src INTEGER,  : アクション元のキャラクターID
@@ -7,7 +13,6 @@ character_id_dst INTEGER, ： アクション先のキャラクターID
 player_id_dst INTEGER, ：　アクション先のキャラクターID
 action_type VARCHAR(20)　：　アクション種別「攻撃」「防御」
 </pre>
-
 <pre>
 (base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\9> .\sqlite3.exe .\cit-db-2023-09.db
 SQLite version 3.39.3 2022-09-05 11:02:23
@@ -20,7 +25,7 @@ CREATE TABLE event (ts TIMESTAMP, character_id_src INTEGER, player_id_src INTEGE
 
 <img src="createEvent.png">
 
-0.1 一番攻撃を受けているCharacter_IDを検索
+0.2 一番攻撃を受けているCharacter_IDを検索
 <pre>
 sqlite> SELECT character_id_dst, count(*) FROM event GROUP BY character_id_dst ORDER BY COUNT(*) DESC LIMIT 5;
 15|19
@@ -30,7 +35,7 @@ sqlite> SELECT character_id_dst, count(*) FROM event GROUP BY character_id_dst O
 54|16
 </pre>
 
-0.2 攻撃を受けたCharacterの履歴と攻撃件数を表示
+0.3 攻撃を受けたCharacterの履歴と攻撃件数を表示
 <pre>
 SELECT E.ts, C.character_name FROM event E INNER JOIN character C ON E.character_id_dst == C.character_id WHERE E.action_type == \'attack\'
 </pre>
@@ -83,4 +88,4 @@ Counter({'doraemon': 419, 'golgo': 61, 'akinator': 54, 'begita': 52, 'bikkuriko'
 (base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\9> python .\09_hist_01.py
 636
 </pre>
-
+<img src="hist.png">
