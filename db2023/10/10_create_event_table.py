@@ -11,7 +11,7 @@ def generateRandomDateTime():
     random_date = random.choice(dates)
     return datetime.datetime.combine(random_date, t)
 
-dbname = 'cit-db-2023-09.db'
+dbname = 'cit-db-2023-10.db'
 conn = sqlite3.connect(dbname)
 
 cur = conn.cursor()

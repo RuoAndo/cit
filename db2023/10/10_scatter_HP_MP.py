@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 data_set = np.loadtxt(
-    fname="9_1.csv",
+    fname="10_1.csv",
     dtype="int",
     delimiter=",",
 )
