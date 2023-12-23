@@ -78,4 +78,9 @@ c = collections.Counter(dict_list)
 636
 Counter({'doraemon': 419, 'golgo': 61, 'akinator': 54, 'begita': 52, 'bikkuriko': 50})
 </pre>
+<pre>
+リストにplt.histメソッドを適用
+(base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\9> python .\09_hist_01.py
+636
+</pre>
 
