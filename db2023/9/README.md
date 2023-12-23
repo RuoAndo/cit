@@ -1,4 +1,11 @@
-# 0. event テーブルの作成
+# 0. DB cit-db-2023-09.dbの作成
+<pre>
+-a----        2023/12/23     15:32           2143 09_create_event_table.py
+-a---l        2023/12/21     18:00           1570 09_insert_character_repeat_weighted.py
+-a----        2023/12/23     15:04           1567 09_insert_player_repeat.py
+</pre>
+
+# 1. event テーブルの作成
 <pre>
 ts TIMESTAMP,  : タイムスタンプ
 character_id_src INTEGER,  : アクション元のキャラクターID
@@ -20,7 +27,7 @@ CREATE TABLE event (ts TIMESTAMP, character_id_src INTEGER, player_id_src INTEGE
 
 <img src="createEvent.png">
 
-0.1 一番攻撃を受けているCharacter_IDを検索
+1.1 一番攻撃を受けているCharacter_IDを検索
 <pre>
 sqlite> SELECT character_id_dst, count(*) FROM event GROUP BY character_id_dst ORDER BY COUNT(*) DESC LIMIT 5;
 15|19
@@ -30,7 +37,7 @@ sqlite> SELECT character_id_dst, count(*) FROM event GROUP BY character_id_dst O
 54|16
 </pre>
 
-0.2 攻撃を受けたCharacterの履歴と攻撃件数を表示
+1.2 攻撃を受けたCharacterの履歴と攻撃件数を表示
 <pre>
 SELECT E.ts, C.character_name FROM event E INNER JOIN character C ON E.character_id_dst == C.character_id WHERE E.action_type == \'attack\'
 </pre>
@@ -46,8 +53,8 @@ pythonプログラムでカウント
 </pre>
 636件
 
-# 1. SQLから統計量を計算
-1.1 HP, MPの分布を作成
+# 2. SQLから統計量を計算
+2.1 HP, MPの分布を作成
 <pre>
 sqlite> .headers on
 sqlite> .mode csv
@@ -67,7 +74,7 @@ HP,MP
 </pre>
 <img src="HPMP.png">
 
-1.2 攻撃を受けたキャラクタのヒストグラムを作成
+2.2 攻撃を受けたキャラクタのヒストグラムを作成
 pythonメソッドを使う
 <pre>
 import collections
