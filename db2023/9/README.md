@@ -59,7 +59,7 @@ pythonプログラムでカウント
 <pre>
 sqlite> .headers on
 sqlite> .mode csv
-sqlite> .once 9_1.csv
+sqlite> .once 10_1.csv
 sqlite> SELECT HP, MP from character;
 </pre>
 <pre>
