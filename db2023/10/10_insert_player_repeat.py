@@ -32,7 +32,7 @@ except:
 
 #comstr2 = "create table player (person_id INTEGER PRIMARY KEY AUTOINCREMENT, fname VARCHAR(20), lname VARCHAR(20), points INTEGER, rank VARCHAR(20));"
 comstr2 = "create table player (player_id INTEGER, fname VARCHAR(20), lname VARCHAR(20), points INTEGER, rank VARCHAR(20));"
-# 3.テーブルに人名データを登録する
+# 3.繝�繝ｼ繝悶Ν縺ｫ莠ｺ蜷阪ョ繝ｼ繧ｿ繧堤匳骭ｲ縺吶ｋ
 cur.execute(comstr2)
 
 for number in range(30):
