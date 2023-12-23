@@ -1,4 +1,5 @@
 # 0. DB cit-db-2023-09.dbの作成
+下記の3つのプログラムを実行する
 <pre>
 -a----        2023/12/23     15:32           2143 09_create_event_table.py
 -a---l        2023/12/21     18:00           1570 09_insert_character_repeat_weighted.py
