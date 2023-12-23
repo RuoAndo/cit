@@ -63,7 +63,7 @@ for number in range(1000):
 	if(counter%100==0):
 		print(comstr)
 		dt_now = datetime.datetime.now()
-		print("[" + str(dt_now) + "] " + "INSERTED: " + str(counter) + "(4000)")
+		print("[" + str(dt_now) + "] " + "INSERTED: " + str(counter) + "(/1000)")
 
 	counter = counter + 1
 
