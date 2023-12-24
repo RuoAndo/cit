@@ -53,7 +53,7 @@ SELECT E.ts, C.character_name FROM event E INNER JOIN character C ON E.character
 </pre>
 pythonプログラムでカウント
 <pre>
-(base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\9> python .\09_select_01.py
+(base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\9> python .\10_select_01.py
 ('2023-12-25 13:48:16', 'bikkuriko')
 ('2023-12-25 12:34:08', 'bikkuriko')
 ('2023-12-27 09:29:58', 'begita')
@@ -68,11 +68,11 @@ pythonプログラムでカウント
 <pre>
 sqlite> .headers on
 sqlite> .mode csv
-sqlite> .once 9_1.csv
+sqlite> .once 10_1.csv
 sqlite> SELECT HP, MP from character;
 </pre>
 <pre>
-(base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\9> head -n 5 .\9_1.csv
+(base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\9> head -n 5 .\10_1.csv
 HP,MP
 6,53
 43,92
@@ -80,7 +80,7 @@ HP,MP
 34,72
 </pre>
 <pre>
-(base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\9> python .\09_scatter_HP_MP_2.py
+(base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\9> python .\10_scatter_HP_MP_2.py
 </pre>
 <img src="HPMP.png">
 
@@ -91,7 +91,7 @@ import collections
 c = collections.Counter(dict_list)
 </pre>
 <pre>
-(base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\9> python .\09_select_02.py
+(base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\9> python .\10_select_02.py
 636
 Counter({'doraemon': 419, 'golgo': 61, 'akinator': 54, 'begita': 52, 'bikkuriko': 50})
 </pre>
