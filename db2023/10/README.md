@@ -140,4 +140,4 @@ STLのイテレーションを使って処理 SQLのWHERE句やGROUP BYなどは
 fields name
 from event
 where character_id=3
-</pre>pre>
+</pre>
