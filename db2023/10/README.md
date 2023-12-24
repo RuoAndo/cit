@@ -27,6 +27,8 @@ CREATE TABLE event (ts TIMESTAMP, character_id_src INTEGER, player_id_src INTEGE
 
 <img src="createEvent.png">
 
+<img src="characters.png">
+
 0.2 一番攻撃を受けているCharacter_IDを検索
 <pre>
 sqlite> SELECT character_id_dst, count(*) FROM event GROUP BY character_id_dst ORDER BY COUNT(*) DESC LIMIT 5;
