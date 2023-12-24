@@ -166,7 +166,9 @@ where character_id=3
 <img src="sakila-schemes.jpg">
 
 # 5. 参考: ChatGPTを使う
+
 <img src="ChatGPT.png">
+
 <pre>
 ChatGPT 3.5
 https://chat.openai.com/
