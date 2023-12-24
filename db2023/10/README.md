@@ -98,7 +98,18 @@ Counter({'doraemon': 419, 'golgo': 61, 'akinator': 54, 'begita': 52, 'bikkuriko'
 <img src="hist.png">
 
 # 2. C++実装
+
 <pre>
 # g++ 10_c_driver.cpp -lsqlite3 
 </pre>
+characterID 1～99までの状態を表示
+<pre>
+Callback function called: character_id = 99
+player_id = 5
+character_name = doraemon
+HP = 70
+MP = 63
+EXP = 96
+</pre>
+
 
