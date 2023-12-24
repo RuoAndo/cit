@@ -96,3 +96,9 @@ Counter({'doraemon': 419, 'golgo': 61, 'akinator': 54, 'begita': 52, 'bikkuriko'
 636
 </pre>
 <img src="hist.png">
+
+# 2. C++実装
+<pre>
+# g++ 10_c_driver.cpp -lsqlite3 
+</pre>
+
