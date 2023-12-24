@@ -1,3 +1,5 @@
+<img src="characters.png">
+
 # 0. データベースcit-db-2023-10.dbの作成
 0.1 下記の３つのプログラムを実行
 <pre>
