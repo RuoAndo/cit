@@ -132,4 +132,12 @@ STLのイテレーションを使って処理 SQLのWHERE句やGROUP BYなどは
 <img src="map_iteration.png">
 
 # 3. SQL実装2 DBからの出力をC++で処理する
-
+<pre>
+# g++ x3-sql-parser.cpp 
+</pre>
+<pre>
+# ./a.out                                                                                                                                                                                         
+fields name
+from event
+where character_id=3
+</pre>pre>
