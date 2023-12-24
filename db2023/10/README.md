@@ -146,6 +146,12 @@ g++ (GCC) 8.2.0
 <pre>
 # g++ x3-sql-parser.cpp 
 </pre>
+
+下記のSELECT文をパースする
+<pre>
+"SELECT name FROM event WHERE character_id=3";
+</pre>
+
 <pre>
 # ./a.out                                                                                                                                                                                         
 fields name
