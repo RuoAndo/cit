@@ -131,5 +131,31 @@ key(characterID)99 => value(HP)70
 STLのイテレーションを使って処理 SQLのWHERE句やGROUP BYなどはSTLを使って実装できる
 <img src="map_iteration.png">
 
-# 3. SQL実装2 DBからの出力をC++で処理する
+# 3. SQL実装2 SQL文のパース(semantic action)
+
+g++のバージョン
+<pre>
+# g++ --version 
+g++ (GCC) 8.2.0
+</pre>
+
+パースした結果をtupleに格納
+
+<img src="x3.png">
+
+<pre>
+# g++ x3-sql-parser.cpp 
+</pre>
+
+下記のSELECT文をパースする
+<pre>
+"SELECT name FROM event WHERE character_id=3";
+</pre>
+
+<pre>
+# ./a.out                                                                                                                                                                                         
+fields name
+from event
+where character_id=3
+</pre>
 
