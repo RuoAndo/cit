@@ -1,5 +1,8 @@
 <img src="characters.png">
-
+pythonのバージョン確認 (3.6以上であること）
+<pre>
+# python --version                                                                                                                                                                                  Python 3.6.3
+</pre>
 # 0. データベースcit-db-2023-10.dbの作成
 0.1 下記の３つのプログラムを実行
 <pre>
