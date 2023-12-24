@@ -167,7 +167,7 @@ where character_id=3
 
 # 5. 参考: ChatGPTを使う
 
-<img src="ChatGPT.png">
+<img src="chatGPT.png">
 
 <pre>
 ChatGPT 3.5
