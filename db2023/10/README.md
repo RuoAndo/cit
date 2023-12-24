@@ -126,7 +126,7 @@ key(characterID)99 => value(HP)70
 </pre>
 
 解説: stl::mapをグローバルで定義して、コールバック関数内で格納
-<img src="callback.png">
+<img src="map_iteration.png">
 
 STLのイテレーションを使って処理 SQLのWHERE句やGROUP BYなどはstlを使って実装できる
 
