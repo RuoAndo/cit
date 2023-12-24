@@ -132,7 +132,6 @@ STLのイテレーションを使って処理 SQLのWHERE句やGROUP BYなどは
 <img src="map_iteration.png">
 
 # 3. SQL実装2 SQL文のパース(semantic action)
-
 パースした結果をtupleに格納
 
 <img src="x3.png">
