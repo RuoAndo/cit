@@ -99,10 +99,10 @@ Counter({'doraemon': 419, 'golgo': 61, 'akinator': 54, 'begita': 52, 'bikkuriko'
 
 # 2. C++実装
 
+2.1 characterID 1～99までの状態を表示
 <pre>
 # g++ 10_c_driver.cpp -lsqlite3 
 </pre>
-characterID 1～99までの状態を表示
 <pre>
 Callback function called: character_id = 99
 player_id = 5
@@ -111,5 +111,20 @@ HP = 70
 MP = 63
 EXP = 96
 </pre>
+
+2.2 STL mapにcharacterIDとHPの組を格納
+<pre>
+# g++ 10_c_driver_2.cpp -lsqlite3
+</pre>
+<pre>
+# ./a.out 
+key(characterID)95 => value(HP)20
+key(characterID)96 => value(HP)2
+key(characterID)97 => value(HP)19
+key(characterID)98 => value(HP)26
+key(characterID)99 => value(HP)70
+</pre>
+解説: stl::mapをグローバルで定義して、コールバック関数内で格納
+<img src="callback.png">
 
 
