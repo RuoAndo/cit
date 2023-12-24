@@ -97,7 +97,7 @@ Counter({'doraemon': 419, 'golgo': 61, 'akinator': 54, 'begita': 52, 'bikkuriko'
 </pre>
 <img src="hist.png">
 
-# 2. SQLの出力をC++で処理する
+# 2. SQL実装1 DBからの出力をC++で処理する
 
 2.1 characterID 1～99までの状態を表示
 <pre>
@@ -131,4 +131,5 @@ key(characterID)99 => value(HP)70
 STLのイテレーションを使って処理 SQLのWHERE句やGROUP BYなどはSTLを使って実装できる
 <img src="map_iteration.png">
 
+# 3. SQL実装2 DBからの出力をC++で処理する
 
