@@ -10,6 +10,11 @@ pythonのバージョン確認 (3.6以上であること）
 -a---l        2023/12/23     16:37           1572 10_insert_character_repeat_weighted.py
 -a---l        2023/12/23     16:37           1584 10_insert_player_repeat.py
 </pre>
+またはgenerate.batを実行
+<pre>
+(base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\10> .\generate.bat
+</pre>
+</pe>
 <pre>
 ts TIMESTAMP,  : タイムスタンプ
 character_id_src INTEGER,  : アクション元のキャラクターID
