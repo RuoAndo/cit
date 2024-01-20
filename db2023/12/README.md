@@ -8,4 +8,4 @@
 (base) PS C:\Users\flare\cit\db2023\12> python .\12_show_character_status.py
 </pre>
 
-<src img="status_before.png">
+<img src="status_before.png">
