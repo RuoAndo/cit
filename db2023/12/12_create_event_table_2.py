@@ -33,7 +33,7 @@ cur.execute(comstr2)
 
 counter = 0
 
-for number in range(10):
+for number in range(1000):
 
 	playerID_src  = random.randrange(1, 30, 1)
 	characterID_src  = random.randrange(1, 100, 1)
