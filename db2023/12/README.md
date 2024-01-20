@@ -20,3 +20,9 @@
 (base) PS C:\Users\flare\cit\db2023\12> python .\12_show_character_status.py
 </pre>
 <img src="status_after.png">
+
+# 主成分分析をする
+<pre>
+(base) PS C:\Users\flare\cit\db2023\12> python .\12_PCA.py
+</pre>
+<img src="PCA.png">
