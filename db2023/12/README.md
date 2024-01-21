@@ -1,5 +1,7 @@
+Player * 30
 <img src="players.png">
 
+Character * 100
 <img src="characters.png">
 
 # 1. バッチファイル実行
