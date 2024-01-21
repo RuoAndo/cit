@@ -50,7 +50,7 @@ character_id = 9 のキャラクタのHPを500にする
 
 stable diffusion: Above the big city, a good-looking Doraemon is frantically repairing a bad-looking Doraemon.
 
-<img src="dora2.png">
+<img src="dora2.png" width=70%>
 
 <pre>
 (base) PS C:\Users\flare\cit\db2023\12> .\sqlite3.exe .\cit-db-2023-12.db
