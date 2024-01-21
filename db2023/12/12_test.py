@@ -33,8 +33,6 @@ for i in range(1000):
 	HP_tmp = int(X1[i])
 	MP_tmp = int(X2[i])
 
-	print("! " + str(HP_tmp) + " : " + str(MP_tmp))
-
 	comstr = "update character set HP = " + str(HP_tmp) + " where character_id = " + str(i) + ";"
 	cur = conn.cursor()
 	cur.execute(comstr)

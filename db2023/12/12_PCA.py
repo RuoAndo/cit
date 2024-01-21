@@ -45,7 +45,7 @@ df = df.assign(HP=x)
 df = df.assign(MP=y)
 df = df.assign(EXP=z)
 
-print(df)
+#print(df)
 
 from sklearn.decomposition import PCA
 pca = PCA()  
