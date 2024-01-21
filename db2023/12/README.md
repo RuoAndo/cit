@@ -50,4 +50,4 @@ Satble Diffusion: The evil-looking Doraemon is releasing a large number of fireb
 
 全キャラクタのHPとMPの値を、強制的に次のような分布にする
 
-<img src="blobs.png" width=75%>
+<img src="blobs.png" width=50%>
