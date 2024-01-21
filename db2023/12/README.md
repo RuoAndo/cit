@@ -44,7 +44,12 @@ Character * 100
 
 # 6. 特殊なイベントを実装する1 (UPDATE利用)
 
+「D」の修理
+
 character_id = 9 のキャラクタのHPを500にする
+
+stable diffusion: Above the big city, a good-looking Doraemon is frantically repairing a bad-looking Doraemon.
+<img src="dora2.png">
 
 <pre>
 (base) PS C:\Users\flare\cit\db2023\12> .\sqlite3.exe .\cit-db-2023-12.db
