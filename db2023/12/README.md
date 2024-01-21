@@ -41,3 +41,5 @@ Character * 100
 第１，第２主成分をプロット
 
 <img src="PCA.png">
+
+<img src="dora.png">
