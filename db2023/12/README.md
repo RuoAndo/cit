@@ -4,7 +4,7 @@ Player * 30
 Character * 100
 <img src="characters.png">
 
-<img src="ER.png">
+<img src="ER.png" width=50%>
 
 # 1. バッチファイル実行
 <pre>
