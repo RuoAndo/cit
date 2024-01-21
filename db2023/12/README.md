@@ -42,7 +42,24 @@ Character * 100
 
 <img src="PCA.png">
 
-# 6. 特殊なイベントを実装する
+# 6. 特殊なイベントを実装する1 (UPDATE利用)
+
+character_id = 9 のキャラクタのHPを500にする
+
+<pre>
+(base) PS C:\Users\flare\cit\db2023\12> .\sqlite3.exe .\cit-db-2023-12.db
+SQLite version 3.39.3 2022-09-05 11:02:23
+Enter ".help" for usage hints.
+sqlite> update character set HP = 500 where character_id = 9;
+</pre>
+
+<pre>
+(base) PS C:\Users\flare\cit\db2023\12> python .\12_PCA.py
+</pre>
+
+<img src="event_by_update_1.png">
+            
+# 7. 特殊なイベントを実装する2 (UPDATE利用)
 
 Satble Diffusion: The evil-looking Doraemon is releasing a large number of fireballs from far up in the air.
 
