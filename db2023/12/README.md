@@ -1,3 +1,5 @@
+<img src="players.png">
+
 <img src="characters.png">
 
 # 1. バッチファイル実行
