@@ -58,6 +58,22 @@ sqlite> update character set HP = 500 where character_id = 9;
 </pre>
 
 <img src="event_by_update_1.png">
+
+One-class KVMで異常検知
+
+<pre>
+(base) PS C:\Users\flare\cit\db2023\12> python .\12_PCA_kmeans.py
+           1          2          3
+0 -31.201880  28.428707  -1.749345
+1 -44.342107  -2.509248  61.773701
+2  28.891464  64.919250  20.661151
+3  44.339793   7.810922 -27.192668
+4 -48.117434  15.261168  48.584341
+[ 9 53  2 31 52]
+anomaly 450.1047300909108
+449.06757151470254
+-6.246531054245064
+</pre>
             
 # 7. 特殊なイベントを実装する2 (UPDATE利用)
 
