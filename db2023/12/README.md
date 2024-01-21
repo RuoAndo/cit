@@ -51,3 +51,12 @@ Satble Diffusion: The evil-looking Doraemon is releasing a large number of fireb
 全キャラクタのHPとMPの値を、強制的に次のような分布にする
 
 <img src="blobs.png" width=50%>
+
+<pre>
+(base) PS C:\Users\flare\cit\db2023\12> python .\12_disaster_by_dora.py
+(base) PS C:\Users\flare\cit\db2023\12> python .\12_PCA.py
+</pre>
+
+<img src="status_before_1.png" width=50%>
+<img src="status_after_1.png" width=50%>
+
