@@ -44,4 +44,4 @@ Character * 100
 
 Satble Diffusion: The evil-looking Doraemon is releasing a large number of fireballs from far up in the air.
 
-<img src="dora.png" width=50%>
+<img src="dora.png" width=10%>
