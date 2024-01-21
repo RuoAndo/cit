@@ -74,8 +74,12 @@ anomaly 450.1047300909108
 449.06757151470254
 -6.246531054245064
 </pre>
+
+<img src="one_class_km.png">
             
 # 7. 特殊なイベントを実装する2 (UPDATE利用)
+
+「Dの災厄」
 
 Satble Diffusion: The evil-looking Doraemon is releasing a large number of fireballs from far up in the air.
 
