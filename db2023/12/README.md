@@ -42,7 +42,7 @@ Character * 100
 
 <img src="PCA.png">
 
-# 6. 特殊なイベントを生成する
+# 6. 特殊なイベントを実行する
 
 Satble Diffusion: The evil-looking Doraemon is releasing a large number of fireballs from far up in the air.
 
@@ -57,6 +57,11 @@ Satble Diffusion: The evil-looking Doraemon is releasing a large number of fireb
 (base) PS C:\Users\flare\cit\db2023\12> python .\12_PCA.py
 </pre>
 
+プログラム実行前
+
 <img src="status_before_1.png" width=50%>
+
+プログラム実行後
+
 <img src="status_after_1.png" width=50%>
 
