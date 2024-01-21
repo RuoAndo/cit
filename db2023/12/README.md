@@ -42,6 +42,8 @@ Character * 100
 
 <img src="PCA.png">
 
+# 6. 特殊なイベントを生成する
+
 Satble Diffusion: The evil-looking Doraemon is releasing a large number of fireballs from far up in the air.
 
-<img src="dora.png" width=10%>
+<img src="dora.png" width=20%>
