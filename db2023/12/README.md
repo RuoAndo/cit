@@ -61,6 +61,8 @@ Enter ".help" for usage hints.
 sqlite> update character set HP = 500 where character_id = 9;
 </pre>
 
+<img src="500.png">
+
 <pre>
 (base) PS C:\Users\flare\cit\db2023\12> python .\12_PCA.py
 </pre>
