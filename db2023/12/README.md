@@ -49,6 +49,7 @@ Character * 100
 character_id = 9 のキャラクタのHPを500にする
 
 stable diffusion: Above the big city, a good-looking Doraemon is frantically repairing a bad-looking Doraemon.
+
 <img src="dora2.png">
 
 <pre>
