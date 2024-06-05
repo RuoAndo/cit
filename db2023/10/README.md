@@ -10,6 +10,11 @@ pythonのバージョン確認 (3.6以上であること）
 -a---l        2023/12/23     16:37           1572 10_insert_character_repeat_weighted.py
 -a---l        2023/12/23     16:37           1584 10_insert_player_repeat.py
 </pre>
+またはgenerate.batを実行
+<pre>
+(base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\10> .\generate.bat
+</pre>
+</pe>
 <pre>
 ts TIMESTAMP,  : タイムスタンプ
 character_id_src INTEGER,  : アクション元のキャラクターID
@@ -48,7 +53,7 @@ SELECT E.ts, C.character_name FROM event E INNER JOIN character C ON E.character
 </pre>
 pythonプログラムでカウント
 <pre>
-(base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\9> python .\09_select_01.py
+(base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\9> python .\10_select_01.py
 ('2023-12-25 13:48:16', 'bikkuriko')
 ('2023-12-25 12:34:08', 'bikkuriko')
 ('2023-12-27 09:29:58', 'begita')
@@ -63,11 +68,11 @@ pythonプログラムでカウント
 <pre>
 sqlite> .headers on
 sqlite> .mode csv
-sqlite> .once 9_1.csv
+sqlite> .once 10_1.csv
 sqlite> SELECT HP, MP from character;
 </pre>
 <pre>
-(base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\9> head -n 5 .\9_1.csv
+(base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\9> head -n 5 .\10_1.csv
 HP,MP
 6,53
 43,92
@@ -75,7 +80,7 @@ HP,MP
 34,72
 </pre>
 <pre>
-(base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\9> python .\09_scatter_HP_MP_2.py
+(base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\9> python .\10_scatter_HP_MP_2.py
 </pre>
 <img src="HPMP.png">
 
@@ -86,7 +91,7 @@ import collections
 c = collections.Counter(dict_list)
 </pre>
 <pre>
-(base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\9> python .\09_select_02.py
+(base) PS C:\Users\flare\OneDrive-2023-11-15\OneDrive\cit\db2023\9> python .\10_select_02.py
 636
 Counter({'doraemon': 419, 'golgo': 61, 'akinator': 54, 'begita': 52, 'bikkuriko': 50})
 </pre>
@@ -159,3 +164,73 @@ where character_id=3
 
 # 4. SQL文
 <img src="sakila-schemes.jpg">
+
+# 5. 参考: ChatGPTを使う
+
+<img src="chatGPT.png">
+
+<pre>
+ChatGPT 3.5
+https://chat.openai.com/
+</pre>
+Q1. データベースの概念スキーマについて教えてください。
+<pre>
+データベースの概念スキーマは、データベースの設計段階で使用される重要な概念の一部です。これは、データベースに含まれるデータやその関係を抽象的に表現するものであり、具体的なデータベースの実装に先立って、データの論理的な構造を定義します。以下に、概念スキーマに関連するいくつかのキーポイントを示します。
+
+エンティティ（Entity）:
+
+エンティティは、データベース内で識別可能な実世界の対象や事物を表します。例えば、"顧客"や"注文"などがエンティティとなります。
+属性（Attribute）:
+
+エンティティは属性を持ちます。属性はエンティティの特性や情報を表します。例えば、"顧客"エンティティの属性には、名前、住所、電話番号などがあります。
+リレーションシップ（Relationship）:
+
+エンティティ間の関連性を表現します。例えば、"注文"と"顧客"との間には関連があり、ある注文は特定の顧客に関連しています。
+主キー（Primary Key）:
+
+エンティティ内の各レコードを一意に識別するための属性（または属性の組み合わせ）です。主キーはデータベース内での検索や関連付けに使用されます。
+外部キー（Foreign Key）:
+
+あるテーブルの主キーが他のテーブルの特定の列と関連している場合、その列は外部キーとなります。外部キーは異なるテーブル間の関連性を確立します。
+正規化（Normalization）:
+
+データの冗長性を減少させ、データの整合性を維持するためのプロセスです。これにより、データベースの構造が効率的になります。
+データベースの概念スキーマは、データベースの物理的な実装に先行してデザインされ、データベースの変更や拡張が容易になるように設計されます。物理的なデータベースは、この概念スキーマに基づいて構築され、データの永続的な格納と取得が行われます。
+</pre>
+
+<img src="chatGPT2.png">
+
+Q2. SQLのSELECTを実行するpythonプログラムについて教えてください。
+
+<pre>
+Pythonを使用してSQLのSELECT文を実行するためには、通常はデータベース接続とクエリの実行のためのライブラリを使用します。最も一般的なのは、sqlite3（SQLiteデータベース用）やpsycopg2（PostgreSQLデータベース用）、mysql-connector（MySQLデータベース用）などのライブラリです。以下に、SQLiteデータベースを例にして、PythonでSELECTクエリを実行する基本的な例を示します。
+
+まず、sqlite3ライブラリを使ってSQLiteデータベースに接続します。SQLiteは標準でPythonに組み込まれているので、追加のインストールは不要です。
+
+import sqlite3
+# データベースに接続
+conn = sqlite3.connect('your_database.db')
+# カーソルを取得
+cursor = conn.cursor()
+# SELECTクエリを実行
+cursor.execute('SELECT * FROM your_table')
+# 結果を取得
+results = cursor.fetchall()
+# 結果を表示
+for row in results:
+    print(row)
+# 接続を閉じる
+conn.close()
+
+上記の例では、your_database.dbは接続したいSQLiteデータベースファイルの名前、your_tableはクエリを実行したいテーブルの名前です。実際のデータベースやテーブルの名前に合わせて変更してください。
+
+データベースの種類や接続方法によっては、異なるライブラリや接続方法が必要です。例えば、PostgreSQLを使用する場合はpsycopg2ライブラリを、MySQLを使用する場合はmysql-connectorライブラリを使います。また、データベース接続情報（ホスト、ユーザー名、パスワードなど）を提供することも重要です。
+</pre>
+
+
+
+
+
+
+
+
