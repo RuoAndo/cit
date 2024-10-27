@@ -28,6 +28,8 @@ country                 film_text               staff
 customer                inventory               staff_list
 customer_list           language                store
 
+# テーブルの情報を取得
+  
 sqlite> .schema customer
 CREATE TABLE customer (
   customer_id INT NOT NULL,
