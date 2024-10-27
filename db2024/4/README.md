@@ -1,3 +1,5 @@
+<img src="sakila-schemes.jpg">
+
 <pre>
 PS D:\cit\db2024\3> .\sqlite3.exe .\sakila_master.db
 SQLite version 3.39.3 2022-09-05 11:02:23
