@@ -102,7 +102,7 @@ MARGARET|MOORE|613 Korolev Drive
 DOROTHY|TAYLOR|1531 Sal Drive
 </pre>
 
-# csvファイルの結合とインデックスの表示 - csv_read.ipynb
+# csvファイルの結合とインデックスの表示 - 4_6_csv_read.ipynb
 
 <pre>
   state/region     ages  year  population
