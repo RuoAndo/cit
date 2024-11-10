@@ -120,6 +120,17 @@ DOROTHY|TAYLOR|1531 Sal Drive
         state abbreviation
 0     Alabama           AL
 1      Alaska           AK
+
+# 参考：外部結合
+
+<pre>
+	state/region	ages	year	population	state
+0	AK	total	1990	553290.0	Alaska
+1	AK	under18	1990	177502.0	Alaska
+2	AK	total	1992	588736.0	Alaska
+3	AK	under18	1991	182180.0	Alaska
+4	AK	under18	1992	184878.0	Alaska
+</pre>
 2     Arizona           AZ
 3    Arkansas           AR
 4  California           CA
