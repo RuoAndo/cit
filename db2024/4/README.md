@@ -132,6 +132,7 @@ DOROTHY|TAYLOR|1531 Sal Drive
 3	AK	under18	1991	182180.0	Alaska
 4	AK	under18	1992	184878.0	Alaska
 </pre>
+<pre>
 2     Arizona           AZ
 3    Arkansas           AR
 4  California           CA
