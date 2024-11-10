@@ -120,7 +120,8 @@ DOROTHY|TAYLOR|1531 Sal Drive
         state abbreviation
 0     Alabama           AL
 1      Alaska           AK
-
+</pre>
+	
 # 参考：外部結合
 
 <pre>
