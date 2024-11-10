@@ -101,3 +101,26 @@ SUSAN|WILSON|478 Joliet Way
 MARGARET|MOORE|613 Korolev Drive
 DOROTHY|TAYLOR|1531 Sal Drive
 </pre>
+
+# csvファイルの結合とインデックスの表示 - csv_read.ipynb
+
+<pre>
+  state/region     ages  year  population
+0           AL  under18  2012   1117489.0
+1           AL    total  2012   4817528.0
+2           AL  under18  2010   1130966.0
+3           AL    total  2010   4785570.0
+4           AL  under18  2011   1125763.0
+        state  area (sq. mi)
+0     Alabama          52423
+1      Alaska         656425
+2     Arizona         114006
+3    Arkansas          53182
+4  California         163707
+        state abbreviation
+0     Alabama           AL
+1      Alaska           AK
+2     Arizona           AZ
+3    Arkansas           AR
+4  California           CA
+</pre>
