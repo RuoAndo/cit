@@ -58,8 +58,7 @@ sqlite> SELECT player.player_id, player.fname, player.lname, player.points, play
 <img src="JOIN-HP-MP-EXP.png">
 
 # 5.5 デカルト積（？）
-
-
+<pre>
 sqlite> SELECT c.first_name, c.last_name, a.address FROM customer c JOIN address a LIMIT 5;
 MARY|SMITH|47 MySakila Drive
 MARY|SMITH|28 MySQL Boulevard
