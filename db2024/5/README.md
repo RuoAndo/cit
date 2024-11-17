@@ -1,3 +1,6 @@
+<img src="players.png">
+
+<img src="characters.png">
 
 # playerテーブルとschemaテーブルを作成
 
