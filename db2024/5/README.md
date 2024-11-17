@@ -49,7 +49,7 @@ sqlite> SELECT player.player_id, player.fname, player.lname, player.points, play
 2|IczjS|vmFSp|45|Y|90|golgo|18|98|15
 </pre>
 
-# back-up
+# back-up: 2023-12回
 
 Character * 100
 <img src="characters.png">
