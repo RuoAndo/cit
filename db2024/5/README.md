@@ -57,6 +57,36 @@ sqlite> SELECT player.player_id, player.fname, player.lname, player.points, play
 
 <img src="JOIN-HP-MP-EXP.png">
 
+# デカルト積（？）
+
+sqlite> SELECT c.first_name, c.last_name, a.address FROM customer c JOIN address a LIMIT 5;
+MARY|SMITH|47 MySakila Drive
+MARY|SMITH|28 MySQL Boulevard
+MARY|SMITH|23 Workhaven Lane
+MARY|SMITH|1411 Lillydale Drive
+MARY|SMITH|1913 Hanoi Way
+
+sqlite> SELECT COUNT(*) AS row_count FROM customer c JOIN address a ON c.address_id = a.address_id;
+599
+
+# 内部結合
+
+sqlite> SELECT c.first_name, c.last_name, a.address FROM customer c JOIN address a ON c.address_id = a.address_id LIMIT 5;
+MARY|SMITH|1913 Hanoi Way
+PATRICIA|JOHNSON|1121 Loja Avenue
+LINDA|WILLIAMS|692 Joliet Street
+BARBARA|JONES|1566 Inegl Manor
+ELIZABETH|BROWN|53 Idfu Parkway
+
+# 複数のテーブルを結合
+
+sqlite> SELECT c.first_name, c.last_name, ct.city FROM customer c INNER JOIN address a ON c.address_id = a.address_id INNER JOIN city ct ON a.city_id = ct.city_id LIMIT 5;
+MARY|SMITH|Sasebo
+PATRICIA|JOHNSON|San Bernardino
+LINDA|WILLIAMS|Athenai
+BARBARA|JONES|Myingyan
+ELIZABETH|BROWN|Nantou
+
 # back-up: 2023-12回
 
 Character * 100
