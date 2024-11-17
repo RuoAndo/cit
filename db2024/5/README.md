@@ -49,6 +49,10 @@ sqlite> SELECT player.player_id, player.fname, player.lname, player.points, play
 2|IczjS|vmFSp|45|Y|90|golgo|18|98|15
 </pre>
 
+<pre>
+5_3_join_HP_MP_EXP.ipynb
+</pre>
+  
 # character*10のHP,MP,EXPを表示
 
 <img src="JOIN-HP-MP-EXP.png">
