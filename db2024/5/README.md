@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 Player * 30
 <img src="players.png">
+=======
+<img src="players.png">
+
+<img src="characters.png">
+>>>>>>> fe28009709d883000cb71350b176ac966ac29ce9
 
 Character * 100
 <img src="characters.png">
