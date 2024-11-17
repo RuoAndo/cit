@@ -33,7 +33,7 @@ sqlite> select * from character limit 5;
 4|18|begita|26|56|23  
 </pre>
 
-# playerテーブルとschemaテーブルの結合
+# playerテーブルとcharacterテーブルをplayer_idで結合
 
 <pre>
 sqlite> SELECT player.player_id, player.fname, player.lname, player.points, player.rank, character.character_id, character.character_name,  character.HP, character.MP, character.EXP FROM player JOIN character ON player.player_id = character.player_id LIMIT 10;
