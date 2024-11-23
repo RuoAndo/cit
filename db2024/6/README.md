@@ -2,7 +2,6 @@
 <img src="characters.png">
 
 # 6.1 SQL tableの作成 (player, character, event)
-
 <pre>
 > python 6_1_create_character_table.py
 > python 6_2_create_player_table.py
@@ -20,6 +19,10 @@ sqlite> .schema event
 CREATE TABLE event (event_id INTEGER PRIMARY KEY, ts TIMESTAMP, character_id INTEGER, player_id INTEGER, character_id_dst INTEGER, player_id_dst INTEGER, action_type VARCHAR(20), action_value INTEGER);
 </pre>
 
+<pre>
+イベントの生成
+> python 6_3_create_event_table.py
+</pre>
 <img src="dora_begi.png" width=25%>
 <img src="dora2.png" width=25%>
 <img src="dora3.png" width=25%>
