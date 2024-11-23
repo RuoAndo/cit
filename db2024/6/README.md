@@ -1,4 +1,4 @@
-# tableの作成 (player, character, event)
+# 6.1 tableの作成 (player, character, event)
 
 <pre>
 > python 6_1_create_character_table.py
@@ -6,7 +6,7 @@
 > python 6_3_create_event_table.py
 </pre>
   
-# スキーマの表示
+# 6.2 スキーマの表示
 
 <pre>
 sqlite> .schema player
@@ -17,7 +17,7 @@ sqlite> .schema event
 CREATE TABLE event (event_id INTEGER PRIMARY KEY, ts TIMESTAMP, character_id INTEGER, player_id INTEGER, character_id_dst INTEGER, player_id_dst INTEGER, action_type VARCHAR(20), action_value INTEGER);
 </pre>
   
-# playerテーブルとeventテーブルのJOIN
+# 6.3 playerテーブルとeventテーブルのJOIN
 
 <pre>
 sqlite> SELECT player.fname, player.lname, event.* FROM event JOIN player ON event.player_id = player.player_id WHERE event.player_id = 20 LIMIT 5;
@@ -27,3 +27,18 @@ xYvoT|gUPpW|41|2024-11-24 13:13:08|28|20|55|11|20|recover
 xYvoT|gUPpW|60|2024-11-25 10:00:56|54|20|57|3|3|attack
 xYvoT|gUPpW|101|2024-11-23 14:58:00|86|20|5|16|18|attack
 </pre>
+
+# 6.4 SQLの構文（テクニック）
+
+<pre>
+1. グループ化と集計
+2. サブクエリ
+3. 結合
+4. 条件付きロジック
+5. トランザクション
+6. インデックスと制約
+7. ビュー
+8. メタデータ
+9. 解析関数
+</pre>
+
