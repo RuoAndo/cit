@@ -1,3 +1,5 @@
+<img src="players.png">
+
 # 6.1 SQL tableの作成 (player, character, event)
 
 <pre>
