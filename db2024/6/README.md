@@ -20,9 +20,9 @@ sqlite> .schema event
 CREATE TABLE event (event_id INTEGER PRIMARY KEY, ts TIMESTAMP, character_id INTEGER, player_id INTEGER, character_id_dst INTEGER, player_id_dst INTEGER, action_type VARCHAR(20), action_value INTEGER);
 </pre>
 
-<img src="dora_begi.png" width=50%>
-<img src="dora2.png" width=50%>
-<img src="dora3.png" width=50%>
+<img src="dora_begi.png" width=25%>
+<img src="dora2.png" width=25%>
+<img src="dora3.png" width=25%>
   
 # 6.3 SQL playerテーブルとeventテーブルのJOIN
 
