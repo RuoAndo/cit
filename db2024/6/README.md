@@ -1,4 +1,5 @@
 <img src="players.png">
+<img src="characters.png">
 
 # 6.1 SQL tableの作成 (player, character, event)
 
