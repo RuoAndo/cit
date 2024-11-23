@@ -42,7 +42,7 @@ xYvoT|gUPpW|101|2024-11-23 14:58:00|86|20|5|16|18|attack
 9. 解析関数
 </pre>
 
-# 6.5 DataFrame
+# 6.5 DataFrame 1対1結合
 
 <pre>
 1対1結合
@@ -54,4 +54,14 @@ df1 = pd.DataFrame({'employee': ['Bob', 'Jake', 'Lisa', 'Sue'],
                               'Engineering', 'HR']})
 df2 = pd.DataFrame({'employee': ['Lisa', 'Bob', 'Jake', 'Sue'],
                     'hire_date': [2004, 2008, 2012, 2014]})
+</pre>
+
+# 6.6 DataFrame 1対多結合
+
+<pre>
+1対多結合
+import pandas as pd
+df4 = pd.DataFrame({'group': ['Accounting', 'Engineering', 'HR'],
+                    'supervisor': ['Carly', 'Guido', 'Steve']})
+df5 = pd.merge(df3,df4)
 </pre>
