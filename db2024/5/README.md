@@ -2,7 +2,7 @@
 
 <img src="characters.png">
 
-# playerテーブルとschemaテーブルを作成
+# 5.1 playerテーブルとschemaテーブルを作成
 
 <pre>
 5_1_create_character_table.ipynb
@@ -16,7 +16,7 @@ sqlite> .schema character
 CREATE TABLE character (character_id INTEGER, player_id INTEGER, character_name VARCHAR(20), HP INTERGER, MP INTEGER, EXP INTEGER);
 </pre>
 
-# データ表示
+# 5.2 データ表示
 
 <pre>
 sqlite> select * from player limit 5;
@@ -33,7 +33,7 @@ sqlite> select * from character limit 5;
 4|18|begita|26|56|23  
 </pre>
 
-# playerテーブルとcharacterテーブルをplayer_idで結合
+# 5.3 playerテーブルとcharacterテーブルをplayer_idで結合
 
 <pre>
 sqlite> SELECT player.player_id, player.fname, player.lname, player.points, player.rank, character.character_id, character.character_name,  character.HP, character.MP, character.EXP FROM player JOIN character ON player.player_id = character.player_id LIMIT 10;
@@ -49,9 +49,48 @@ sqlite> SELECT player.player_id, player.fname, player.lname, player.points, play
 2|IczjS|vmFSp|45|Y|90|golgo|18|98|15
 </pre>
 
-# character*10のHP,MP,EXPを表示
+<pre>
+5_3_join_HP_MP_EXP.ipynb
+</pre>
+  
+# 5.4 character*10のHP,MP,EXPを表示
 
 <img src="JOIN-HP-MP-EXP.png">
+
+# 5.5 デカルト積（？）
+<pre>
+sqlite> SELECT c.first_name, c.last_name, a.address FROM customer c JOIN address a LIMIT 5;
+MARY|SMITH|47 MySakila Drive
+MARY|SMITH|28 MySQL Boulevard
+MARY|SMITH|23 Workhaven Lane
+MARY|SMITH|1411 Lillydale Drive
+MARY|SMITH|1913 Hanoi Way
+
+sqlite> SELECT COUNT(*) AS row_count FROM customer c JOIN address a ON c.address_id = a.address_id;
+599
+</pre>
+
+# 5.6 内部結合
+
+<pre>
+sqlite> SELECT c.first_name, c.last_name, a.address FROM customer c JOIN address a ON c.address_id = a.address_id LIMIT 5;
+MARY|SMITH|1913 Hanoi Way
+PATRICIA|JOHNSON|1121 Loja Avenue
+LINDA|WILLIAMS|692 Joliet Street
+BARBARA|JONES|1566 Inegl Manor
+ELIZABETH|BROWN|53 Idfu Parkway
+</pre>
+
+# 5.7 複数のテーブルを結合
+
+<pre>
+sqlite> SELECT c.first_name, c.last_name, ct.city FROM customer c INNER JOIN address a ON c.address_id = a.address_id INNER JOIN city ct ON a.city_id = ct.city_id LIMIT 5;
+MARY|SMITH|Sasebo
+PATRICIA|JOHNSON|San Bernardino
+LINDA|WILLIAMS|Athenai
+BARBARA|JONES|Myingyan
+ELIZABETH|BROWN|Nantou
+</pre>
 
 # back-up: 2023-12回
 
