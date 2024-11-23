@@ -19,6 +19,8 @@ CREATE TABLE character (character_id INTEGER, player_id INTEGER, character_name 
 sqlite> .schema event
 CREATE TABLE event (event_id INTEGER PRIMARY KEY, ts TIMESTAMP, character_id INTEGER, player_id INTEGER, character_id_dst INTEGER, player_id_dst INTEGER, action_type VARCHAR(20), action_value INTEGER);
 </pre>
+
+<img src="dora_begi.png">
   
 # 6.3 SQL playerテーブルとeventテーブルのJOIN
 
