@@ -65,3 +65,13 @@ df4 = pd.DataFrame({'group': ['Accounting', 'Engineering', 'HR'],
                     'supervisor': ['Carly', 'Guido', 'Steve']})
 df5 = pd.merge(df3,df4)
 </pre>
+
+# 6.7 DataFrame 多対多結合
+
+<pre>
+import pandas as pd
+df5 = pd.DataFrame({'group': ['Accounting', 'Accounting',
+                              'Engineering', 'Engineering', 'HR', 'HR'],
+                    'skills': ['math', 'spreadsheets', 'software', 'math',
+                               'spreadsheets', 'organization']}
+</pre>
