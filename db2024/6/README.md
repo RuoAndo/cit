@@ -1,4 +1,4 @@
-# 6.1 tableの作成 (player, character, event)
+# 6.1 SQL tableの作成 (player, character, event)
 
 <pre>
 > python 6_1_create_character_table.py
@@ -6,7 +6,7 @@
 > python 6_3_create_event_table.py
 </pre>
   
-# 6.2 スキーマの表示
+# 6.2 SQL スキーマの表示
 
 <pre>
 sqlite> .schema player
@@ -17,7 +17,7 @@ sqlite> .schema event
 CREATE TABLE event (event_id INTEGER PRIMARY KEY, ts TIMESTAMP, character_id INTEGER, player_id INTEGER, character_id_dst INTEGER, player_id_dst INTEGER, action_type VARCHAR(20), action_value INTEGER);
 </pre>
   
-# 6.3 playerテーブルとeventテーブルのJOIN
+# 6.3 SQL playerテーブルとeventテーブルのJOIN
 
 <pre>
 sqlite> SELECT player.fname, player.lname, event.* FROM event JOIN player ON event.player_id = player.player_id WHERE event.player_id = 20 LIMIT 5;
@@ -42,3 +42,16 @@ xYvoT|gUPpW|101|2024-11-23 14:58:00|86|20|5|16|18|attack
 9. 解析関数
 </pre>
 
+# 6.5 DataFrame
+
+<pre>
+1対1結合
+import pandas as pd
+import numpy as np
+
+df1 = pd.DataFrame({'employee': ['Bob', 'Jake', 'Lisa', 'Sue'],
+                    'group': ['Accounting', 'Engineering',
+                              'Engineering', 'HR']})
+df2 = pd.DataFrame({'employee': ['Lisa', 'Bob', 'Jake', 'Sue'],
+                    'hire_date': [2004, 2008, 2012, 2014]})
+</pre>
