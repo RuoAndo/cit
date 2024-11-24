@@ -93,3 +93,16 @@ sqlite> SELECT cust.last_name, ",", cust.first_name FROM (select first_name, las
 BANKS|,|JESSIE 
 MILAM|,|JESSIE
 </pre>
+
+# 6.8 SQL(2) Group byとHaving
+映画を40本以上レンタルしている顧客をすべてリストアップする。
+<pre>
+sqlite> SELECT c.first_name, c.last_name, count(*) FROM customer c INNER JOIN rental r ON c.customer_id = r.customer_id GROUP BY c.first_name, c.last_name HAVING count(*) >= 40;
+CLARA|SHAW|42
+ELEANOR|HUNT|46
+KARL|SEAL|45
+MARCIA|DEAN|42
+SUE|PETERS|40
+TAMMY|SANDERS|41
+WESLEY|BULL|40
+</pre>
