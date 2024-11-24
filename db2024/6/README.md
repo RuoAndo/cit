@@ -85,3 +85,11 @@ df5 = pd.DataFrame({'group': ['Accounting', 'Accounting',
                     'skills': ['math', 'spreadsheets', 'software', 'math',
                                'spreadsheets', 'organization']}
 </pre>
+
+# 6.8 SQL(1) サブクエリ
+<pre>
+クエリの結果をテーブルにして、再検索。
+sqlite> SELECT cust.last_name, ",", cust.first_name FROM (select first_name, last_name, email FROM customer WHERE first_name = 'JESSIE') cust;
+BANKS|,|JESSIE 
+MILAM|,|JESSIE
+</pre>
