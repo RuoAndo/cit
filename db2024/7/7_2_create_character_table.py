@@ -7,7 +7,7 @@ import random
 # the number of characters: 100
 # the number of players: 30
 
-dbname = 'cit-db-2024-06.db'
+dbname = 'cit-db-2024-07.db'
 conn = sqlite3.connect(dbname)
 
 cur = conn.cursor()
@@ -43,7 +43,7 @@ for number in range(200):
     HP = random.randint(1, 100)
     MP = random.randint(1, 100)
     EXP = random.randint(1, 100)
-    character_rank = random.randint(1, 20)
+    character_rank = random.randint(1, 10)
 
     # Correctly formatted SQL statement
     comstr = f"""

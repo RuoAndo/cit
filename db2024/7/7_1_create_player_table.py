@@ -31,7 +31,7 @@ except:
 	pass
 
 #comstr2 = "create table player (person_id INTEGER PRIMARY KEY AUTOINCREMENT, fname VARCHAR(20), lname VARCHAR(20), points INTEGER, rank VARCHAR(20));"
-comstr2 = "create table player (player_id INTEGER, first_name VARCHAR(20), last_name VARCHAR(20), points INTEGER, player_rank VARCHAR(20));"
+comstr2 = "create table player (player_id INTEGER, first_name VARCHAR(20), last_name VARCHAR(20), points INTEGER, player_rank INTEGER);"
 # 3.テーブルに人名データを登録する
 cur.execute(comstr2)
 
@@ -43,13 +43,14 @@ for number in range(100):
 	lname = get_random_string(5)
 	#print(lname)
 
-	rank = ''.join(random.choices(string.ascii_uppercase, k=1))
+	#rank = ''.join(random.choices(string.ascii_uppercase, k=1))
+	rank = random.randrange(1, 10, 1)
 	#print(rank)
 
 	point  = random.randrange(1, 100, 1)
 	#print(point)
 
-	comstr = "insert into player (player_id, first_name, last_name, points, player_rank) values('" + str(number) + "','" + fname + "','" + lname + "','" + str(point) + "','" + rank + "');"
+	comstr = "insert into player (player_id, first_name, last_name, points, player_rank) values('" + str(number) + "','" + fname + "','" + lname + "','" + str(point) + "'," + str(rank) + ");"
 	print(comstr)
 
 	cur.execute(comstr)
