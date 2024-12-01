@@ -10,3 +10,10 @@ VLNJX|ckhKB|3|25|2024-12-05 10:33:37|87|20|33|19|3|attack
 VLNJX|ckhKB|3|36|2024-12-04 11:49:38|76|20|5|19|19|attack
 VLNJX|ckhKB|3|39|2024-12-02 10:08:17|97|20|44|2|21|attack
 </pre>
+
+# テーブルの結合: 郵便番号で検索
+<pre>
+sqlite> SELECT c.first_name, c.last_name, a.address FROM customer c INNER JOIN address a ON c.address_id = a.address_id WHERE a.postal_code = 52137;
+JAMES|GANNON|1635 Kuwana Boulevard
+FREDDIE|DUGGAN|1103 Quilmes Boulevard
+</pre>
