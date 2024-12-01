@@ -77,7 +77,7 @@ CREATE TABLE city (
 );
 </pre>
 
-# 7.4 player_id = 20 の名前と、期間内にどのような行動をとったか集計する (GROUP BY)
+# 7.4 player_id = 20 の名前と、期間内にどのような行動をとったか集計する (JOINとGROUP BY)
 <pre>
 sqlite> SELECT player.first_name, player.last_name, player.player_rank, event.*, count(*) FROM event JOIN player ON event.player_id = player.player_id WHERE event.player_id = 20 GROUP BY action_type;
 VLNJX|ckhKB|3|250|2024-12-01 09:55:15|30|20|93|27|1|attack|2
