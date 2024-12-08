@@ -211,8 +211,8 @@ Satble Diffusion: The evil-looking Doraemon is releasing a large number of fireb
 <img src="blobs.png" width=50%>
 
 <pre>
-(base) PS C:\Users\flare\cit\db2023\12> python .\12_disaster_by_dora.py
-(base) PS C:\Users\flare\cit\db2023\12> python .\12_PCA.py
+(base) PS C:\Users\flare\cit\db2024\8> python  8_4_disaster_dora.py
+(base) PS C:\Users\flare\cit\db2024\8> python  8_5_PCA.py
 </pre>
 
 プログラム実行前
