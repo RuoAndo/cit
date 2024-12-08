@@ -1,4 +1,4 @@
-<img src="sakila-schemes.jpg>
+<img src="sakila-schemes.jpg">
 
 # 8.1 SQLクエリのリストアップ
 <pre>
