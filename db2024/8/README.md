@@ -128,7 +128,7 @@ sqlite> SELECT city_id, city FROM city WHERE country_id <> (SELECT country_id FR
 5|Adana
 </pre>
 
-# 8.2 playerテーブルとchacterテーブルの結合
+# 8.2 playerテーブルとchacterテーブルの結合(1)
 <pre>
 character_rankで順序付ける
 sqlite> SELECT p.first_name, p.last_name, p.player_rank, c.* FROM character c JOIN player p ON c.player_id = p.player_id WHERE p.player_id = 20 order by c.character_rank;
@@ -141,7 +141,7 @@ glsYS|xQIfC|7|91|20|bikkuriko|-71|59|42|6
 glsYS|xQIfC|7|28|20|akinator|50|3|87|8
 </pre>
 
-# 8.3 playerテーブルとchacterテーブルの結合
+# 8.3 playerテーブルとchacterテーブルの結合(2)
 <pre>
 id=20と24のプレイヤーの持ちキャラのランクの平均を計算(サブクエリをテーブルとして使う)
 sqlite> SELECT AVG(character_rank) FROM (SELECT p.first_name, p.last_name, p.player_rank, c.* FROM character c JOIN player p ON c.player_id = p.player_id WHERE p.player_id = 20 order by c.character_rank);
