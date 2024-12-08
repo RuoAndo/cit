@@ -1,3 +1,5 @@
+
+# 8.1 SQLクエリのリストアップ
 <pre>
 1. addressとcustomerのテーブルを結合
 sqlite> SELECT c.first_name, c.last_name, a.address FROM customer c JOIN address a ON c.address_id = a.address_id LIMIT 10;
@@ -125,7 +127,7 @@ sqlite> SELECT city_id, city FROM city WHERE country_id <> (SELECT country_id FR
 5|Adana
 </pre>
 
-# 8.1 playerテーブルとchacterテーブルの結合: character_rankで順序付ける
+# 8.2 playerテーブルとchacterテーブルの結合: character_rankで順序付ける
 <pre>
 sqlite> SELECT p.first_name, p.last_name, p.player_rank, c.* FROM character c JOIN player p ON c.player_id = p.player_id WHERE p.player_id = 20 order by c.character_rank;
 glsYS|xQIfC|7|0|20|doraemon|24|28|21|1
@@ -136,3 +138,7 @@ glsYS|xQIfC|7|56|20|doraemon|3|33|70|4
 glsYS|xQIfC|7|91|20|bikkuriko|-71|59|42|6
 glsYS|xQIfC|7|28|20|akinator|50|3|87|8
 </pre>
+
+# 8.3 playerテーブルとchacterテーブルの結合: character_rankで順序付ける
+sqlite> SELECT AVG(character_rank) FROM (SELECT p.first_name, p.last_name, p.player_rank, c.* FROM character c JOIN player p ON c.player_id = p.player_id WHERE p.player_id = 20 order by c.character_rank);
+3.71428571428571
