@@ -125,7 +125,7 @@ sqlite> SELECT city_id, city FROM city WHERE country_id <> (SELECT country_id FR
 5|Adana
 </pre>
 
-# playerテーブルとchacterテーブルの結合: character_rankで順序付ける
+# 8.1 playerテーブルとchacterテーブルの結合: character_rankで順序付ける
 <pre>
 sqlite> SELECT p.first_name, p.last_name, p.player_rank, c.* FROM character c JOIN player p ON c.player_id = p.player_id WHERE p.player_id = 20 order by c.character_rank;
 glsYS|xQIfC|7|0|20|doraemon|24|28|21|1
