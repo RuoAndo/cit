@@ -1,5 +1,10 @@
+# 7.zipを回答して、7.batを実行
+
 # テーブル項目修正 (2024-12-01)
 <img src="ER_7.jpeg">
+
+<img src="players.png">
+<img src="characters.png">
 
 # 7.1 playerテーブルとeventテーブルの結合
 <pre>
@@ -10,6 +15,10 @@ VLNJX|ckhKB|3|25|2024-12-05 10:33:37|87|20|33|19|3|attack
 VLNJX|ckhKB|3|36|2024-12-04 11:49:38|76|20|5|19|19|attack
 VLNJX|ckhKB|3|39|2024-12-02 10:08:17|97|20|44|2|21|attack
 </pre>
+
+<img src="dora_begi.png" width=25%>
+<img src="dora2.png" width=25%>
+<img src="dora3.png" width=25%>
 
 # 7.2 sakila - テーブルの結合: 郵便番号で検索 (addressとcustomer)
 <pre>
@@ -70,7 +79,7 @@ CREATE TABLE city (
 );
 </pre>
 
-# 7.4 player_id = 20 の名前と、期間内にどのような行動をとったか集計する (GROUP BY)
+# 7.4 player_id = 20 の名前と、期間内にどのような行動をとったか集計する (JOINとGROUP BY)
 <pre>
 sqlite> SELECT player.first_name, player.last_name, player.player_rank, event.*, count(*) FROM event JOIN player ON event.player_id = player.player_id WHERE event.player_id = 20 GROUP BY action_type;
 VLNJX|ckhKB|3|250|2024-12-01 09:55:15|30|20|93|27|1|attack|2
