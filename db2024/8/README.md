@@ -89,7 +89,6 @@ AMBER|DIXON|23:42:56
 JOYCE|EDWARDS|23:16:26
 
 13. メンバーシップ条件 ratingがGかPGの映画をリストアップ
-
 sqlite> SELECT title, rating FROM film WHERE rating = 'G' OR rating = 'PG' LIMIT 5;
 ACADEMY DINOSAUR|PG
 ACE GOLDFINGER|G
@@ -98,7 +97,6 @@ AFRICAN EGG|G
 AGENT TRUMAN|PG
 
 14. マッチング条件 ワイルドカードの利用
-
 sqlite> select last_name, first_name FROM customer WHERE last_name LIKE '_A_T%S';
 MATTHEWS|ERICA
 WALTERS|CASSANDRA
