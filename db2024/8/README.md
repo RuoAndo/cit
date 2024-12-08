@@ -155,3 +155,72 @@ sqlite> SELECT AVG(character_rank) FROM (SELECT p.first_name, p.last_name, p.pla
 
 <img src="characters.png" width=70%>
 
+# 8.4 特殊なイベントを実装する1 (UPDATE利用)
+
+「D」の修理
+
+character_id = 9 のキャラクタのHPを500にする
+
+stable diffusion: Above the big city, a good-looking Doraemon is frantically repairing a bad-looking Doraemon.
+
+<img src="dora2.png" width=20%>
+
+<pre>
+(base) PS C:\Users\flare\cit\db2023\12> .\sqlite3.exe .\cit-db-2023-12.db
+SQLite version 3.39.3 2022-09-05 11:02:23
+Enter ".help" for usage hints.
+sqlite> update character set HP = 500 where character_id = 9;
+</pre>
+
+<img src="500.png">
+
+<pre>
+(base) PS C:\Users\flare\cit\db2023\12> python .\12_PCA.py
+</pre>
+
+<img src="event_by_update_1.png">
+
+One-class KVMで異常検知
+
+<pre>
+(base) PS C:\Users\flare\cit\db2023\12> python .\12_PCA_kmeans.py
+           1          2          3
+0 -31.201880  28.428707  -1.749345
+1 -44.342107  -2.509248  61.773701
+2  28.891464  64.919250  20.661151
+3  44.339793   7.810922 -27.192668
+4 -48.117434  15.261168  48.584341
+[ 9 53  2 31 52]
+anomaly 450.1047300909108
+449.06757151470254
+-6.246531054245064
+</pre>
+
+<img src="one_class_km.png">
+            
+# 8.5 特殊なイベントを実装する2 (UPDATE利用)
+
+「Dの災厄」
+
+Satble Diffusion: The evil-looking Doraemon is releasing a large number of fireballs from far up in the air.
+
+<img src="dora.png" width=20%>
+
+全キャラクタのHPとMPの値を、強制的に次のような分布にする
+
+<img src="blobs.png" width=50%>
+
+<pre>
+(base) PS C:\Users\flare\cit\db2023\12> python .\12_disaster_by_dora.py
+(base) PS C:\Users\flare\cit\db2023\12> python .\12_PCA.py
+</pre>
+
+プログラム実行前
+
+<img src="status_before_1.png" width=50%>
+
+プログラム実行後
+
+<img src="status_after_1.png" width=50%>
+
+
