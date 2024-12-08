@@ -151,7 +151,7 @@ sqlite> SELECT AVG(character_rank) FROM (SELECT p.first_name, p.last_name, p.pla
 7.22222222222222
 </pre>
 
-<img src="players.png" width=80%>
+<img src="players.png" width=70%>
 
-<img src="character.png" width=80%>
+<img src="characters.png" width=70%>
 
