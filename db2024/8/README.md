@@ -145,4 +145,5 @@ glsYS|xQIfC|7|28|20|akinator|50|3|87|8
 sqlite> SELECT AVG(character_rank) FROM (SELECT p.first_name, p.last_name, p.player_rank, c.* FROM character c JOIN player p ON c.player_id = p.player_id WHERE p.player_id = 20 order by c.character_rank);
 3.71428571428571
 sqlite> SELECT AVG(character_rank) FROM (SELECT p.first_name, p.last_name, p.player_rank, c.* FROM character c JOIN player p ON c.player_id = p.player_id WHERE p.player_id = 24 order by c.character_rank);
+7.22222222222222
 </pre>
