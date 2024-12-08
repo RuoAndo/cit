@@ -106,6 +106,7 @@ WATTS|SHELLY
 
 15. サブクエリをテーブルとして使う
 SELECT c.first_name, c.last_name, addr.address, addr.city FROM customer c INNER JOIN (SELECT a.address_id, a.address, ct.city FROM address a INNER JOIN city ct ON a.city_id = ct.city_id WHERE a.district = 'California') addr ON c.address_id = addr.address_id;
+  
 16. グループ化と集計　レンタル回数が最も多い顧客を突き止める
 sqlite> SELECT customer_id, count(*) FROM rental GROUP BY customer_id ORDER BY 2 DESC LIMIT 5;
 148|46
@@ -139,6 +140,9 @@ glsYS|xQIfC|7|91|20|bikkuriko|-71|59|42|6
 glsYS|xQIfC|7|28|20|akinator|50|3|87|8
 </pre>
 
-# 8.3 playerテーブルとchacterテーブルの結合: character_rankで順序付ける
+# 8.3 playerテーブルとchacterテーブルの結合: id=20と24のプレイヤーの持ちキャラのランクの平均を計算(サブクエリをテーブルとして使う)
+<pre>
 sqlite> SELECT AVG(character_rank) FROM (SELECT p.first_name, p.last_name, p.player_rank, c.* FROM character c JOIN player p ON c.player_id = p.player_id WHERE p.player_id = 20 order by c.character_rank);
 3.71428571428571
+sqlite> SELECT AVG(character_rank) FROM (SELECT p.first_name, p.last_name, p.player_rank, c.* FROM character c JOIN player p ON c.player_id = p.player_id WHERE p.player_id = 24 order by c.character_rank);
+</pre>
