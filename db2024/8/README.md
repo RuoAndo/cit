@@ -150,3 +150,8 @@ sqlite> SELECT AVG(character_rank) FROM (SELECT p.first_name, p.last_name, p.pla
 sqlite> SELECT AVG(character_rank) FROM (SELECT p.first_name, p.last_name, p.player_rank, c.* FROM character c JOIN player p ON c.player_id = p.player_id WHERE p.player_id = 24 order by c.character_rank);
 7.22222222222222
 </pre>
+
+<img src="players.png" width=80%>
+
+<img src="character.png" width=80%>
+
