@@ -158,9 +158,9 @@ sqlite> SELECT AVG(character_rank) FROM (SELECT p.first_name, p.last_name, p.pla
 <img src="ER_7.jpeg" width=70%>
 
 
-<img src="dora3.png" width=70%>
-<img src="dora4.png" width=70%>
-<img src="dora5.png" width=70%>
+<img src="dora3.png" width=30%>
+<img src="dora4.png" width=30%>
+<img src="dora5.png" width=30%>
 
 # 8.4 特殊なイベントを実装する1 (UPDATE利用)
 
