@@ -8,7 +8,7 @@
 6 slb_stock
 7 Iris
 8 California housing dataset
-9 Prima Indians dataset
+9 Pima Indians dataset
 10 
 11 
 12 diabetes 
