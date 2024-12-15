@@ -45,10 +45,11 @@ TOMMY|COLLAZO
 NELSON|CHRISTENSON
 </pre>
 
-3. 解析関数 各顧客の名前、住所、支払総額、レンタル回数のレポートを作成
-payment, customer, address, cityの4つのテーブルを結合し、氏名に基づいてグループ化
+3. 解析関数 タスク指向のサブクエリ - 各顧客の名前、住所、支払総額、レンタル回数のレポートを作成
 <pre>
-sqlite> SELECT c.first_name, c.last_name, ct.city, sum(p.amount) tot_payments, count(*) tot_rentals FROM payment p INNER JOIN customer c ON p.customer_id = c.customer_id INNER JOIN address a ON c.address_id = a.address_id INNER JOIN city ct ON a.city_id = ct.city_id GROUP BY c.first_name, c.last_name, ct.city LIMIT 10;
+payment, customer, address, cityの4つのテーブルを結合し、氏名に基づいてグループ化
+
+  sqlite> SELECT c.first_name, c.last_name, ct.city, sum(p.amount) tot_payments, count(*) tot_rentals FROM payment p INNER JOIN customer c ON p.customer_id = c.customer_id INNER JOIN address a ON c.address_id = a.address_id INNER JOIN city ct ON a.city_id = ct.city_id GROUP BY c.first_name, c.last_name, ct.city LIMIT 10;
 AARON|SELBY|Mwene-Ditu|110.76|24
 ADAM|GOOCH|Adoni|101.78|22
 ADRIAN|CLARY|Udine|74.81|19
