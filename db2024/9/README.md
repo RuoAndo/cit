@@ -1,18 +1,18 @@
 # データセット (12/15)
 <pre>
-1 employee
-2 state_abberevs
-3 state_areas
-4 state_population
-5 movie
-6 slb_stock
-7 Iris
-8 California housing dataset
-9 Pima Indians dataset
-10 
-11 
-12 diabetes 
-13 credit card fraud detection
+1 employee：従業員
+2 state_abberevs：アメリカ人口
+3 state_areas：アメリカ人口
+4 state_population：アメリカ人口
+5 movie：映画
+6 slb_stock：株価
+7 Iris：アヤメの花
+8 California housing dataset: カリフォルニア住宅価格
+9 Pima Indians dataset: Pimaインド糖尿病データセット
+10 Seattle Bycicle：シアトル自転車
+11 planets: 惑星
+12 Breast canser: ガン（病気）
+13 credit card fraud detection：クレジットカード不正利用
 </pre>
 
 # SQL*5
