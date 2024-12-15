@@ -49,7 +49,7 @@ NELSON|CHRISTENSON
 <pre>
 payment, customer, address, cityの4つのテーブルを結合し、氏名に基づいてグループ化
 
-  sqlite> SELECT c.first_name, c.last_name, ct.city, sum(p.amount) tot_payments, count(*) tot_rentals FROM payment p INNER JOIN customer c ON p.customer_id = c.customer_id INNER JOIN address a ON c.address_id = a.address_id INNER JOIN city ct ON a.city_id = ct.city_id GROUP BY c.first_name, c.last_name, ct.city LIMIT 10;
+sqlite> SELECT c.first_name, c.last_name, ct.city, sum(p.amount) tot_payments, count(*) tot_rentals FROM payment p INNER JOIN customer c ON p.customer_id = c.customer_id INNER JOIN address a ON c.address_id = a.address_id INNER JOIN city ct ON a.city_id = ct.city_id GROUP BY c.first_name, c.last_name, ct.city LIMIT 10;
 AARON|SELBY|Mwene-Ditu|110.76|24
 ADAM|GOOCH|Adoni|101.78|22
 ADRIAN|CLARY|Udine|74.81|19
@@ -60,4 +60,24 @@ ALBERTO|HENNING|Barcelona|66.79|21
 ALEX|GRESHAM|Uruapan|151.67|33
 ALEXANDER|FENNELL|Bergamo|151.64|36
 ALFRED|CASILLAS|Sawhaj|120.74|26
+</pre>
+
+4. 条件付きロジック customer.active列を追加する
+<pre>
+sqlite> SELECT first_name, last_name, CASE WHEN active = 1 THEN 'ACTIVE' ELSE 'INACTIVE' END active_type FROM customer LIMIT 10;
+MARY|SMITH|ACTIVE
+PATRICIA|JOHNSON|ACTIVE
+LINDA|WILLIAMS|ACTIVE
+BARBARA|JONES|ACTIVE
+ELIZABETH|BROWN|ACTIVE
+JENNIFER|DAVIS|ACTIVE
+MARIA|MILLER|ACTIVE
+SUSAN|WILSON|ACTIVE
+MARGARET|MOORE|ACTIVE
+DOROTHY|TAYLOR|ACTIVE
+</pre>
+
+5. 条件付きロジック - サブクエリを使ってレンタル回数を返す
+<pre>
+SELECT c.first_name, c.last_name CASE WHEN active = 0 THEN 0 ELSE (SELECT count(*) FROM rental r WHERE r.customer_id = c.customer_id) END NUM_rentals FROM customer c;
 </pre>
