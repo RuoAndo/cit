@@ -15,7 +15,7 @@
 13 credit card fraud detection
 </pre>
 
-# SQL
+# SQL*5
 
 1. 相関サブクエリ レンタル回数がちょうど20回の顧客
 <pre>
