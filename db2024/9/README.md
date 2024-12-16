@@ -102,3 +102,8 @@ SUSAN|WILSON|ACTIVE
 MARGARET|MOORE|ACTIVE
 DOROTHY|TAYLOR|ACTIVE
 </pre>
+
+<img src="manifold1.png">
+
+<img src="manifold2.png">
+
