@@ -1,20 +1,31 @@
-# データセット (12/15)
+# データセット (12/16)
 <pre>
-1 employee
-2 state_abberevs
-3 state_areas
-4 state_population
-5 movie
-6 slb_stock
-7 Iris
-8 California housing dataset
-9 Pima Indians dataset
-10 
-11 
-12 diabetes 
-13 credit card fraud detection
+1 employee：従業員
+2 state_abberevs：アメリカ人口
+3 state_areas：アメリカ人口
+4 state_population：アメリカ人口
+5 movie：映画
+6 slb_stock：株価
+7 Iris：アヤメの花
+8 California housing dataset: カリフォルニア住宅価格
+9 Pima Indians dataset: Pimaインド糖尿病データセット
+10 Seattle Bycicle：シアトル自転車
+11 planets: 惑星
+12 Breast canser: ガン（病気）
+13 credit card fraud detection：クレジットカード不正利用
 </pre>
 
+# 第１０回以降の予定
+<pre>
+1.３種類の結合（１対１、１対多、多対多）
+2. 集約 Groupby メソッド
+3. 時系列 頻度とオフセット
+4. 時系列 再サンプリング
+5. 階層型インデックス
+6. 結合 applyメソッド
+7. 移動窓関数
+</pre>
+  
 # SQL*5
 
 1. 相関サブクエリ レンタル回数がちょうど20回の顧客
