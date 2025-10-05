@@ -1,3 +1,5 @@
+# CPU負荷の測定
+
 <pre>
 PS D:\cit\db2025> python .\16_cpu_util_detail_sqlite.py
 記録される項目:
@@ -47,4 +49,91 @@ sqlite> select Timestamp, CPU_Total FROM cpu_log;
 2025-10-05 19:02:24|47.5
 2025-10-05 19:02:25|48.625
 2025-10-05 19:02:27|38.425
+</pre>
+
+# データベースのインポート
+<pre>
+PS D:\cit\db2025\csv_exports> cp ..\20_import-all-csv.ps1 .
+PS D:\cit\db2025\csv_exports> .\20_import-all-csv.ps1
+?? 既存DBに上書き: D:\cit\db2025\csv_exports\mydata.db
+?? 取り込み中: actor.csv → [actor]
+? 完了: actor.csv → [actor]
+?? 取り込み中: address.csv → [address]
+Columns renamed during .import D:/cit/db2025/csv_exports/address.csv due to duplicates:
+"?" to "?_3",
+" " to " _4",
+"?" to "?_6",
+" " to " _7"
+? 完了: address.csv → [address]
+?? 取り込み中: category.csv → [category]
+? 完了: category.csv → [category]
+?? 取り込み中: city.csv → [city]
+? 完了: city.csv → [city]
+?? 取り込み中: country.csv → [country]
+? 完了: country.csv → [country]
+?? 取り込み中: customer.csv → [customer]
+Columns renamed during .import D:/cit/db2025/csv_exports/customer.csv due to duplicates:
+"1" to "1_1",
+"1" to "1_2",
+"1" to "1_7"
+? 完了: customer.csv → [customer]
+?? 取り込み中: film.csv → [film]
+Columns renamed during .import D:/cit/db2025/csv_exports/film.csv due to duplicates:
+"1" to "1_1",
+"1" to "1_5"
+? 完了: film.csv → [film]
+?? 取り込み中: film_actor.csv → [film_actor]
+Columns renamed during .import D:/cit/db2025/csv_exports/film_actor.csv due to duplicates:
+"1" to "1_1",
+"1" to "1_2"
+? 完了: film_actor.csv → [film_actor]
+?? 取り込み中: film_category.csv → [film_category]
+? 完了: film_category.csv → [film_category]
+?? 取り込み中: film_text.csv → [film_text]
+D:/cit/db2025/csv_exports/film_text.csv: empty file
+警告: ? 失敗: film_text.csv
+?? 取り込み中: inventory.csv → [inventory]
+Columns renamed during .import D:/cit/db2025/csv_exports/inventory.csv due to duplicates:
+"1" to "1_1",
+"1" to "1_2",
+"1" to "1_3"
+? 完了: inventory.csv → [inventory]
+?? 取り込み中: language.csv → [language]
+? 完了: language.csv → [language]
+?? 取り込み中: payment.csv → [payment]
+Columns renamed during .import D:/cit/db2025/csv_exports/payment.csv due to duplicates:
+"1" to "1_1",
+"1" to "1_2",
+"1" to "1_3"
+? 完了: payment.csv → [payment]
+?? 取り込み中: rental.csv → [rental]
+Columns renamed during .import D:/cit/db2025/csv_exports/rental.csv due to duplicates:
+"1" to "1_1",
+"1" to "1_6"
+? 完了: rental.csv → [rental]
+?? 取り込み中: staff.csv → [staff]
+Columns renamed during .import D:/cit/db2025/csv_exports/staff.csv due to duplicates:
+"1" to "1_1",
+"Mike" to "Mike_2",
+"1" to "1_7",
+"1" to "1_8",
+"Mike" to "Mike_9"
+? 完了: staff.csv → [staff]
+?? 取り込み中: store.csv → [store]
+Columns renamed during .import D:/cit/db2025/csv_exports/store.csv due to duplicates:
+"1" to "1_1",
+"1" to "1_2",
+"1" to "1_3"
+? 完了: store.csv → [store]
+
+確認コマンド:
+.\sqlite3.exe "D:\cit\db2025\csv_exports\mydata.db"
+.tables
+PS D:\cit\db2025\csv_exports> .\sqlite3.exe .\mydata.db
+SQLite version 3.39.3 2022-09-05 11:02:23
+Enter ".help" for usage hints.
+sqlite> .tables
+actor          city           film           inventory      rental
+address        country        film_actor     language       staff
+category       customer       film_category  payment        store
 </pre>
