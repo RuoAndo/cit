@@ -1,13 +1,13 @@
 <pre>
-基本
+1. 基本
 ts：サンプル取得時刻（UTC, ISO8601 例: 2025-10-12T13:45:05.489170Z）
 hostname / username：記録したマシン名／ユーザー名（識別用）
 
-CPU（全体）
+2. CPU（全体）
 cpu_percent：全コア合成のCPU使用率 [%]。psutil.cpu_percent(interval=…) の結果。
 temp_c：CPU温度 [℃]。LHM/OpenHardwareMonitor/ACPIの順で取得。権限や機種により NULL になることあり。
 
-CPU（内訳・統計）
+3. CPU（内訳・統計）
 cpu_user_pct：ユーザ空間のCPU使用率 [%]
 cpu_system_pct：カーネル（システム）時間のCPU使用率 [%]
 cpu_idle_pct：アイドル時間の割合 [%]
@@ -24,7 +24,7 @@ cpu_freq_min_mhz / cpu_freq_max_mhz：CPU周波数の想定最小/最大 [MHz]�
 per_core_cpu：各コアのCPU使用率 [%] の配列を JSON文字列で保存（例：[3.1, 7.4, …]）
 per_core_freq：各コアの現在周波数 [MHz] の配列を JSON文字列で保存（取得不可ならNULL）
 
-メモリ（RAM）
+4. メモリ（RAM）
 mem_percent：メモリ使用率 [%]
 mem_total：総メモリ容量 [バイト]
 mem_available：新規割当てに利用可能なメモリ推定値 [バイト]
@@ -35,14 +35,14 @@ mem_cached：ページキャッシュ量 [バイト]（WindowsではNULLのこ�
 mem_buffers：バッファ量 [バイト]（Linux中心・WindowsではNULL）
 mem_shared：共有メモリ量 [バイト]（OS依存・多くはNULL）
 
-スワップ
+5. スワップ
 swap_percent：スワップ使用率 [%]
 swap_total / swap_used / swap_free：スワップ総量／使用量／空き [バイト]
 swap_sin / swap_sout：スワップイン／アウトの累積バイト数（OSによりNULL）
 
-負荷平均（UNIX系）
+6. 負荷平均（UNIX系）
 load1 / load5 / load15：1/5/15分のロードアベレージ（Windowsは通常 NULL)
 
 </pre>
-  <
-</pre>
+
+<img src="3d-plot-1.png">
