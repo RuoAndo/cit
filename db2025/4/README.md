@@ -45,4 +45,4 @@ load1 / load5 / load15：1/5/15分のロードアベレージ（Windowsは通常
 
 </pre>
 
-<img src="3d-plot-1.png" width=50%>
+<img src="3d-plot-2.png" width=50%>
