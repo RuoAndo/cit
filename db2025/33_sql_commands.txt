@@ -1,0 +1,17 @@
+-- ① 支払総額ランキング
+SELECT c.customer_id,c.first_name,c.last_name,SUM(p.amount) total_amount,COUNT(*) payments FROM customer c JOIN payment p USING(customer_id) GROUP BY c.customer_id ORDER BY total_amount DESC LIMIT 20;
+
+-- ② 活動パターン（利用間隔・最終利用日）
+WITH r AS(SELECT customer_id,MIN(rental_date) f,MAX(rental_date) l,COUNT(*) n FROM rental GROUP BY customer_id) SELECT c.customer_id,c.first_name,c.last_name,n,(julianday(l)-julianday(f)) active_span,(CASE WHEN n>1 THEN (julianday(l)-julianday(f))/(n-1) END) avg_interval,(julianday('now')-julianday(l)) dormant FROM customer c LEFT JOIN r USING(customer_id) ORDER BY dormant DESC;
+
+-- ③ 名前・メール分析（ファーストネーム）
+SELECT first_name,COUNT(*) cnt FROM customer GROUP BY first_name ORDER BY cnt DESC LIMIT 20;
+
+-- ③-2 メールドメイン分析
+SELECT substr(email,instr(email,'@')+1) domain,COUNT(*) cnt FROM customer WHERE instr(email,'@')>0 GROUP BY domain ORDER BY cnt DESC LIMIT 20;
+
+-- ③-3 重複メール検出
+SELECT email,COUNT() cnt FROM customer WHERE email IS NOT NULL AND email<>'' GROUP BY email HAVING COUNT()>1 ORDER BY cnt DESC,email;
+
+-- ③-4 アクティブ／非アクティブ構成
+SELECT active,COUNT() cnt,ROUND(100.0COUNT()/SUM(COUNT()) OVER(),2) pct FROM customer GROUP BY active ORDER BY active DESC;
