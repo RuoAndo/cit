@@ -46,3 +46,71 @@ load1 / load5 / load15：1/5/15分のロードアベレージ（Windowsは通常
 </pre>
 
 <img src="3d-plot-2.png" width=50%>
+
+<hr>
+
+<pre>
+customer_id：顧客の主キー。JOINの基準。
+first_name / last_name：顧客名。表記ゆれ・重複名あり得るため識別はIDで。
+active：現在の顧客状態（1/0）。「休眠」とは別概念（下記 days_since_* 参照）。
+store_id：所属店舗ID。店舗別集計・比較のキー。
+
+total_payment：支払総額（SUM(payment.amount)）。通貨単位は元データに依存。返金や負値があれば要注意。
+pay_count：支払回数（COUNT(*)）。小口多回か、大口少回かの把握に有用。
+avg_payment：平均支払額（AVG(amount)）。高単価顧客の特定に。外れ値の影響を受ける点に留意。
+max_payment：最大支払額（MAX(amount)）。高額取引の有無指標。不正/例外の早期検知にも使える。
+pay_span：初回支払〜最終支払の期間（日）（julianday(max)-julianday(min)）。0 は同日内のみの取引。NULL は支払記録なし。
+days_since_pay：最終支払から今日までの日数（julianday('now')-julianday(max)）。小さいほど最近アクティブ。NULL は支払記録なし。
+
+rent_count：レンタル件数（COUNT(*)）。利用頻度の基本指標。
+rent_span：初回レンタル〜最終レンタルの期間（日）。0 は同日内のみの利用。NULL はレンタル記録なし。
+avg_rent_interval：平均レンタル間隔（日）（rent_count>1 のとき rent_span/(rent_count-1)）。連続利用のテンポ感。1件のみは算出不可のため NULL。
+days_since_rent：最終レンタルから今日までの日数。小さいほど直近に利用。NULL はレンタル記録なし。
+</pre>
+
+<pre>
+customer_id
+SELECT c.customer_id
+
+first_name
+SELECT c.first_name
+
+last_name
+SELECT c.last_name
+
+active
+SELECT c.active
+
+store_id
+SELECT c.store_id
+
+total_payment（顧客別の支払総額）
+SELECT customer_id, SUM(amount) AS total_payment FROM payment GROUP BY customer_id
+
+pay_count（顧客別の支払回数）
+SELECT customer_id, COUNT(*) AS pay_count FROM payment GROUP BY customer_id
+
+avg_payment（顧客別の平均支払額）
+SELECT customer_id, AVG(amount) AS avg_payment FROM payment GROUP BY customer_id
+
+max_payment（顧客別の最大支払額）
+SELECT customer_id, MAX(amount) AS max_payment FROM payment GROUP BY customer_id
+
+pay_span（日）（初回支払～最終支払の期間：SQLite想定）
+SELECT customer_id, (julianday(MAX(payment_date)) - julianday(MIN(payment_date))) AS pay_span FROM payment GROUP BY customer_id
+
+days_since_pay（日）（最終支払から今日まで：SQLite想定）
+SELECT customer_id, (julianday('now') - julianday(MAX(payment_date))) AS days_since_pay FROM payment GROUP BY customer_id
+
+rent_count（顧客別のレンタル件数）
+SELECT customer_id, COUNT(*) AS rent_count FROM rental GROUP BY customer_id
+
+rent_span（日）（初回レンタル～最終レンタルの期間：SQLite想定）
+SELECT customer_id, (julianday(MAX(rental_date)) - julianday(MIN(rental_date))) AS rent_span FROM rental GROUP BY customer_id
+
+days_since_rent（日）（最終レンタルから今日まで：SQLite想定）
+SELECT customer_id, (julianday('now') - julianday(MAX(rental_date))) AS days_since_rent FROM rental GROUP BY customer_id
+
+avg_rent_interval（日）（平均レンタル間隔：件数>1のみ有効、SQLite想定）
+WITH r AS (SELECT customer_id, (julianday(MAX(rental_date)) - julianday(MIN(rental_date))) AS span, COUNT() AS n FROM rental GROUP BY customer_id) SELECT customer_id, CASE WHEN n>1 THEN span1.0/(n-1) END AS avg_rent_interval FROM r
+</pre>
