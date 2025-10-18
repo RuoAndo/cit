@@ -1,3 +1,5 @@
+# System utilization
+
 <pre>
 1. 基本
 ts：サンプル取得時刻（UTC, ISO8601 例: 2025-10-12T13:45:05.489170Z）
@@ -68,49 +70,70 @@ avg_rent_interval：平均レンタル間隔（日）（rent_count>1 のとき r
 days_since_rent：最終レンタルから今日までの日数。小さいほど直近に利用。NULL はレンタル記録なし。
 </pre>
 
+# sakila-DB
+
 <pre>
+1.
 customer_id
 SELECT c.customer_id
 
+2.
 first_name
 SELECT c.first_name
 
+3.
 last_name
 SELECT c.last_name
 
+4.
 active
 SELECT c.active
 
+5.
 store_id
 SELECT c.store_id
 
+6.
 total_payment（顧客別の支払総額）
 SELECT customer_id, SUM(amount) AS total_payment FROM payment GROUP BY customer_id
 
+7.
 pay_count（顧客別の支払回数）
 SELECT customer_id, COUNT(*) AS pay_count FROM payment GROUP BY customer_id
 
+8.
 avg_payment（顧客別の平均支払額）
 SELECT customer_id, AVG(amount) AS avg_payment FROM payment GROUP BY customer_id
 
+9.
 max_payment（顧客別の最大支払額）
 SELECT customer_id, MAX(amount) AS max_payment FROM payment GROUP BY customer_id
 
+10.
 pay_span（日）（初回支払～最終支払の期間：SQLite想定）
 SELECT customer_id, (julianday(MAX(payment_date)) - julianday(MIN(payment_date))) AS pay_span FROM payment GROUP BY customer_id
 
+11.
 days_since_pay（日）（最終支払から今日まで：SQLite想定）
 SELECT customer_id, (julianday('now') - julianday(MAX(payment_date))) AS days_since_pay FROM payment GROUP BY customer_id
 
+12.
 rent_count（顧客別のレンタル件数）
 SELECT customer_id, COUNT(*) AS rent_count FROM rental GROUP BY customer_id
 
+13.
 rent_span（日）（初回レンタル～最終レンタルの期間：SQLite想定）
 SELECT customer_id, (julianday(MAX(rental_date)) - julianday(MIN(rental_date))) AS rent_span FROM rental GROUP BY customer_id
 
+14.
 days_since_rent（日）（最終レンタルから今日まで：SQLite想定）
 SELECT customer_id, (julianday('now') - julianday(MAX(rental_date))) AS days_since_rent FROM rental GROUP BY customer_id
 
+15.
 avg_rent_interval（日）（平均レンタル間隔：件数>1のみ有効、SQLite想定）
 WITH r AS (SELECT customer_id, (julianday(MAX(rental_date)) - julianday(MIN(rental_date))) AS span, COUNT() AS n FROM rental GROUP BY customer_id) SELECT customer_id, CASE WHEN n>1 THEN span1.0/(n-1) END AS avg_rent_interval FROM r
 </pre>
+
+<img src="pay_count_topN_bar.png">
+
+<img src="pay_count_hist.png">
