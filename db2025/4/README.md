@@ -1,4 +1,4 @@
-# System utilization
+# A. System utilization
 
 <pre>
 1. 基本
@@ -51,6 +51,8 @@ load1 / load5 / load15：1/5/15分のロードアベレージ（Windowsは通常
 
 <hr>
 
+# B. sakila-DB
+
 <pre>
 customer_id：顧客の主キー。JOINの基準。
 first_name / last_name：顧客名。表記ゆれ・重複名あり得るため識別はIDで。
@@ -69,8 +71,6 @@ rent_span：初回レンタル〜最終レンタルの期間（日）。0 は同
 avg_rent_interval：平均レンタル間隔（日）（rent_count>1 のとき rent_span/(rent_count-1)）。連続利用のテンポ感。1件のみは算出不可のため NULL。
 days_since_rent：最終レンタルから今日までの日数。小さいほど直近に利用。NULL はレンタル記録なし。
 </pre>
-
-# sakila-DB
 
 <pre>
 1.
