@@ -1,5 +1,7 @@
 
 
+データベースに格納される項目
+
 <pre>
 ts, cpu_percent, temp_c,
 cpu_user_pct, cpu_system_pct, cpu_idle_pct, cpu_iowait_pct,
