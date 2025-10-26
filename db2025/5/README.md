@@ -30,3 +30,5 @@ hostname, username
 <img src = "players.png">
 
 <img src = "characters.png">
+
+<img src = "ER.png">
