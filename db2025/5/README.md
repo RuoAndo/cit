@@ -1,4 +1,4 @@
-# CPU負荷をDB格納
+# A. CPU負荷をDB格納
 
 <pre>
 PS D:\cit\db2025\5> python .\35_dump_system_metrics.py
@@ -25,7 +25,7 @@ load1, load5, load15,
 hostname, username
 </pre>
 
-# オンラインゲームのDB
+# B. オンラインゲームのDB
 
 <img src = "players.png">
 
