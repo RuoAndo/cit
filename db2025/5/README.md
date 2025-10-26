@@ -28,3 +28,5 @@ hostname, username
 # オンラインゲームのDB
 
 <img src = "players.png">
+
+<img src = "characters.png">
