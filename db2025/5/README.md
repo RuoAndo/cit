@@ -1,4 +1,4 @@
-
+# CPU負荷をDB格納
 
 <pre>
 PS D:\cit\db2025\5> python .\35_dump_system_metrics.py
@@ -24,3 +24,7 @@ swap_percent, swap_total, swap_used, swap_free, swap_sin, swap_sout,
 load1, load5, load15,
 hostname, username
 </pre>
+
+# オンラインゲームのDB
+
+<img src = "players.png">
