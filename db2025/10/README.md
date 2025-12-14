@@ -1,3 +1,5 @@
+# 正規化前（第一正規形）
+
 <pre>
 1.
 PS D:\cit\db2025\10> cp ..\sqlite3.exe .
