@@ -1,0 +1,29 @@
+#include <iostream>
+#include <concepts>
+#include <vector>
+#include <string>
+
+// size() が呼べる型、かつ size() の戻りが整数っぽい（integral）ことまで要求
+template <typename T>
+concept HasSize = requires (const T& x) {
+    { x.size() } -> std::integral;
+};
+
+void print_size(const HasSize auto& x) {
+    std::cout << "size() = " << x.size() << "\n";
+}
+
+// HasSize じゃないもの用のフォールバック
+void print_size(const auto&) {
+    std::cout << "no size()\n";
+}
+
+int main() {
+    std::vector<int> v{1,2,3};
+    std::string s = "abc";
+    int n = 42;
+
+    print_size(v); // size() = 3
+    print_size(s); // size() = 3
+    print_size(n); // no size()
+}
