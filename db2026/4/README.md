@@ -12,3 +12,13 @@ PowerShellGet で NuGet ベースのリポジトリを操作するには、'2.8.
 信頼されていないリポジトリからモジュールをインストールしようとしています。このリポジトリを信頼する場合は、Set-PSRepository
 コマンドレットを実行して、リポジトリの InstallationPolicy の値を変更してください。'PSGallery' からモジュールをインストールしますか?
 [Y] はい(Y)  [A] すべて続行(A)  [N] いいえ(N)  [L] すべて無視(L)  [S] 中断(S)  [?] ヘルプ (既定値は "N"): A
+
+D:\cit\db2026\4> .\sqlite3.exe .\01_cpu_usage.db
+SQLite version 3.39.3 2022-09-05 11:02:23
+Enter ".help" for usage hints.
+sqlite> .tables
+cpu_usage
+sqlite> select * from cpu_usage;
+1|2026-10-24 08:33:35|85.0
+2|2026-10-24 08:33:37|100.0
+3|2026-10-24 08:33:39|94.0
